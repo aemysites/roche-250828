@@ -69,7 +69,7 @@ export async function doExtractContentPaths(zipContentsPath) {
             } else {
               core.debug(`Filter XML content: ${data}`);
               const paths = getFilterPaths(data);
-              core.setOutput('page_paths', paths);
+              core.setOutput('page_paths', JSON.stringify(paths));
               resolve();
             }
           });
