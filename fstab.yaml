@@ -1,0 +1,5 @@
+mountpoints:
+  /:
+    url: "https://author-p141866-e1619657.adobeaemcloud.com/bin/franklin.delivery/aemysites/roche-250828/main"
+    type: "markup"
+    suffix: ".html"
