@@ -3,7 +3,8 @@
     "/content/roche-250828/:/",
     "/content/roche-250828/configuration:/.helix/config.json",
     "/content/roche-250828/metadata:/metadata.json",
-    "/content/roche-250828/tools/sidekick/library:/tools/sidekick/library.json"
+    "/content/roche-250828/tools/sidekick/library:/tools/sidekick/library.json",
+    "/content/roche-250828/placeholders:/placeholders.json"
   ],
   "includes": [
     "/content/roche-250828/"
