@@ -243,6 +243,12 @@ export default {
   transform: async (source) => {
     const { document, params: { originalURL } } = source;
 
+    document.querySelector('header')?.remove();
+    document.querySelector('footer')?.remove();
+    document.querySelector('.yellow-bar')?.remove();
+    document.querySelector('#onetrust-consent-sdk')?.remove();
+    document.querySelector('.skip-link')?.remove();
+
     /* eslint-disable-next-line prefer-const */
     let publishUrl = window.location.origin;
     // $$publishUrl = '{{{publishUrl}}}';
