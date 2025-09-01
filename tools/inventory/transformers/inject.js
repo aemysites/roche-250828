@@ -25,12 +25,4 @@
       el.style.outline = "2px solid #FF0000";
     });
   });
-
-  // If Hero wrapper is not a direct child of <body>, bubble up—Edge Delivery clusters by layout proximity
-  // If your hero sections are nested, try to move them to top-level (if safe). For advanced cases you can try:
-  document.querySelectorAll('.block-hero').forEach(el => {
-    if (el.parentElement !== document.body) {
-      document.body.insertBefore(el, document.body.firstChild);
-    }
-  });
 })();
