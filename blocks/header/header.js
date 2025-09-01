@@ -94,6 +94,12 @@ function processSectionsWithMetadata(nav) {
   }, { topSections: [], mainSections: [], bottomSections: [] });
 }
 
+function closeSearch(navSearch) {
+  navSearch.classList.remove('expanded');
+  navSearch.setAttribute('aria-expanded', 'false');
+  document.body.style.overflowY = '';
+}
+
 /**
  * Toggles the entire nav
  * @param {Element} nav The container element
@@ -107,6 +113,8 @@ function toggleMenu(nav, navSections, forceExpanded = null) {
   nav.setAttribute('aria-expanded', expanded ? 'false' : 'true');
   if (expanded) {
     toggleAllNavSections(navSections, 'false');
+  } else {
+    closeSearch(nav.querySelector('.nav-search'));
   }
   button.setAttribute('aria-label', expanded ? 'Open navigation' : 'Close navigation');
   // enable nav dropdown keyboard accessibility
@@ -128,11 +136,8 @@ function toggleMenu(nav, navSections, forceExpanded = null) {
   if (!expanded || isDesktop.matches) {
     // collapse menu on escape press
     window.addEventListener('keydown', closeOnEscape);
-    // collapse menu on focus lost
-    // nav.addEventListener('focusout', closeOnFocusLost);
   } else {
     window.removeEventListener('keydown', closeOnEscape);
-    nav.removeEventListener('focusout', closeOnFocusLost);
   }
 }
 
@@ -189,7 +194,7 @@ export default async function decorate(block) {
   const { topSections, mainSections, bottomSections } = processSectionsWithMetadata(nav);
   nav.replaceChildren(...mainSections);
 
-  const classes = ['brand', 'sections', 'secondary-menu'];
+  const classes = ['brand', 'sections', 'secondary-menu', 'search'];
   classes.forEach((c, i) => {
     const section = nav.children[i];
     if (section) section.classList.add(`nav-${c}`);
@@ -216,9 +221,9 @@ export default async function decorate(block) {
     brandLink.closest('.button-container').className = '';
 
     if (i === 0) {
-      brandLink.classList.add('nav-brand__primary-logo');
+      brandLink.classList.add('nav-top-bar__primary-logo');
     } else if (i === 1) {
-      brandLink.classList.add('nav-brand__secondary-logo');
+      brandLink.classList.add('nav-top-bar__secondary-logo');
     }
   });
 
@@ -247,7 +252,7 @@ export default async function decorate(block) {
         if (nested) {
           item.classList.add('nav-nested');
         } else {
-          item.classList.add('nav-root');
+          item.classList.add('nav-root-item');
         }
 
         if (submenu) {
@@ -280,16 +285,28 @@ export default async function decorate(block) {
   const navSecondaryMenu = nav.querySelector('.nav-secondary-menu');
   const closeButton = buildClose(nav, navSections, placeholders);
   navMenu.append(closeButton, navSections, navSecondaryMenu);
-  nav.prepend(navMenu);
 
   // Search for mobile
-  const search = document.createElement('div');
-  search.classList.add('nav-search');
-  search.innerHTML = `<button type="button">
+  const navSearch = nav.querySelector('.nav-search');
+  const searchTrigger = document.createElement('div');
+  searchTrigger.classList.add('nav-search-trigger');
+  searchTrigger.innerHTML = `<button type="button">
       <span class="icon icon-search-white"></span>
     </button>`;
-  decorateIcons(search);
-  nav.append(search);
+  decorateIcons(searchTrigger);
+  searchTrigger.addEventListener('click', () => {
+    if (navSearch.getAttribute('aria-expanded') === 'true') {
+      closeSearch(navSearch);
+    } else {
+      navSearch.classList.add('expanded');
+      navSearch.setAttribute('aria-expanded', 'true');
+      document.body.style.overflowY = 'hidden';
+      toggleMenu(nav, navSections, false);
+    }
+  });
+  isDesktop.addEventListener('change', () => {
+    closeSearch(navSearch);
+  });
 
   const sideBar = document.createElement('div');
   sideBar.classList.add('nav-sidebar');
@@ -305,14 +322,23 @@ export default async function decorate(block) {
   sidebarLogoLink.href = '/';
   sidebarLogoLink.append(sidebarLogo);
   sideBar.prepend(sidebarLogoLink);
-  nav.prepend(sideBar);
 
   const navPanelOverlay = document.createElement('div');
   navPanelOverlay.classList.add('nav-panel-overlay');
   navPanelOverlay.addEventListener('click', () => {
     toggleMenu(nav, navSections, false);
   });
+
+  const navTop = document.createElement('div');
+  navTop.classList.add('nav-top-bar');
+  navTop.append(navBrand.querySelector('.nav-top-bar__primary-logo'), nav.querySelector('.nav-search'), navBrand.querySelector('.nav-top-bar__secondary-logo'));
+  navBrand.remove();
+
+  nav.prepend(navMenu);
+  nav.prepend(sideBar);
+  nav.append(navTop);
   nav.append(navPanelOverlay);
+  nav.append(searchTrigger);
 
   const navWrapper = document.createElement('div');
   navWrapper.className = 'nav-wrapper';

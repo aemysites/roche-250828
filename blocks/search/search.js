@@ -1,7 +1,7 @@
 import {
   createOptimizedPicture,
   decorateIcons,
-  fetchPlaceholders,
+  fetchPlaceholders, toCamelCase,
 } from '../../scripts/aem.js';
 
 const searchParams = new URLSearchParams(window.location.search);
@@ -222,11 +222,16 @@ function searchInput(block, config) {
 
   const searchPlaceholder = config.placeholders.searchPlaceholder || 'Search...';
   input.placeholder = searchPlaceholder;
+  input.type = 'text';
+  input.id = 'search-input';
+  input.formmethod = 'get';
+  input.name = 's';
+  input.autocomplete = 'off';
   input.setAttribute('aria-label', searchPlaceholder);
 
-  input.addEventListener('input', (e) => {
-    handleSearch(e, block, config);
-  });
+  // input.addEventListener('input', (e) => {
+  //   handleSearch(e, block, config);
+  // });
 
   input.addEventListener('keyup', (e) => { if (e.code === 'Escape') { clearSearch(block); } });
 
@@ -235,35 +240,99 @@ function searchInput(block, config) {
 
 function searchIcon() {
   const icon = document.createElement('span');
-  icon.classList.add('icon', 'icon-search');
+  icon.classList.add('icon', 'icon-search', 'search__button__icon');
   return icon;
+}
+
+function searchIconButton() {
+  const button = document.createElement('button');
+  button.classList.add('search__button');
+  button.type = 'submit';
+  button.append(searchIcon());
+  return button;
 }
 
 function searchBox(block, config) {
   const box = document.createElement('div');
   box.classList.add('search-box');
   box.append(
-    searchIcon(),
     searchInput(block, config),
+    searchIconButton(),
   );
 
   return box;
 }
 
+function searchSuggestionsTags(tags) {
+  return Object.values(tags).map((tag) => {
+    const link = document.createElement('a');
+    link.classList.add('search__suggestions__tag');
+    link.textContent = tag.name;
+    link.href = tag.url;
+    return link;
+  });
+}
+
+function searchSuggestionsContainer(block, config) {
+  const container = document.createElement('div');
+  container.classList.add('search__suggestions');
+  container.append(...searchSuggestionsTags(config.tags));
+
+  return container;
+}
+
+/**
+ * Gets tags object.
+ * @param {string} [prefix] Location of tags
+ * @returns {object} Window tags object
+ */
+// eslint-disable-next-line import/prefer-default-export
+function fetchTags(prefix = 'default') {
+  window.tags = window.tags || {};
+  if (!window.tags[prefix]) {
+    window.tags[prefix] = new Promise((resolve) => {
+      fetch(`${prefix === 'default' ? '' : prefix}/tags.json`)
+        .then((resp) => {
+          if (resp.ok) {
+            return resp.json();
+          }
+          return {};
+        })
+        .then((json) => {
+          const tags = {};
+          json.data
+            .forEach((tag) => {
+              tags[toCamelCase(tag.Name)] = {
+                url: tag.URL,
+                name: tag.Name,
+              };
+            });
+          window.tags[prefix] = tags;
+          resolve(window.tags[prefix]);
+        })
+        .catch(() => {
+          // error loading tags
+          window.tags[prefix] = {};
+          resolve(window.tags[prefix]);
+        });
+    });
+  }
+  return window.tags[`${prefix}`];
+}
+
 export default async function decorate(block) {
   const placeholders = await fetchPlaceholders();
-  const source = block.querySelector('a[href]')?.href || `${window.hlx.codeBasePath}/query-index.json`;
+  const tags = await fetchTags();
   block.innerHTML = '';
-  block.append(
-    searchBox(block, { source, placeholders }),
-    searchResultsContainer(block),
+  const form = document.createElement('form');
+  form.role = 'search';
+  form.action = 'https://www.lumieresurlasep.fr/'; // TODO: get from project config
+  form.append(
+    searchBox(block, { tags, placeholders }),
+    searchSuggestionsContainer(block, { tags, placeholders }),
+    // searchResultsContainer(block),
   );
-
-  if (searchParams.get('q')) {
-    const input = block.querySelector('input');
-    input.value = searchParams.get('q');
-    input.dispatchEvent(new Event('input'));
-  }
+  block.append(form);
 
   decorateIcons(block);
 }
