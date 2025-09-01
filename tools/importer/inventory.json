@@ -238,7 +238,6 @@
     {
       "name": "unknown",
       "cluster": 9,
-      "key": "unknown9",
       "instances": [
         {
           "url": "https://www.lumieresurlasep.fr/",
