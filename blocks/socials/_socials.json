@@ -21,11 +21,24 @@
     "id": "socials",
     "fields": [
       {
+        "component": "text",
+        "valueType": "string",
+        "name": "label",
+        "value": "",
+        "label": "Socials Label"
+      },
+      {
         "component": "richtext",
         "valueType": "string",
         "name": "link-list",
         "value": "",
         "label": "Socials Link List"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "classes",
+        "label": "Style"
       }
     ]
 

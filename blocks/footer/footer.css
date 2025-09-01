@@ -8,14 +8,14 @@ footer {
 }
 
 footer .section:first-child {
+    align-items: center;
     background-color: var(--secondary-color);
-    padding: 60px 0;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 60px;
+    gap: 35px;
+    padding: 40px 0 25px;
 
-    img {
+    .default-content-wrapper img {
         height: auto;
         width: 80px;
     }
@@ -38,7 +38,10 @@ footer .section:nth-child(2) {
 
 @media screen and (width >= 1025px) {
     footer .section:first-child {
-        img {
+        gap: 60px;
+        padding: 60px 0;
+
+        .default-content-wrapper img {
             width: 140px;
         }
     }
