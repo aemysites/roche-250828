@@ -11,7 +11,7 @@
  * governing permissions and limitations under the License.
  */
 
-import heroParser from './parsers/hero.js';
+import { heroParser } from './parsers/hero.js';
 
 /**
  * A map of custom parser names to imported parser functions.

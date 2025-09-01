@@ -1,4 +1,4 @@
-function heroParser(element, document) {
+export function heroParser(element, document) {
   let variant = 'default';
   if (element.classList.contains('header-home')) variant = 'home';
   if (element.classList.contains('article-header')) variant = 'article';
