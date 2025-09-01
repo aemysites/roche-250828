@@ -19,7 +19,7 @@
       ]
     },
     {
-      "name": "'Grid Portfolio'",
+      "name": "'Dashboard Overview'",
       "cluster": 2,
       "pages": [
         {
@@ -29,7 +29,7 @@
       ]
     },
     {
-      "name": "'Portfolio Grid'",
+      "name": "'Portfolio Showcase'",
       "cluster": 3,
       "pages": [
         {
