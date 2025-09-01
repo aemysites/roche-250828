@@ -1,45 +1,56 @@
-
+/* stylelint-disable max-line-length */
 @font-face {
-  font-family: Roboto;      
-  src: url('../fonts/roboto-400-normal.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-  unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    font-family: minion;
+    src: url("../fonts/minion-regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal
 }
 
 @font-face {
-  font-family: Roboto;      
-  src: url('../fonts/roboto-500-normal.woff2') format('woff2');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-  unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    font-family: minion;
+    src: url("../fonts/minion-italic.woff2") format("woff2");
+    font-weight: 400;
+    font-style: italic
 }
 
 @font-face {
-  font-family: Imago;      
-  src: url('../fonts/imago-400-normal.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-  unicode-range: U+0-10FFFF;
+    font-family: minion;
+    src: url("../fonts/minion-bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal
 }
 
 @font-face {
-  font-family: Minion;      
-  src: url('../fonts/minion-700-italic.woff2') format('woff2');
-  font-weight: 700;
-  font-style: italic;
-  font-display: swap;
-  unicode-range: U+0-10FFFF;
+    font-family: minion;
+    src: url("../fonts/minion-bold-italic.woff2") format("woff2");
+    font-weight: 700;
+    font-style: italic
 }
 
 @font-face {
-  font-family: Imago;      
-  src: url('../fonts/imago-500-normal.woff2') format('woff2');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-  unicode-range: U+0-10FFFF;
+    font-family: imago;
+    src: url("../fonts/imago-pro-book.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: imago;
+    src: url("../fonts/imago-pro-book-ita.woff2") format("woff2");
+    font-weight: 400;
+    font-style: italic
+}
+
+@font-face {
+    font-family: imago;
+    src: url("../fonts/imago-pro-med.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal
+}
+
+@font-face {
+    font-family: imago;
+    src: url("../fonts/imago-pro-med-ita.woff2") format("woff2");
+    font-weight: 500;
+    font-style: italic
 }
