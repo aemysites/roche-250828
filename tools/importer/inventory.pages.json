@@ -1,0 +1,42 @@
+{
+  "templates": [
+    {
+      "name": "\"Service Listing\"",
+      "cluster": 1,
+      "pages": [
+        {
+          "url": "https://www.lumieresurlasep.fr/temoignages/aidants-au-coeur-de-la-relation-mere-fille/",
+          "uuid": "703b00f9c71a4f9640ea0e076a19fe0ffe909816"
+        },
+        {
+          "url": "https://www.lumieresurlasep.fr/temoignages/accepter-la-sep-de-mon-enfant/",
+          "uuid": "f2b061ec03a8c8f695962a033ca1ecaa9a79b365"
+        },
+        {
+          "url": "https://www.lumieresurlasep.fr/temoignages/une-sep-un-cancer-je-ne-veux-pas-que-la-maladie-soit-la-star-de-ma-vie/",
+          "uuid": "a6b2be4493caf3610232d6bc2f7a90de489a8838"
+        }
+      ]
+    },
+    {
+      "name": "'Grid Portfolio'",
+      "cluster": 2,
+      "pages": [
+        {
+          "url": "https://www.lumieresurlasep.fr/",
+          "uuid": "48d47c800d1cff4cd7b348053c0d76ca3d3389e2"
+        }
+      ]
+    },
+    {
+      "name": "'Portfolio Grid'",
+      "cluster": 3,
+      "pages": [
+        {
+          "url": "https://www.lumieresurlasep.fr/category/vivre-avec-la-sep/accepter-le-diagnostic/",
+          "uuid": "c902c6c3a9bfa620dc3204dd32f2849cc030a841"
+        }
+      ]
+    }
+  ]
+}
