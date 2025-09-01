@@ -11,23 +11,6 @@
  * governing permissions and limitations under the License.
  */
 
-export function heroParser(element, document) {
-  let variant = 'default';
-  if (element.classList.contains('header-home')) variant = 'home';
-  if (element.classList.contains('article-header')) variant = 'article';
-  if (element.classList.contains('header-page')) variant = 'page';
-
-  const headline = element.querySelector('h1')?.textContent.trim() || '';
-  const label = element.querySelector('.label-hp')?.textContent.trim() || '';
-  const p = element.querySelector('p')?.textContent.trim() || '';
-  const img = element.querySelector('img')?.getAttribute('src') || '';
-  const graphic = element.querySelector('.graphic-line')?.innerHTML || '';
-
-  return [
-    [`Hero (${variant})`,  headline, label, p, img, graphic]
-  ];
-}
-
 /**
  * A map of custom parser names to imported parser functions.
  *
@@ -36,9 +19,7 @@ export function heroParser(element, document) {
  *   myParser: customParser1,
  * }
  */
-export const customParsers = {
-  heroVariant: heroParser,
-};
+export const customParsers = {};
 
 /**
  * An array of custom page elements to parse.
@@ -52,9 +33,9 @@ export const customParsers = {
  * ]
  */
 export const customElements = [
-  { name: 'heroVariant', element: '.header-home' },
-  { name: 'heroVariant', element: '.article-header' },
-  { name: 'heroVariant', element: '.header-page' },
+  { name: 'hero', element: '.header-home' },
+  { name: 'hero', element: '.article-header' },
+  { name: 'hero', element: '.header-page' },
 ];
 
 /**

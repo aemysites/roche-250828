@@ -12,6 +12,7 @@
 /* global WebImporter */
 /* eslint-disable no-console */
 
+import heroParser from './parsers/hero.js';
 import metadataParser from './parsers/metadata.js';
 import cleanupTransformer from './transformers/cleanup.js';
 import imageTransformer from './transformers/images.js';
@@ -27,7 +28,7 @@ import {
 
 const parsers = {
   metadata: metadataParser,
-
+  hero: heroParser,
   ...customParsers,
 };
 
@@ -124,7 +125,7 @@ function transformPage(main, { inventory, ...source }) {
     // sort elements by order in the page
     .sort((a, b) => (a.uuid ? parseInt(a.uuid.split('-')[1], 10) - parseInt(b.uuid.split('-')[1], 10) : 999))
     // filter out fragment elements
-    .filter((item) => !fragmentElements.includes(item.element))
+    // .filter((item) => !fragmentElements.includes(item.element))
     .forEach((item, idx, arr) => {
       const { element = main, ...pageBlock } = item;
       const parserName = WebImporter.Import.getParserName(pageBlock);
