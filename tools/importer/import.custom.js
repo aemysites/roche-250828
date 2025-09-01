@@ -11,6 +11,8 @@
  * governing permissions and limitations under the License.
  */
 
+import heroParser from './parsers/hero.js';
+
 /**
  * A map of custom parser names to imported parser functions.
  *
@@ -19,7 +21,9 @@
  *   myParser: customParser1,
  * }
  */
-export const customParsers = {};
+export const customParsers = {
+  heroVariant: heroParser,
+};
 
 /**
  * An array of custom page elements to parse.
@@ -32,7 +36,11 @@ export const customParsers = {};
  *   { name: 'myParser', element: 'selector' },
  * ]
  */
-export const customElements = [];
+export const customElements = [
+  { name: 'heroVariant', element: '.header-home' },
+  { name: 'heroVariant', element: '.article-header' },
+  { name: 'heroVariant', element: '.header-page' },
+];
 
 /**
  * Custom transformers
