@@ -374,19 +374,36 @@
 }
 
 .nav-sidebar__logo {
-    background-color: var(--secondary-color);
     display: none;
-    padding: 16px 10px;
-
-    &.show {
-        display: block;
-    }
 }
 
 @media screen and (width >= 1025px) {
     .nav-sidebar {
         background-color: var(--primary-color);
         width: 72px;
+    }
+
+    .nav-sidebar__logo {
+        background-color: var(--secondary-color);
+        display: flex;
+        padding: 16px 10px;
+        transform: translateY(-70px);
+        will-change: transform;
+        transition: transform .5s ease;
+
+        &.show {
+            transform: none;
+
+            + .nav-hamburger {
+                transform: none;
+            }
+        }
+    }
+
+    .nav-hamburger {
+        transform: translateY(-70px);
+        will-change: transform;
+        transition: transform .5s ease;
     }
 }
 

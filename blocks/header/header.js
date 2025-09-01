@@ -340,6 +340,17 @@ export default async function decorate(block) {
   nav.append(navPanelOverlay);
   nav.append(searchTrigger);
 
+  const intersectionObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) {
+        sidebarLogoLink.classList.add('show');
+      } else {
+        sidebarLogoLink.classList.remove('show');
+      }
+    });
+  });
+  intersectionObserver.observe(navTop);
+
   const navWrapper = document.createElement('div');
   navWrapper.className = 'nav-wrapper';
   navWrapper.append(topContainer, nav, bottomContainer);
