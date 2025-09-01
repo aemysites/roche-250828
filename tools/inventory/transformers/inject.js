@@ -7,5 +7,7 @@
 
   document.querySelectorAll('.header-home, .article-header, .header-page').forEach(el => {
     el.setAttribute('data-block-type', 'hero');
+    el.classList.add('xc-force-hero');
+    el.style.border = '5px solid red';
   });
 })();
