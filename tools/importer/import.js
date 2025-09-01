@@ -12,7 +12,6 @@
 /* global WebImporter */
 /* eslint-disable no-console */
 
-import headerParser from './parsers/header.js';
 import metadataParser from './parsers/metadata.js';
 import cleanupTransformer from './transformers/cleanup.js';
 import imageTransformer from './transformers/images.js';
