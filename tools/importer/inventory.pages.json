@@ -1,7 +1,7 @@
 {
   "templates": [
     {
-      "name": "\"News Listing\"",
+      "name": "'Dashboard Overview'",
       "cluster": 1,
       "pages": [
         {
@@ -19,7 +19,7 @@
       ]
     },
     {
-      "name": "Gallery Grid Template",
+      "name": "Gallery Grid Page",
       "cluster": 2,
       "pages": [
         {
@@ -29,7 +29,7 @@
       ]
     },
     {
-      "name": "Gallery Overview Page",
+      "name": "'Portfolio Grid'",
       "cluster": 3,
       "pages": [
         {
