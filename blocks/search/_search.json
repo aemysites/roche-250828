@@ -17,36 +17,6 @@
       }
     }
   ],
-  "models": [
-    {
-      "id": "search",
-      "fields": [
-        {
-          "component": "text",
-          "valueType": "string",
-          "name": "index",
-          "label": "Index"
-        },
-        {
-          "component": "multiselect",
-          "name": "classes",
-          "value": "",
-          "label": "Options",
-          "valueType": "string",
-          "options": [
-            {
-              "name": "Search Type",
-              "children": [
-                {
-                  "name": "Minimal",
-                  "value": "minimal"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    }
-  ],
+  "models": [],
   "filters": []
 }
