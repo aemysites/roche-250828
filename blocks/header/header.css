@@ -343,7 +343,7 @@
     max-width: 520px;
     padding: 50px 25px 25px;
     pointer-events: none;
-    position: absolute;
+    position: fixed;
     transform: translate(-100%);
     transition: transform .4s ease-in-out;
     width: 100%;

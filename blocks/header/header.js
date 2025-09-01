@@ -109,13 +109,13 @@ function closeSearch(navSearch) {
 function toggleMenu(nav, navSections, forceExpanded = null) {
   const expanded = forceExpanded !== null ? !forceExpanded : nav.getAttribute('aria-expanded') === 'true';
   const button = nav.querySelector('.nav-hamburger button');
-  document.body.style.overflowY = (expanded || isDesktop.matches) ? '' : 'hidden';
   nav.setAttribute('aria-expanded', expanded ? 'false' : 'true');
   if (expanded) {
     toggleAllNavSections(navSections, 'false');
   } else {
     closeSearch(nav.querySelector('.nav-search'));
   }
+  document.body.style.overflowY = expanded ? '' : 'hidden';
   button.setAttribute('aria-label', expanded ? 'Open navigation' : 'Close navigation');
   // enable nav dropdown keyboard accessibility
   const navDrops = navSections.querySelectorAll('.nav-drop > p .nav-link');
