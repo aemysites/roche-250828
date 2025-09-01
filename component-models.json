@@ -396,6 +396,18 @@
     ]
   },
   {
+    "id": "socials",
+    "fields": [
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "link-list",
+        "value": "",
+        "label": "Socials Link List"
+      }
+    ]
+  },
+  {
     "id": "table",
     "fields": [
       {
