@@ -1,0 +1,387 @@
+{
+  "fragments": [
+    {
+      "name": "nav",
+      "path": "/nav",
+      "totalBoxes": 1,
+      "instances": [
+        {
+          "url": "https://www.lumieresurlasep.fr/",
+          "urlHash": "48d47c800d1cff4cd7b348053c0d76ca3d3389e2",
+          "uuid": "48d47c80-00-0e656e90ffa9b526f8ce51ba23e08542406d6fcc",
+          "xpath": "/html[1]/body[1]/main[1]/div[1]"
+        },
+        {
+          "url": "https://www.lumieresurlasep.fr/temoignages/aidants-au-coeur-de-la-relation-mere-fille/",
+          "urlHash": "703b00f9c71a4f9640ea0e076a19fe0ffe909816",
+          "uuid": "703b00f9-00-3ab9b21ef6cb3a018359b9f0daf1c63ecf73c7c1",
+          "xpath": "/html[1]/body[1]/main[1]/div[2]"
+        },
+        {
+          "url": "https://www.lumieresurlasep.fr/temoignages/une-sep-un-cancer-je-ne-veux-pas-que-la-maladie-soit-la-star-de-ma-vie/",
+          "urlHash": "a6b2be4493caf3610232d6bc2f7a90de489a8838",
+          "uuid": "a6b2be44-00-3ab9b21ef6cb3a018359b9f0daf1c63ecf73c7c1",
+          "xpath": "/html[1]/body[1]/main[1]/div[2]"
+        },
+        {
+          "url": "https://www.lumieresurlasep.fr/category/vivre-avec-la-sep/accepter-le-diagnostic/",
+          "urlHash": "c902c6c3a9bfa620dc3204dd32f2849cc030a841",
+          "uuid": "c902c6c3-00-3ab9b21ef6cb3a018359b9f0daf1c63ecf73c7c1",
+          "xpath": "/html[1]/body[1]/main[1]/div[2]"
+        },
+        {
+          "url": "https://www.lumieresurlasep.fr/temoignages/accepter-la-sep-de-mon-enfant/",
+          "urlHash": "f2b061ec03a8c8f695962a033ca1ecaa9a79b365",
+          "uuid": "f2b061ec-00-3ab9b21ef6cb3a018359b9f0daf1c63ecf73c7c1",
+          "xpath": "/html[1]/body[1]/main[1]/div[2]"
+        }
+      ],
+      "styles": {
+        "height": 2663
+      }
+    },
+    {
+      "name": "footer",
+      "path": "/footer",
+      "totalBoxes": 1,
+      "instances": [
+        {
+          "url": "https://www.lumieresurlasep.fr/",
+          "urlHash": "48d47c800d1cff4cd7b348053c0d76ca3d3389e2",
+          "uuid": "48d47c80-05-34b942e655e00cd411588c932c71fceff9ee4b9b",
+          "xpath": "/html[1]/body[1]/main[1]/div[3]/div[1]/div[1]"
+        },
+        {
+          "url": "https://www.lumieresurlasep.fr/temoignages/aidants-au-coeur-de-la-relation-mere-fille/",
+          "urlHash": "703b00f9c71a4f9640ea0e076a19fe0ffe909816",
+          "uuid": "703b00f9-04-347b3681ebc7bea9aef0a6e5428c92801a94d802",
+          "xpath": "/html[1]/body[1]/main[1]/div[4]/div[1]/div[2]"
+        },
+        {
+          "url": "https://www.lumieresurlasep.fr/temoignages/une-sep-un-cancer-je-ne-veux-pas-que-la-maladie-soit-la-star-de-ma-vie/",
+          "urlHash": "a6b2be4493caf3610232d6bc2f7a90de489a8838",
+          "uuid": "a6b2be44-04-347b3681ebc7bea9aef0a6e5428c92801a94d802",
+          "xpath": "/html[1]/body[1]/main[1]/div[4]/div[1]/div[2]"
+        },
+        {
+          "url": "https://www.lumieresurlasep.fr/category/vivre-avec-la-sep/accepter-le-diagnostic/",
+          "urlHash": "c902c6c3a9bfa620dc3204dd32f2849cc030a841",
+          "uuid": "c902c6c3-06-d70c6e6ca8d70ee1f6c77e1030748587e67c4882",
+          "xpath": "/html[1]/body[1]/main[1]/div[5]"
+        },
+        {
+          "url": "https://www.lumieresurlasep.fr/temoignages/accepter-la-sep-de-mon-enfant/",
+          "urlHash": "f2b061ec03a8c8f695962a033ca1ecaa9a79b365",
+          "uuid": "f2b061ec-04-347b3681ebc7bea9aef0a6e5428c92801a94d802",
+          "xpath": "/html[1]/body[1]/main[1]/div[4]/div[1]/div[2]"
+        }
+      ],
+      "styles": {
+        "background": "rgb(251, 248, 241) none repeat scroll 0% 0% / auto padding-box border-box"
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "name": "header",
+      "cluster": 1,
+      "source": "Header",
+      "target": "Header (header1)",
+      "key": "header1",
+      "instances": [
+        {
+          "url": "https://www.lumieresurlasep.fr/temoignages/une-sep-un-cancer-je-ne-veux-pas-que-la-maladie-soit-la-star-de-ma-vie/",
+          "urlHash": "a6b2be4493caf3610232d6bc2f7a90de489a8838",
+          "uuid": "a6b2be44-00-3ab9b21ef6cb3a018359b9f0daf1c63ecf73c7c1",
+          "xpath": "/html[1]/body[1]/main[1]/div[2]"
+        },
+        {
+          "url": "https://www.lumieresurlasep.fr/temoignages/accepter-la-sep-de-mon-enfant/",
+          "urlHash": "f2b061ec03a8c8f695962a033ca1ecaa9a79b365",
+          "uuid": "f2b061ec-00-3ab9b21ef6cb3a018359b9f0daf1c63ecf73c7c1",
+          "xpath": "/html[1]/body[1]/main[1]/div[2]"
+        }
+      ]
+    },
+    {
+      "name": "Columns",
+      "cluster": 2,
+      "source": "Columns",
+      "target": "Columns (columns2)",
+      "key": "columns2",
+      "instances": [
+        {
+          "url": "https://www.lumieresurlasep.fr/",
+          "urlHash": "48d47c800d1cff4cd7b348053c0d76ca3d3389e2",
+          "uuid": "48d47c80-03-516bd61c849c9e46833f85a0f2c9b3ecf6eeafe8",
+          "xpath": "/html[1]/body[1]/main[1]/div[2]/div[2]"
+        },
+        {
+          "url": "https://www.lumieresurlasep.fr/category/vivre-avec-la-sep/accepter-le-diagnostic/",
+          "urlHash": "c902c6c3a9bfa620dc3204dd32f2849cc030a841",
+          "uuid": "c902c6c3-05-ac18c7f4ff0dda41caddc17273e87ac35c820487",
+          "xpath": "/html[1]/body[1]/main[1]/div[4]"
+        }
+      ]
+    },
+    {
+      "name": "Cards",
+      "cluster": 3,
+      "key": "cards3",
+      "instances": [
+        {
+          "url": "https://www.lumieresurlasep.fr/temoignages/aidants-au-coeur-de-la-relation-mere-fille/",
+          "urlHash": "703b00f9c71a4f9640ea0e076a19fe0ffe909816",
+          "uuid": "703b00f9-04-347b3681ebc7bea9aef0a6e5428c92801a94d802",
+          "xpath": "/html[1]/body[1]/main[1]/div[4]/div[1]/div[2]"
+        },
+        {
+          "url": "https://www.lumieresurlasep.fr/temoignages/une-sep-un-cancer-je-ne-veux-pas-que-la-maladie-soit-la-star-de-ma-vie/",
+          "urlHash": "a6b2be4493caf3610232d6bc2f7a90de489a8838",
+          "uuid": "a6b2be44-04-347b3681ebc7bea9aef0a6e5428c92801a94d802",
+          "xpath": "/html[1]/body[1]/main[1]/div[4]/div[1]/div[2]"
+        },
+        {
+          "url": "https://www.lumieresurlasep.fr/temoignages/accepter-la-sep-de-mon-enfant/",
+          "urlHash": "f2b061ec03a8c8f695962a033ca1ecaa9a79b365",
+          "uuid": "f2b061ec-04-347b3681ebc7bea9aef0a6e5428c92801a94d802",
+          "xpath": "/html[1]/body[1]/main[1]/div[4]/div[1]/div[2]"
+        }
+      ]
+    },
+    {
+      "name": "Accordion",
+      "cluster": 4,
+      "key": "accordion4",
+      "instances": [
+        {
+          "url": "https://www.lumieresurlasep.fr/category/vivre-avec-la-sep/accepter-le-diagnostic/",
+          "urlHash": "c902c6c3a9bfa620dc3204dd32f2849cc030a841",
+          "uuid": "c902c6c3-01-58ba820679040862b94ffd9804d9204b6c03e429",
+          "xpath": "/html[1]/body[1]/main[1]/div[3]/div[1]"
+        }
+      ]
+    },
+    {
+      "name": "Cards",
+      "cluster": 5,
+      "key": "cards5",
+      "instances": [
+        {
+          "url": "https://www.lumieresurlasep.fr/category/vivre-avec-la-sep/accepter-le-diagnostic/",
+          "urlHash": "c902c6c3a9bfa620dc3204dd32f2849cc030a841",
+          "uuid": "c902c6c3-06-d70c6e6ca8d70ee1f6c77e1030748587e67c4882",
+          "xpath": "/html[1]/body[1]/main[1]/div[5]",
+          "section": "section-1"
+        }
+      ]
+    },
+    {
+      "name": "header",
+      "cluster": 6,
+      "source": "Header",
+      "target": "Header (header6)",
+      "key": "header6",
+      "instances": [
+        {
+          "url": "https://www.lumieresurlasep.fr/temoignages/aidants-au-coeur-de-la-relation-mere-fille/",
+          "urlHash": "703b00f9c71a4f9640ea0e076a19fe0ffe909816",
+          "uuid": "703b00f9-00-3ab9b21ef6cb3a018359b9f0daf1c63ecf73c7c1",
+          "xpath": "/html[1]/body[1]/main[1]/div[2]"
+        }
+      ]
+    },
+    {
+      "name": "Cards",
+      "cluster": 7,
+      "key": "cards7",
+      "instances": [
+        {
+          "url": "https://www.lumieresurlasep.fr/temoignages/aidants-au-coeur-de-la-relation-mere-fille/",
+          "urlHash": "703b00f9c71a4f9640ea0e076a19fe0ffe909816",
+          "uuid": "703b00f9-02-ca354720badd352be2382e0143a2179bee9468cc",
+          "xpath": "/html[1]/body[1]/main[1]/div[3]/div[1]/div[2]",
+          "section": "section-2"
+        },
+        {
+          "url": "https://www.lumieresurlasep.fr/temoignages/une-sep-un-cancer-je-ne-veux-pas-que-la-maladie-soit-la-star-de-ma-vie/",
+          "urlHash": "a6b2be4493caf3610232d6bc2f7a90de489a8838",
+          "uuid": "a6b2be44-02-ca354720badd352be2382e0143a2179bee9468cc",
+          "xpath": "/html[1]/body[1]/main[1]/div[3]/div[1]/div[2]",
+          "section": "section-2"
+        },
+        {
+          "url": "https://www.lumieresurlasep.fr/temoignages/accepter-la-sep-de-mon-enfant/",
+          "urlHash": "f2b061ec03a8c8f695962a033ca1ecaa9a79b365",
+          "uuid": "f2b061ec-02-ca354720badd352be2382e0143a2179bee9468cc",
+          "xpath": "/html[1]/body[1]/main[1]/div[3]/div[1]/div[2]",
+          "section": "section-2"
+        }
+      ]
+    },
+    {
+      "name": "Columns",
+      "cluster": 8,
+      "source": "Columns",
+      "target": "Columns (columns8)",
+      "key": "columns8",
+      "instances": [
+        {
+          "url": "https://www.lumieresurlasep.fr/",
+          "urlHash": "48d47c800d1cff4cd7b348053c0d76ca3d3389e2",
+          "uuid": "48d47c80-05-34b942e655e00cd411588c932c71fceff9ee4b9b",
+          "xpath": "/html[1]/body[1]/main[1]/div[3]/div[1]/div[1]",
+          "section": "section-1"
+        }
+      ]
+    },
+    {
+      "name": "unknown",
+      "cluster": 9,
+      "key": "unknown9",
+      "instances": [
+        {
+          "url": "https://www.lumieresurlasep.fr/",
+          "urlHash": "48d47c800d1cff4cd7b348053c0d76ca3d3389e2",
+          "uuid": "48d47c80-02-9f88d91b18294a35656032f821ce9b162fd35797",
+          "xpath": "/html[1]/body[1]/main[1]/div[2]/div[1]/div[2]"
+        }
+      ]
+    },
+    {
+      "name": "Tabs",
+      "cluster": 10,
+      "key": "tabs10",
+      "instances": [
+        {
+          "url": "https://www.lumieresurlasep.fr/category/vivre-avec-la-sep/accepter-le-diagnostic/",
+          "urlHash": "c902c6c3a9bfa620dc3204dd32f2849cc030a841",
+          "uuid": "c902c6c3-02-a5c1dbf93630b34dc3874dfd404f4755653ec260",
+          "xpath": "/html[1]/body[1]/main[1]/div[3]/div[2]/div[1]"
+        }
+      ]
+    },
+    {
+      "name": "header",
+      "cluster": 11,
+      "source": "Header",
+      "target": "Header (header11)",
+      "key": "header11",
+      "instances": [
+        {
+          "url": "https://www.lumieresurlasep.fr/",
+          "urlHash": "48d47c800d1cff4cd7b348053c0d76ca3d3389e2",
+          "uuid": "48d47c80-00-0e656e90ffa9b526f8ce51ba23e08542406d6fcc",
+          "xpath": "/html[1]/body[1]/main[1]/div[1]"
+        }
+      ]
+    },
+    {
+      "name": "Cards",
+      "cluster": 12,
+      "key": "cards12",
+      "instances": [
+        {
+          "url": "https://www.lumieresurlasep.fr/",
+          "urlHash": "48d47c800d1cff4cd7b348053c0d76ca3d3389e2",
+          "uuid": "48d47c80-01-9a3b427bbc870fd3cb61ecf2e1cbe7927b2035d2",
+          "xpath": "/html[1]/body[1]/main[1]/div[2]/div[1]/div[1]"
+        }
+      ]
+    },
+    {
+      "name": "Cards",
+      "cluster": 13,
+      "key": "cards13",
+      "instances": [
+        {
+          "url": "https://www.lumieresurlasep.fr/category/vivre-avec-la-sep/accepter-le-diagnostic/",
+          "urlHash": "c902c6c3a9bfa620dc3204dd32f2849cc030a841",
+          "uuid": "c902c6c3-03-0ee7ffd2e3220e845d4123eaff9e633558e5ce5d",
+          "xpath": "/html[1]/body[1]/main[1]/div[3]/div[2]/div[2]"
+        }
+      ]
+    },
+    {
+      "name": "header",
+      "cluster": 14,
+      "source": "Header",
+      "target": "Header (header14)",
+      "key": "header14",
+      "instances": [
+        {
+          "url": "https://www.lumieresurlasep.fr/category/vivre-avec-la-sep/accepter-le-diagnostic/",
+          "urlHash": "c902c6c3a9bfa620dc3204dd32f2849cc030a841",
+          "uuid": "c902c6c3-00-3ab9b21ef6cb3a018359b9f0daf1c63ecf73c7c1",
+          "xpath": "/html[1]/body[1]/main[1]/div[2]"
+        }
+      ]
+    }
+  ],
+  "outliers": [
+    {
+      "url": "https://www.lumieresurlasep.fr/",
+      "urlHash": "48d47c800d1cff4cd7b348053c0d76ca3d3389e2",
+      "uuid": "48d47c80-04-ee524a0490529b7ff78e569aa9f824107d6deae7",
+      "xpath": "/html[1]/body[1]/main[1]/div[3]/div[1]/h3[1]",
+      "section": "section-1"
+    },
+    {
+      "url": "https://www.lumieresurlasep.fr/temoignages/aidants-au-coeur-de-la-relation-mere-fille/",
+      "urlHash": "703b00f9c71a4f9640ea0e076a19fe0ffe909816",
+      "uuid": "703b00f9-01-34b942e655e00cd411588c932c71fceff9ee4b9b",
+      "xpath": "/html[1]/body[1]/main[1]/div[3]/div[1]/div[1]",
+      "section": "section-2"
+    },
+    {
+      "url": "https://www.lumieresurlasep.fr/temoignages/aidants-au-coeur-de-la-relation-mere-fille/",
+      "urlHash": "703b00f9c71a4f9640ea0e076a19fe0ffe909816",
+      "uuid": "703b00f9-03-b44850d78b9e5c971d52551807e0912d59d10d15",
+      "xpath": "/html[1]/body[1]/main[1]/div[4]/div[1]/div[1]"
+    },
+    {
+      "url": "https://www.lumieresurlasep.fr/temoignages/une-sep-un-cancer-je-ne-veux-pas-que-la-maladie-soit-la-star-de-ma-vie/",
+      "urlHash": "a6b2be4493caf3610232d6bc2f7a90de489a8838",
+      "uuid": "a6b2be44-01-34b942e655e00cd411588c932c71fceff9ee4b9b",
+      "xpath": "/html[1]/body[1]/main[1]/div[3]/div[1]/div[1]",
+      "section": "section-2"
+    },
+    {
+      "url": "https://www.lumieresurlasep.fr/temoignages/une-sep-un-cancer-je-ne-veux-pas-que-la-maladie-soit-la-star-de-ma-vie/",
+      "urlHash": "a6b2be4493caf3610232d6bc2f7a90de489a8838",
+      "uuid": "a6b2be44-03-b44850d78b9e5c971d52551807e0912d59d10d15",
+      "xpath": "/html[1]/body[1]/main[1]/div[4]/div[1]/div[1]"
+    },
+    {
+      "url": "https://www.lumieresurlasep.fr/category/vivre-avec-la-sep/accepter-le-diagnostic/",
+      "urlHash": "c902c6c3a9bfa620dc3204dd32f2849cc030a841",
+      "uuid": "c902c6c3-04-5e114f88257a5c8de95ed0d88056df1633600469",
+      "xpath": "/html[1]/body[1]/main[1]/div[3]/div[2]/p[1]"
+    },
+    {
+      "url": "https://www.lumieresurlasep.fr/temoignages/accepter-la-sep-de-mon-enfant/",
+      "urlHash": "f2b061ec03a8c8f695962a033ca1ecaa9a79b365",
+      "uuid": "f2b061ec-01-34b942e655e00cd411588c932c71fceff9ee4b9b",
+      "xpath": "/html[1]/body[1]/main[1]/div[3]/div[1]/div[1]",
+      "section": "section-2"
+    },
+    {
+      "url": "https://www.lumieresurlasep.fr/temoignages/accepter-la-sep-de-mon-enfant/",
+      "urlHash": "f2b061ec03a8c8f695962a033ca1ecaa9a79b365",
+      "uuid": "f2b061ec-03-b44850d78b9e5c971d52551807e0912d59d10d15",
+      "xpath": "/html[1]/body[1]/main[1]/div[4]/div[1]/div[1]"
+    }
+  ],
+  "sections": [
+    {
+      "name": "section-1",
+      "background": "rgb(251, 248, 241) none repeat scroll 0% 0% / auto padding-box border-box",
+      "count": 3
+    },
+    {
+      "name": "section-2",
+      "background": "rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box border-box",
+      "count": 6
+    }
+  ]
+}
