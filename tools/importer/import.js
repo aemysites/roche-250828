@@ -237,6 +237,11 @@ function transformFragment(main, { fragment, inventory, ...source }) {
 
 export default {
   onLoad: async (payload) => {
+    document.body.querySelector('header').remove();
+    document.body.querySelector('footer').remove();
+    document.body.querySelector('.widgetRocheSEP').remove();
+    document.body.querySelector('#onetrust-consent-sdk').remove();
+
     await handleOnLoad(payload);
   },
 
