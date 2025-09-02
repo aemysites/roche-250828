@@ -6,6 +6,8 @@ export default function parse(element, { document }) {
   // Find text container and collect relevant children
   const textContainer = element.querySelector('.text-container');
   const cellContents = [];
+  const h1Row = [];
+  const graphicLineRow = []
 
   if (textContainer) {
     // Find label (subheading)
@@ -13,17 +15,19 @@ export default function parse(element, { document }) {
     if (label) cellContents.push(label);
     // Find h1 (main headline)
     const h1 = textContainer.querySelector('h1');
-    if (h1) cellContents.push(h1);
+    if (h1) h1Row.push(h1);
     // Find graphic line (svg)
     const graphicLine = textContainer.querySelector('.graphic-line');
-    if (graphicLine) cellContents.push(graphicLine);
+    if (graphicLine) graphicLineRow.push(graphicLine);
   }
 
   // Table rows based on example structure
   const rows = [
     ['Hero'], // Table header: exactly matches example
     [img], // Image row
-    [cellContents] // Combined heading/subheading/graphic-line row
+    [cellContents],
+    [h1Row], // heading row
+    [graphicLineRow]
   ];
 
   // Create table using WebImporter helper
