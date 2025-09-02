@@ -196,6 +196,7 @@
             "component": "select",
             "name": "type",
             "label": "Type",
+            "valueType": "string",
             "options": [
               {
                 "name": "Tease",
@@ -214,23 +215,27 @@
           {
             "component": "image",
             "name": "image",
-            "label": "Image"
+            "label": "Image",
+            "valueType": "string"
           },
           {
             "component": "richtext",
             "name": "title",
-            "label": "Title"
+            "label": "Title",
+            "valueType": "string"
           },
           {
             "component": "aem-content",
             "name": "link",
             "label": "URL",
-            "description": "Destination URL for the article."
+            "description": "Destination URL for the article.",
+            "valueType": "string"
           },
           {
             "component": "select",
             "name": "postType",
             "label": "Post Type",
+            "valueType": "string",
             "options": [
               {
                 "name": "Post",
