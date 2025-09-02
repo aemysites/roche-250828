@@ -12,6 +12,7 @@
 /* global WebImporter */
 /* eslint-disable no-console */
 
+import articlesMasonry from './parsers/articlesMasonry.js';
 import heroParser from './parsers/hero.js';
 import headerParser from './parsers/header.js';
 import metadataParser from './parsers/metadata.js';
@@ -31,6 +32,7 @@ const parsers = {
   metadata: metadataParser,
   header: headerParser,
   hero: heroParser,
+  articlesMasonry: articlesMasonry,
   ...customParsers,
 };
 
