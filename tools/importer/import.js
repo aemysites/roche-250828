@@ -43,6 +43,8 @@ import {
   handleOnLoad,
   mergeInventory,
 } from './import.utils.js';
+import articlesMasonry from './parsers/articlesMasonry.js';
+import heroParser from './parsers/hero.js';
 
 const parsers = {
   metadata: metadataParser,
@@ -51,7 +53,7 @@ const parsers = {
   columns6: columns6Parser,
   hero10: hero10Parser,
   cards8: cards8Parser,
-  hero14: hero14Parser,
+  hero14: heroParser,
   tabs13: tabs13Parser,
   cards2: cards2Parser,
   columns20: columns20Parser,
@@ -65,6 +67,7 @@ const parsers = {
   columns12: columns12Parser,
   columns23: columns23Parser,
   columns17: columns17Parser,
+  articlesMasonry: articlesMasonry,
   ...customParsers,
 };
 

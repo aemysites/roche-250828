@@ -33,7 +33,6 @@ export const customParsers = {};
  * ]
  */
 export const customElements = [
-  { name: 'hero', element: '.header-home' },
   { name: 'hero', element: '.article-header' },
   { name: 'hero', element: '.header-page' },
 ];
@@ -45,11 +44,13 @@ export const customTransformers = {
   inject: (hookName, element, { document }) => {
     if (hookName === 'beforeTransform') {
       try {
-        document.querySelector('#onetrust-consent-sdk').remove();
-        document.querySelector('header').remove();
-        document.querySelector('footer').remove();
+        document.querySelector('#onetrust-consent-sdk')?.remove();
+        document.querySelector('header')?.remove();
+        document.querySelector('footer')?.remove();
+        document.querySelector('.yellow-bar')?.remove();
+        document.querySelector('.skip-link')?.remove();
         // the notification widget seen on the right side
-        document.querySelector('.widgetRocheSEP').remove();
+        document.querySelector('.widgetRocheSEP')?.remove();
       } catch (e) {
         console.warn('Failed to remove onetrust-consent-sdk', e);
       }

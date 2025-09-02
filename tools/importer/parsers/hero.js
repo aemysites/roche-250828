@@ -7,7 +7,7 @@ export default function heroParser(element) {
   const headline = element.querySelector('h1')?.textContent.trim() || '';
   const label = element.querySelector('.label-hp')?.textContent.trim() || '';
   const p = element.querySelector('p')?.textContent.trim() || '';
-  const img = element.querySelector('img')?.getAttribute('src') || '';
+  const img = element.querySelector('img') || '';
   const graphic = element.querySelector('.graphic-line')?.innerHTML || '';
 
   const cells = [
