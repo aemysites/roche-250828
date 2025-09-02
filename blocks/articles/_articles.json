@@ -9,7 +9,23 @@
             "resourceType": "core/franklin/components/block/v1/block",
             "template": {
               "name": "Articles",
-              "model": "articles"
+              "model": "articles",
+              "filter": "articles"
+            }
+          }
+        }
+      }
+    },
+    {
+      "title": "Articles Item",
+      "id": "articles-item",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block/item",
+            "template": {
+              "name": "Articles Item",
+              "model": "articles-item"
             }
           }
         }
@@ -17,6 +33,53 @@
     }
   ],
   "models": [
+    {
+      "id": "articles-item",
+      "fields": [
+        {
+          "component": "select",
+          "name": "type",
+          "label": "Type",
+          "valueType": "string",
+          "options": [
+            { "name": "Tease", "value": "tease" },
+            { "name": "Customization", "value": "customization" },
+            { "name": "Survey", "value": "survey" }
+          ]
+        },
+        {
+          "component": "image",
+          "name": "image",
+          "label": "Image",
+          "valueType": "string"
+        },
+        {
+          "component": "richtext",
+          "name": "title",
+          "label": "Title",
+          "valueType": "string"
+        },
+        {
+          "component": "aem-content",
+          "name": "link",
+          "label": "URL",
+          "description": "Destination URL for the article.",
+          "valueType": "string"
+        },
+        {
+          "component": "select",
+          "name": "postType",
+          "label": "Post Type",
+          "valueType": "string",
+          "options": [
+            { "name": "Post", "value": "post" },
+            { "name": "Testimony", "value": "testimony" },
+            { "name": "Advice", "value": "advice" },
+            { "name": "Instagram", "value": "instagram" }
+          ]
+        }
+      ]
+    },
     {
       "id": "articles",
       "fields": [
@@ -30,59 +93,14 @@
             { "name": "Load More", "value": "load-more" }
           ],
           "default": "masonry"
-        },
-        {
-          "component": "container",
-          "name": "items",
-          "label": "Items",
-          "multi": true,
-          "fields": [
-            {
-              "component": "select",
-              "name": "type",
-              "label": "Type",
-              "valueType": "string",
-              "options": [
-                { "name": "Tease", "value": "tease" },
-                { "name": "Customization", "value": "customization" },
-                { "name": "Survey", "value": "survey" }
-              ]
-            },
-            {
-              "component": "image",
-              "name": "image",
-              "label": "Image",
-              "valueType": "string"
-            },
-            {
-              "component": "richtext",
-              "name": "title",
-              "label": "Title",
-              "valueType": "string"
-            },
-            {
-              "component": "aem-content",
-              "name": "link",
-              "label": "URL",
-              "description": "Destination URL for the article.",
-              "valueType": "string"
-            },
-            {
-              "component": "select",
-              "name": "postType",
-              "label": "Post Type",
-              "valueType": "string",
-              "options": [
-                { "name": "Post", "value": "post" },
-                { "name": "Testimony", "value": "testimony" },
-                { "name": "Advice", "value": "advice" },
-                { "name": "Instagram", "value": "instagram" }
-              ]
-            }
-          ]
         }
       ]
     }
   ],
-  "filters": []
+  "filters": [{
+    "id": "articles",
+    "components": [
+      "articles-item"
+    ]
+  }]
 }

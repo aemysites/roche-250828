@@ -32,6 +32,12 @@
     ]
   },
   {
+    "id": "articles",
+    "components": [
+      "articles-item"
+    ]
+  },
+  {
     "id": "cards",
     "components": [
       "card"
