@@ -11,6 +11,7 @@ export default function heroParser(element, document) {
   const graphic = element.querySelector('.graphic-line')?.innerHTML || '';
 
   const cells = [
+    ["block", "classes", "headline", "label", "description", "image", "graphic"],
     ['Hero', variant, headline, label, p, img, graphic]
   ];
 

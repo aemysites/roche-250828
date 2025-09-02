@@ -64,8 +64,8 @@
         {
           "component": "richtext",
           "valueType": "string",
-          "name": "Description",
-          "label": "description"
+          "name": "description",
+          "label": "Description"
         },
         {
           "component": "reference",
