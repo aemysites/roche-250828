@@ -435,7 +435,7 @@
           "xpath": "/html[1]/body[1]/main[1]/div[2]/div[1]/div[1]"
         }
       ],
-      "target": "Cards (masonry)"
+      "target": "Articles (masonry)"
     },
     {
       "name": "Hero",
