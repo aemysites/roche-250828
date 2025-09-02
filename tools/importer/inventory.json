@@ -424,10 +424,9 @@
       ]
     },
     {
-      "name": "Articles",
+      "name": "Cards",
       "cluster": 18,
-      "key": "articlesMasonry",
-      "target": "Articles (masonry)",
+      "key": "cards18",
       "instances": [
         {
           "url": "https://www.lumieresurlasep.fr/",
