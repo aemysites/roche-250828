@@ -6,11 +6,12 @@ export default function heroParser(element) {
 
   const headline = element.querySelector('h1')?.textContent.trim() || '';
   const label = element.querySelector('.label-hp')?.textContent.trim() || '';
+  const p = element.querySelector('p')?.textContent.trim() || '';
   const img = element.querySelector('img')?.getAttribute('src') || '';
   const graphic = element.querySelector('.graphic-line')?.innerHTML || '';
 
   const cells = [
-    [`Hero (${variant})`], [headline], [label], [img], [graphic]
+    [`Hero (${variant})`], [headline], [label], [p], [img], [graphic]
   ];
 
   const block = WebImporter.DOMUtils.createTable(cells, document);

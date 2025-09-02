@@ -23,8 +23,20 @@
         {
           "component": "text",
           "valueType": "string",
-          "name": "classes",
-          "label": "Style"
+          "name": "headline",
+          "label": "Headline"
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "label",
+          "label": "Label"
+        },
+        {
+          "component": "richtext",
+          "valueType": "string",
+          "name": "Description",
+          "label": "description"
         },
         {
           "component": "reference",
@@ -34,17 +46,9 @@
           "multi": false
         },
         {
-          "component": "text",
-          "valueType": "string",
-          "name": "imageAlt",
-          "label": "Alt",
-          "value": ""
-        },
-        {
           "component": "richtext",
-          "name": "text",
-          "value": "",
-          "label": "Text",
+          "name": "graphic",
+          "label": "SVG Graphic",
           "valueType": "string"
         }
       ]
