@@ -1,4 +1,4 @@
-export default function heroParser(element) {
+export default function heroParser(element, document) {
   let variant = 'default';
   if (element.classList.contains('header-home')) variant = 'home';
   if (element.classList.contains('article-header')) variant = 'article';
@@ -11,7 +11,7 @@ export default function heroParser(element) {
   const graphic = element.querySelector('.graphic-line')?.innerHTML || '';
 
   const cells = [
-    [`Hero`], [variant], [headline], [label], [p], [img], [graphic]
+    ['Hero', variant, headline, label, p, img, graphic]
   ];
 
   const block = WebImporter.DOMUtils.createTable(cells, document);
