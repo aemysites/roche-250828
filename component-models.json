@@ -167,6 +167,113 @@
     ]
   },
   {
+    "id": "articles",
+    "fields": [
+      {
+        "component": "multiselect",
+        "valueType": "string",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Masonry",
+            "value": "masonry"
+          },
+          {
+            "name": "Load More",
+            "value": "load-more"
+          }
+        ],
+        "default": "masonry"
+      },
+      {
+        "component": "list",
+        "name": "items",
+        "label": "Articles",
+        "min": 1,
+        "fields": [
+          {
+            "component": "select",
+            "name": "type",
+            "label": "Type",
+            "options": [
+              {
+                "label": "Survey",
+                "value": "survey"
+              },
+              {
+                "label": "Customization",
+                "value": "customization"
+              },
+              {
+                "label": "Tease",
+                "value": "tease"
+              }
+            ],
+            "required": true
+          },
+          {
+            "component": "reference",
+            "valueType": "string",
+            "name": "image",
+            "label": "Image",
+            "multi": false
+          },
+          {
+            "component": "text",
+            "valueType": "string",
+            "name": "title",
+            "label": "Title"
+          },
+          {
+            "component": "text",
+            "valueType": "string",
+            "name": "titleType",
+            "label": "Title"
+          },
+          {
+            "component": "aem-content",
+            "name": "link",
+            "label": "Link (Tease only)"
+          },
+          {
+            "component": "text",
+            "name": "linkText",
+            "label": "Link Text"
+          },
+          {
+            "component": "text",
+            "name": "linkTitle",
+            "label": "Link Title"
+          },
+          {
+            "component": "select",
+            "name": "postType",
+            "label": "Post Type (Tease only)",
+            "options": [
+              {
+                "label": "Testimony",
+                "value": "testimony"
+              },
+              {
+                "label": "Post",
+                "value": "post"
+              },
+              {
+                "label": "Advice",
+                "value": "advice"
+              },
+              {
+                "label": "Instagram",
+                "value": "instagram"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "cards",
     "fields": [
       {

@@ -116,6 +116,27 @@
           }
         },
         {
+          "title": "Articles",
+          "id": "articles",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Articles",
+                  "model": "articles",
+                  "items": [
+                    {
+                      "titleType": "h2",
+                      "postType": "post"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        {
           "title": "Cards",
           "id": "cards",
           "plugins": {
