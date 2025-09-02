@@ -41,4 +41,18 @@ export const customElements = [
 /**
  * Custom transformers
  */
-export const customTransformers = {};
+export const customTransformers = {
+  inject: (hookName, element, { document }) => {
+    if (hookName === 'beforeTransform') {
+      try {
+        document.querySelector('#onetrust-consent-sdk').remove();
+        document.querySelector('header').remove();
+        document.querySelector('footer').remove();
+        // the notification widget seen on the right side
+        document.querySelector('.widgetRocheSEP').remove();
+      } catch (e) {
+        console.warn('Failed to remove onetrust-consent-sdk', e);
+      }
+    }
+  },
+};
