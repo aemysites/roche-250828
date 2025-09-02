@@ -187,10 +187,10 @@
         "default": "masonry"
       },
       {
-        "component": "list",
+        "component": "container",
         "name": "items",
-        "label": "Articles",
-        "min": 1,
+        "label": "Items",
+        "multi": true,
         "fields": [
           {
             "component": "select",
@@ -198,73 +198,54 @@
             "label": "Type",
             "options": [
               {
-                "label": "Survey",
-                "value": "survey"
+                "name": "Tease",
+                "value": "tease"
               },
               {
-                "label": "Customization",
+                "name": "Customization",
                 "value": "customization"
               },
               {
-                "label": "Tease",
-                "value": "tease"
+                "name": "Survey",
+                "value": "survey"
               }
-            ],
-            "required": true
+            ]
           },
           {
-            "component": "reference",
-            "valueType": "string",
+            "component": "image",
             "name": "image",
-            "label": "Image",
-            "multi": false
+            "label": "Image"
           },
           {
-            "component": "text",
-            "valueType": "string",
+            "component": "richtext",
             "name": "title",
-            "label": "Title"
-          },
-          {
-            "component": "text",
-            "valueType": "string",
-            "name": "titleType",
             "label": "Title"
           },
           {
             "component": "aem-content",
             "name": "link",
-            "label": "Link (Tease only)"
-          },
-          {
-            "component": "text",
-            "name": "linkText",
-            "label": "Link Text"
-          },
-          {
-            "component": "text",
-            "name": "linkTitle",
-            "label": "Link Title"
+            "label": "URL",
+            "description": "Destination URL for the article."
           },
           {
             "component": "select",
             "name": "postType",
-            "label": "Post Type (Tease only)",
+            "label": "Post Type",
             "options": [
               {
-                "label": "Testimony",
-                "value": "testimony"
-              },
-              {
-                "label": "Post",
+                "name": "Post",
                 "value": "post"
               },
               {
-                "label": "Advice",
+                "name": "Testimony",
+                "value": "testimony"
+              },
+              {
+                "name": "Advice",
                 "value": "advice"
               },
               {
-                "label": "Instagram",
+                "name": "Instagram",
                 "value": "instagram"
               }
             ]

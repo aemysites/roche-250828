@@ -20,10 +20,10 @@ export default function articlesMasonry(element) {
     const cells = [];
     cells.push([type]);
 
-    const img = gridItem.querySelector('.img-container img');
+    const img = gridItem.querySelector('.img-container img') || '';
     cells.push([img]);
 
-    const title = gridItem.querySelector('h2.title');
+    const title = gridItem.querySelector('h2.title') || '';
     cells.push([title]);
 
     if (type === 'tease') {
