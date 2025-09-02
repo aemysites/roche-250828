@@ -43,6 +43,7 @@
     margin-inline-start: var(--trigger-button-size-mobile);
     padding-inline: 15px;
     justify-content: center;
+    z-index: 1;
 
     a {
         flex-shrink: 0;
@@ -97,10 +98,10 @@
 @media screen and (width >= 1025px) {
     .nav-top-bar {
         align-items: start;
-        padding: 40px 38px 0;
+        padding: 40px 38px 0 calc(38px + var(--sidebar-width));
         width: 100%;
         gap: 0;
-        margin-inline-start: var(--sidebar-width);
+        margin-inline: auto;
     }
 
     .nav-top-bar__primary-logo img {

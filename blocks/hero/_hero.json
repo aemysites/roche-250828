@@ -9,7 +9,9 @@
             "resourceType": "core/franklin/components/block/v1/block",
             "template": {
               "name": "Hero",
-              "model": "hero"
+              "model": "hero",
+              "headlineType": "h1",
+              "labelType": "h5"
             }
           }
         }
@@ -21,16 +23,43 @@
       "id": "hero",
       "fields": [
         {
-          "component": "text",
+          "component": "select",
+          "valueType": "string",
+          "name": "variant",
+          "label": "Variant",
+          "options": [
+            { "label": "Home", "value": "home" },
+            { "label": "Article", "value": "article" },
+            { "label": "Page", "value": "page" }
+          ],
+          "required": true,
+          "default": "home"
+        },
+        {
+          "component": "heading",
           "valueType": "string",
           "name": "headline",
-          "label": "Headline"
+          "label": "Headline",
+          "headingLevel": 1
         },
         {
           "component": "text",
           "valueType": "string",
+          "name": "headlineType",
+          "hidden": true
+        },
+        {
+          "component": "heading",
+          "valueType": "string",
           "name": "label",
-          "label": "Label"
+          "label": "Label",
+          "headingLevel": 5
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "labelType",
+          "hidden": true
         },
         {
           "component": "richtext",
