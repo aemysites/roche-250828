@@ -191,22 +191,19 @@
       },
       {
         "component": "reference",
-        "valueType": "string",
         "name": "image",
         "label": "Image",
         "multi": false
       },
       {
-        "component": "heading",
+        "component": "text",
         "name": "title",
         "label": "Title",
-        "valueType": "string",
-        "headingLevel": 2
+        "valueType": "string"
       },
       {
         "component": "text",
         "name": "titleType",
-        "label": "Title Type",
         "valueType": "string",
         "hidden": true
       },
