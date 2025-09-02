@@ -12,8 +12,6 @@
 /* global WebImporter */
 /* eslint-disable no-console */
 
-import articlesMasonry from './parsers/articlesMasonry.js';
-import heroParser from './parsers/hero.js';
 import headerParser from './parsers/header.js';
 import metadataParser from './parsers/metadata.js';
 import cleanupTransformer from './transformers/cleanup.js';
@@ -30,9 +28,7 @@ import {
 
 const parsers = {
   metadata: metadataParser,
-  header: headerParser,
-  hero: heroParser,
-  articlesMasonry: articlesMasonry,
+
   ...customParsers,
 };
 
@@ -246,12 +242,6 @@ export default {
 
   transform: async (source) => {
     const { document, params: { originalURL } } = source;
-
-    document.querySelector('header')?.remove();
-    document.querySelector('footer')?.remove();
-    document.querySelector('.yellow-bar')?.remove();
-    document.querySelector('#onetrust-consent-sdk')?.remove();
-    document.querySelector('.skip-link')?.remove();
 
     /* eslint-disable-next-line prefer-const */
     let publishUrl = window.location.origin;
