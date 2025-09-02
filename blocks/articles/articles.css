@@ -2,10 +2,7 @@
     --item-width: 100%;
 
     display: grid;
-    grid-template-columns: repeat(
-        auto-fit,
-        minmax(min(var(--item-width, 200px), 100%), 1fr)
-      );
+    grid-template-columns: 1fr;
     grid-template-rows: masonry;
     grid-auto-flow: dense;
     column-gap: 20px;
@@ -20,15 +17,23 @@
     align-self: start;
     display: flex;
     flex-direction: column;
-    grid-column-end: span var(--span, 1);
-    margin-block-end: 20px;
+    grid-column: span 1;
 
     a {
         text-decoration: none;
     }
 
     &.customization {
-        --span: 2;
+        background: var(--primary-color);
+        padding: 30px 30px 20px;
+        margin-inline: -20px;
+        text-align: left;
+    }
+
+    &.survey {
+        background-color: var(--secondary-color);
+        height: 450px;
+        padding: 20px 20px 40px;
     }
 
     &.tease a {
@@ -49,6 +54,7 @@
         }
 
         & h2 {
+            font-size: 22px;
             margin-block-end: 10px;
         }
 
@@ -93,21 +99,46 @@
 @media screen and (width >= 620px) {
     .articles {
         --item-width: calc(50% - 15px);
+
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .articles__item {
-        margin-block-end: 40px;
+    .articles__item.customization {
+        grid-column: span 2;
     }
 }
 
 @media screen and (width >= 970px) {
     .articles {
         --item-width: calc(33.3333% - 15px);
+
+        column-gap: 30px;
+    }
+}
+
+@media screen and (width >= 1025px) {
+    .articles {
+        --item-width: calc(33.3333% - 20px);
+
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .articles__item.survey {
+        height: 474px;
+        padding-bottom: 50px;
+    }
+
+
+    .articles__item.customization {
+        margin-inline: 0;
+        padding: 30px 20px 50px;
     }
 }
 
 @media screen and (width >= 1440px) {
     .articles {
         --item-width: calc(25% - 22.5px);
+
+        grid-template-columns: repeat(4, minmax(0, 1fr));
     }
 }

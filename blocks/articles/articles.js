@@ -24,7 +24,7 @@ async function masonry(block, items) {
 
   items.forEach((item) => {
     const ib = item.getBoundingClientRect();
-    item.style.gridRowEnd = `span ${Math.round((ib.firstChild || ib).height + colGap)}`;
+    item.style.gridRowEnd = `span ${Math.round(ib.height + colGap)}`;
   });
 }
 
