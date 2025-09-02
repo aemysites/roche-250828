@@ -75,7 +75,7 @@
         },
         {
           "component": "select",
-          "name": "postType",
+          "name": "typeOfPost",
           "label": "Post Type",
           "valueType": "string",
           "options": [
