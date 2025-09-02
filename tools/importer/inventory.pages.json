@@ -1,7 +1,7 @@
 {
   "templates": [
     {
-      "name": "'Dashboard Overview'",
+      "name": "'Service Listing Page'",
       "cluster": 1,
       "pages": [
         {
@@ -9,17 +9,17 @@
           "uuid": "703b00f9c71a4f9640ea0e076a19fe0ffe909816"
         },
         {
-          "url": "https://www.lumieresurlasep.fr/temoignages/une-sep-un-cancer-je-ne-veux-pas-que-la-maladie-soit-la-star-de-ma-vie/",
-          "uuid": "a6b2be4493caf3610232d6bc2f7a90de489a8838"
-        },
-        {
           "url": "https://www.lumieresurlasep.fr/temoignages/accepter-la-sep-de-mon-enfant/",
           "uuid": "f2b061ec03a8c8f695962a033ca1ecaa9a79b365"
+        },
+        {
+          "url": "https://www.lumieresurlasep.fr/temoignages/une-sep-un-cancer-je-ne-veux-pas-que-la-maladie-soit-la-star-de-ma-vie/",
+          "uuid": "a6b2be4493caf3610232d6bc2f7a90de489a8838"
         }
       ]
     },
     {
-      "name": "Gallery Grid Page",
+      "name": "'Directory Listing'",
       "cluster": 2,
       "pages": [
         {
