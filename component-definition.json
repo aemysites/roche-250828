@@ -140,7 +140,8 @@
                 "resourceType": "core/franklin/components/block/v1/block/item",
                 "template": {
                   "name": "Articles Item",
-                  "model": "articles-item"
+                  "model": "articles-item",
+                  "titleType": "h2"
                 }
               }
             }

@@ -190,16 +190,25 @@
         ]
       },
       {
-        "component": "image",
+        "component": "reference",
+        "valueType": "string",
         "name": "image",
         "label": "Image",
-        "valueType": "string"
+        "multi": false
       },
       {
-        "component": "richtext",
+        "component": "heading",
         "name": "title",
         "label": "Title",
-        "valueType": "string"
+        "valueType": "string",
+        "headingLevel": 2
+      },
+      {
+        "component": "text",
+        "name": "titleType",
+        "label": "Title Type",
+        "valueType": "string",
+        "hidden": true
       },
       {
         "component": "aem-content",
