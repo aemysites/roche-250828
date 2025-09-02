@@ -83,8 +83,6 @@ jobs:
           npm install
           cd ../sta-aem-publish
           npm install
-          cd ../sta-da-helper
-          npm install
 
       - name: '[Check] Validate inputs'
         if: ${{ env.errorMessage != '' }}
