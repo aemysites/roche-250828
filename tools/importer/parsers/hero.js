@@ -11,7 +11,7 @@ export default function heroParser(element) {
   const graphic = element.querySelector('.graphic-line')?.innerHTML || '';
 
   const cells = [
-    [`Hero (${variant})`], [headline], [label], [p], [img], [graphic]
+    [`Hero`], [variant], [headline], [label], [p], [img], [graphic]
   ];
 
   const block = WebImporter.DOMUtils.createTable(cells, document);

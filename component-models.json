@@ -323,8 +323,8 @@
       {
         "component": "select",
         "valueType": "string",
-        "name": "variant",
-        "label": "Variant",
+        "name": "classes",
+        "label": "Style",
         "options": [
           {
             "label": "Home",
