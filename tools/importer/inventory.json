@@ -450,10 +450,10 @@
       ]
     },
     {
-      "name": "Columns",
+      "name": "Hero",
       "cluster": 20,
       "source": "Columns",
-      "target": "Columns (columns20)",
+      "target": "Hero (hero50)",
       "key": "columns20",
       "instances": [
         {
