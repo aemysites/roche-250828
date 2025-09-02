@@ -50,7 +50,13 @@ export const customTransformers = {
         document.querySelector('.yellow-bar')?.remove();
         document.querySelector('.skip-link')?.remove();
         // the notification widget seen on the right side
+<<<<<<< HEAD
         document.querySelector('.widgetRocheSEP')?.remove();
+=======
+        document.querySelector('.widgetRocheSEP').remove();
+        document.querySelector('.yellow-bar').remove();
+        document.querySelector('.skip-link screen-reader-text').remove();
+>>>>>>> 7d27999 (fix: remove more banners)
       } catch (e) {
         console.warn('Failed to remove onetrust-consent-sdk', e);
       }
