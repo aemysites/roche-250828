@@ -11,9 +11,25 @@
  */
 /* global WebImporter */
 /* eslint-disable no-console */
-
-import articlesMasonry from './parsers/articlesMasonry.js';
-import heroParser from './parsers/hero.js';
+import columns5Parser from './parsers/columns5.js';
+import cards7Parser from './parsers/cards7.js';
+import columns6Parser from './parsers/columns6.js';
+import hero10Parser from './parsers/hero10.js';
+import cards8Parser from './parsers/cards8.js';
+import hero14Parser from './parsers/hero14.js';
+import tabs13Parser from './parsers/tabs13.js';
+import cards2Parser from './parsers/cards2.js';
+import columns20Parser from './parsers/columns20.js';
+import columns22Parser from './parsers/columns22.js';
+import hero19Parser from './parsers/hero19.js';
+import search16Parser from './parsers/search16.js';
+import hero9Parser from './parsers/hero9.js';
+import cards11Parser from './parsers/cards11.js';
+import columns1Parser from './parsers/columns1.js';
+import cards4Parser from './parsers/cards4.js';
+import columns12Parser from './parsers/columns12.js';
+import columns23Parser from './parsers/columns23.js';
+import columns17Parser from './parsers/columns17.js';
 import headerParser from './parsers/header.js';
 import metadataParser from './parsers/metadata.js';
 import cleanupTransformer from './transformers/cleanup.js';
@@ -30,9 +46,25 @@ import {
 
 const parsers = {
   metadata: metadataParser,
-  header: headerParser,
-  hero: heroParser,
-  articlesMasonry: articlesMasonry,
+  columns5: columns5Parser,
+  cards7: cards7Parser,
+  columns6: columns6Parser,
+  hero10: hero10Parser,
+  cards8: cards8Parser,
+  hero14: hero14Parser,
+  tabs13: tabs13Parser,
+  cards2: cards2Parser,
+  columns20: columns20Parser,
+  columns22: columns22Parser,
+  hero19: hero19Parser,
+  search16: search16Parser,
+  hero9: hero9Parser,
+  cards11: cards11Parser,
+  columns1: columns1Parser,
+  cards4: cards4Parser,
+  columns12: columns12Parser,
+  columns23: columns23Parser,
+  columns17: columns17Parser,
   ...customParsers,
 };
 
@@ -246,12 +278,6 @@ export default {
 
   transform: async (source) => {
     const { document, params: { originalURL } } = source;
-
-    document.querySelector('header')?.remove();
-    document.querySelector('footer')?.remove();
-    document.querySelector('.yellow-bar')?.remove();
-    document.querySelector('#onetrust-consent-sdk')?.remove();
-    document.querySelector('.skip-link')?.remove();
 
     /* eslint-disable-next-line prefer-const */
     let publishUrl = window.location.origin;
