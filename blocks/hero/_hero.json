@@ -28,9 +28,9 @@
           "name": "classes",
           "label": "Style",
           "options": [
-            { "label": "Home", "value": "home" },
-            { "label": "Article", "value": "article" },
-            { "label": "Page", "value": "page" }
+            { "name": "Home", "value": "home" },
+            { "name": "Article", "value": "article" },
+            { "name": "Page", "value": "page" }
           ],
           "required": true,
           "default": "home"

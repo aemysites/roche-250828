@@ -327,15 +327,15 @@
         "label": "Style",
         "options": [
           {
-            "label": "Home",
+            "name": "Home",
             "value": "home"
           },
           {
-            "label": "Article",
+            "name": "Article",
             "value": "article"
           },
           {
-            "label": "Page",
+            "name": "Page",
             "value": "page"
           }
         ],
