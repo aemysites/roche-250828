@@ -45,6 +45,7 @@
     /* font weights */
     --bold: 700;
     --semi-bold: 500;
+    --regular: 400;
 }
 
 @media (width >= 1025px) {
@@ -281,4 +282,8 @@ main > .section:first-of-type {
 
 .section.hidden {
   display: none;
+}
+
+a {
+    color: var(--text-color);
 }
