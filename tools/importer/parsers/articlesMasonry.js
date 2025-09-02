@@ -2,6 +2,12 @@ export default function articlesMasonry(element) {
   const tease = 'tease';
   const customization = 'customization';
   const survey = 'survey';
+  const testimony = 'testimony';
+  const post = 'post';
+  const advice = 'advice';
+  const instagram = 'instagram';
+
+  let variantClasses = 'masonry';
 
   const gridItems = element.querySelectorAll('.grid-item');
   const items = [];
@@ -20,19 +26,33 @@ export default function articlesMasonry(element) {
     const title = gridItem.querySelector('h2.title');
     cells.push([title]);
 
-    const link = gridItem.querySelector('a');
-    cells.push([link]);
-
     if (type === 'tease') {
-      const postType = gridItem.querySelector('.post-type').textContent.trim();
+      const link = gridItem.querySelector('a');
+      cells.push([link]);
+
+      const postType = gridItem.classList.contains('tease-testimony') ? testimony
+        : gridItem.classList.contains('tease-post') ? post
+        : gridItem.classList.contains('tease-advice') ? advice
+        : gridItem.classList.contains('tease-instagram') ? instagram
+          : '';
       cells.push([postType])
+    } else {
+      cells.push([''],['']);
     }
 
     items.push(cells);
-  })
+  });
+
+  const autoLoadButton = element.nextElementSibling?.classList.contains('auto-load-button')
+    ? element.nextElementSibling
+    : null ?? element.querySelector('.auto-load-button');
+  if (autoLoadButton) {
+    variantClasses += ',load-more'
+    autoLoadButton.remove();
+  }
 
   const cells = [
-    [`Articles (masonry)`],
+    [`Articles (${variantClasses})`],
     ...items,
   ];
 
