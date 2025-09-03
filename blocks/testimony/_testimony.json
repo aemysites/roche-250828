@@ -41,13 +41,13 @@
           "label": "Label"
         },
         {
-          "component": "text",
+          "component": "richtext",
           "valueType": "string",
           "name": "person",
           "label": "Name"
         },
         {
-          "component": "text",
+          "component": "richtext",
           "valueType": "string",
           "name": "description",
           "label": "Description"
