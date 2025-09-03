@@ -17,6 +17,7 @@ import columns6Parser from './parsers/columns6.js';
 import hero10Parser from './parsers/hero10.js';
 import cards8Parser from './parsers/cards8.js';
 import hero14Parser from './parsers/hero14.js';
+import testimony27Parser from './parsers/testimony27.js';
 import embed26Parser from './parsers/embed26.js';
 import tabs13Parser from './parsers/tabs13.js';
 import cards2Parser from './parsers/cards2.js';
@@ -50,6 +51,7 @@ import heroParser from './parsers/hero.js';
 
 const parsers = {
   postHero: postHeroParser,
+  testimony27: testimony27Parser,
   metadata: metadataParser,
   columns5: columns5Parser,
   cards7: cards7Parser,
