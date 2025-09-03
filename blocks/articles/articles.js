@@ -52,7 +52,7 @@ async function masonry(block, items) {
 function buildTease(href, type, title, imgSrc) {
   const optimisedPicture = createOptimizedPicture(imgSrc, '', true);
   const tease = document.createElement('div');
-  tease.classList.add('articles__item', 'tease');
+  tease.classList.add('articles__item', 'articles-tease');
 
   const wrapper = document.createElement('div');
   const para = document.createElement('p');
@@ -135,13 +135,27 @@ export default async function decorate(block) {
       link.classList.remove('button');
       link.append(...([...item.children].filter((el) => el !== linkContainer)));
 
-      if (title) {
-        const span = document.createElement('span');
-        span.classList.add('articles__item__h2__text');
-        span.textContent = title.textContent;
-        title.textContent = '';
-        title.append(span);
-      }
+      const span = document.createElement('span');
+      span.classList.add('articles__item__h2__text');
+      span.textContent = title.textContent;
+      title.textContent = '';
+      title.append(span);
+    } else if (type === 'articles-customization') {
+      const linkLabelContainer = item.querySelector(':scope > div:nth-child(4)');
+      const linkLabelAfterContainer = item.querySelector(':scope > div:nth-child(5)');
+
+      const beforeButton = document.createElement('a');
+      beforeButton.classList.add('button', 'articles-customization__push-before');
+      beforeButton.textContent = linkLabelContainer.textContent;
+      beforeButton.href = '#customize';
+
+      const afterButton = document.createElement('a');
+      afterButton.classList.add('articles-customization__push-after');
+      afterButton.textContent = linkLabelAfterContainer.textContent;
+      afterButton.href = '#customize';
+
+      linkLabelContainer.replaceWith(beforeButton);
+      linkLabelAfterContainer.replaceWith(afterButton);
     }
 
     typeContainer.remove();

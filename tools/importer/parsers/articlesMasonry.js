@@ -67,7 +67,6 @@ export default function articlesMasonry(element) {
       cells.push([text]);
 
       gridItem.querySelectorAll('.customization-push__button, .customization-push__button--active').forEach((pushButton) => {
-        console.log(pushButton.textContent)
         cells.push([pushButton.textContent.trim()]);
       });
     }
