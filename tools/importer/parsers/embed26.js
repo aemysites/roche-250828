@@ -11,7 +11,7 @@ export default function embed26Parser(element) {
   contentCell.innerHTML += `<!-- field:embed_uri -->${uri}`;
 
   const cells = [
-    [`Embed`],
+    ['Embed'],
     [contentCell],
   ];
 

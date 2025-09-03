@@ -22,6 +22,18 @@
       "id": "post-hero",
       "fields": [
         {
+          "component": "reference",
+          "valueType": "string",
+          "name": "image",
+          "label": "Image"
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "imageAlt",
+          "label": "Image Alt"
+        },
+        {
           "component": "heading",
           "valueType": "string",
           "name": "headline",
@@ -33,18 +45,6 @@
           "valueType": "string",
           "name": "headlineType",
           "hidden": true
-        },
-        {
-          "component": "reference",
-          "valueType": "string",
-          "name": "image",
-          "label": "Image"
-        },
-        {
-          "component": "text",
-          "valueType": "string",
-          "name": "imageAlt",
-          "label": "Image Alt"
         }
       ]
     }

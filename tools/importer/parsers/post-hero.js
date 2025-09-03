@@ -11,8 +11,8 @@ export default function heroParser(element) {
 
   const cells = [
     [`Post Hero`],
-    [headline],
     [backgroundImageEl],
+    [headline],
   ];
 
   const block = WebImporter.DOMUtils.createTable(cells, document);
