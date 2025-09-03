@@ -13,6 +13,7 @@
       "button",
       "title",
       "hero",
+      "post-hero",
       "cards",
       "columns",
       "fragment",
@@ -22,7 +23,8 @@
       "quote",
       "search",
       "socials",
-      "articles"
+      "articles",
+      "library-metadata"
     ]
   },
   {
@@ -63,6 +65,10 @@
       "button",
       "title"
     ]
+  },
+  {
+    "id": "library-metadata",
+    "components": []
   },
   {
     "id": "shared-articles",

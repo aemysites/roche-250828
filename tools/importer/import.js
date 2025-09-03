@@ -35,6 +35,7 @@ import metadataParser from './parsers/metadata.js';
 import cleanupTransformer from './transformers/cleanup.js';
 import imageTransformer from './transformers/images.js';
 import linkTransformer from './transformers/links.js';
+import postHeroParser from './parsers/post-hero.js';
 import sectionsTransformer from './transformers/sections.js';
 import { TransformHook } from './transformers/transform.js';
 import { customParsers, customTransformers, customElements } from './import.custom.js';
@@ -47,6 +48,7 @@ import articlesMasonry from './parsers/articlesMasonry.js';
 import heroParser from './parsers/hero.js';
 
 const parsers = {
+  postHero: postHeroParser,
   metadata: metadataParser,
   columns5: columns5Parser,
   cards7: cards7Parser,

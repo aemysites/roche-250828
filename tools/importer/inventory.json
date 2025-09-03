@@ -438,15 +438,15 @@
       ]
     },
     {
-      "name": "Hero",
+      "name": "Post Hero",
       "cluster": 19,
-      "key": "hero19",
+      "key": "postHero",
       "instances": [
         {
           "url": "https://www.lumieresurlasep.fr/temoignages/accepter-la-sep-de-mon-enfant/",
           "urlHash": "f2b061ec03a8c8f695962a033ca1ecaa9a79b365",
           "uuid": "f2b061ec-02-add54bcb8f055de42915ab5371264bb19835b0f0",
-          "xpath": "/html[1]/body[1]"
+          "xpath": "/html[1]/body[1]/main[1]/div[2]/article[1]/section[1]"
         }
       ]
     },

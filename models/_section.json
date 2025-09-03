@@ -43,6 +43,7 @@
         "button",
         "title",
         "hero",
+        "post-hero",
         "cards",
         "columns",
         "fragment",
@@ -52,7 +53,8 @@
         "quote",
         "search",
         "socials",
-        "articles"
+        "articles",
+        "library-metadata"
       ]
     }
   ]

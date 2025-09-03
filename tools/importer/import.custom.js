@@ -58,7 +58,7 @@ export const customTransformers = {
         document.querySelector('.return-block')?.remove();
         document.querySelector('.sidebar-article')?.remove();
         document.querySelector('.breadcrumbs-wrapper')?.remove();
-        document.querySelector('.block-posts')?.remove();
+        document.querySelectorAll('.block-posts')?.forEach(el => el.remove());
       } catch (e) {
         console.warn('Failed to remove onetrust-consent-sdk', e);
       }
