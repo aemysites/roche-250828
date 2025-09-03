@@ -426,7 +426,7 @@
     {
       "name": "Articles",
       "cluster": 18,
-      "target": "Articles (masonry)",
+      "target": "Articles",
       "key": "articlesMasonry",
       "instances": [
         {
