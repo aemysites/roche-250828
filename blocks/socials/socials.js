@@ -7,5 +7,8 @@ export default function decorate(block) {
       link.textContent = '';
       link.append(span);
     });
+
+    // Remove label field
+    block.querySelector(':scope > div:first-child').remove();
   }
 }
