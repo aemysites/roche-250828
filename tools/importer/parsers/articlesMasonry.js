@@ -18,11 +18,25 @@ export default function articlesMasonry(element) {
     const cells = [];
     cells.push([type]);
 
-    const img = gridItem.querySelector('img') || '';
-    cells.push([img]);
+    if (type === 'tease') {
+      const img = gridItem.querySelector('.img-container img') || '';
+      cells.push([img]);
+    } else if (type === 'survey') {
+      const img = gridItem.querySelector('img') || '';
+      cells.push([img]);
+    } else {
+      cells.push(['']);
+    }
 
-    const title = gridItem.querySelector('h2') || '';
-    cells.push([title]);
+    if (type === 'tease' || type === "customization") {
+      const title = gridItem.querySelector('h2') || '';
+      cells.push([title]);
+    } else if (type === 'survey') {
+      const title = gridItem.querySelector('.survey-question') || '';
+      cells.push([title]);
+    } else {
+      cells.push(['']);
+    }
 
     if (type === 'tease') {
       const link = gridItem.querySelector('a');
@@ -49,7 +63,7 @@ export default function articlesMasonry(element) {
   }
 
   const cells = [
-    [`Articles (${variantClasses})`],
+    [`Articles`],
     ...items,
   ];
 

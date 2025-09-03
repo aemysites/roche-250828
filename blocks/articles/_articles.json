@@ -89,19 +89,7 @@
     },
     {
       "id": "articles",
-      "fields": [
-        {
-          "component": "multiselect",
-          "valueType": "string",
-          "name": "classes",
-          "label": "Style",
-          "options": [
-            { "name": "Masonry", "value": "masonry" },
-            { "name": "Load More", "value": "load-more" }
-          ],
-          "default": "masonry"
-        }
-      ]
+      "fields": []
     }
   ],
   "filters": [{
