@@ -76,13 +76,13 @@
         position: fixed;
         top: 58px;
         transform: translateX(-100%);
-        transition: transform .3s ease-in-out;
         width: 100%;
         z-index: 10;
 
         &.expanded {
             pointer-events: auto;
             transform: none;
+            transition: transform .3s ease-in-out;
         }
 
         .search-box {
@@ -346,7 +346,6 @@
     pointer-events: none;
     position: fixed;
     transform: translate(-100%);
-    transition: transform .4s ease-in-out;
     width: 100%;
     will-change: transform;
     z-index: 80;
@@ -355,6 +354,7 @@
 @media screen and (width >= 1025px) {
     .nav-menu {
         padding: 40px 40px 25px;
+        transition: transform .4s ease-in-out;
     }
 }
 
@@ -380,22 +380,20 @@
 }
 
 .nav-sidebar__to-top {
-    display: none;
-    position: absolute;
-    bottom: 0;
-    flex-direction: column;
     align-items: center;
+    bottom: 0;
+    cursor: pointer;
+    display: none;
+    flex-direction: column;
     gap: 5px;
+    height: auto;
     justify-content: center;
     padding: 25px 0;
-    cursor: pointer;
+    position: absolute;
     text-decoration: none;
     transform: translateY(80px);
-    will-change: transform;
-    transition: transform .5s ease;
-    height: auto;
-    padding: 25px 0;
     width: 100%;
+    will-change: transform;
 
     span:not(.icon) {
         color: var(--secondary-color);
@@ -419,10 +417,10 @@
         padding: 16px 10px;
         transform: translateY(-70px);
         will-change: transform;
-        transition: transform .5s ease;
 
         &.show {
             transform: none;
+            transition: transform .5s ease;
 
             + .nav-hamburger {
                 transform: none;
@@ -435,6 +433,7 @@
 
         &.show {
             transform: none;
+            transition: transform .5s ease;
         }
     }
 
@@ -685,7 +684,6 @@
     width: 100%;
     transform: translateX(-100%);
     pointer-events: none;
-    transition: transform .3s ease-in-out;
     overflow: auto;
     max-width: 100%;
     padding: 25px;
@@ -693,6 +691,7 @@
     &[aria-expanded="true"] {
         pointer-events: auto;
         transform: none;
+        transition: transform .3s ease-in-out;
     }
 }
 
