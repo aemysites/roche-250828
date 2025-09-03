@@ -8,7 +8,7 @@ export default function heroParser(element) {
   const label = element.querySelector('.label-hp')?.textContent.trim() || '';
   const p = element.querySelector('p')?.textContent.trim() || '';
   const img = element.querySelector('img') || '';
-  const graphic = element.querySelector('.graphic-line')?.innerHTML || '';
+  const graphic = '/content/dam/roche-250828/logos/swoosh.png';
 
   const cells = [
     [`Hero (${variant})`],

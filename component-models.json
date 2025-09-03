@@ -460,10 +460,11 @@
         "multi": false
       },
       {
-        "component": "richtext",
+        "component": "reference",
         "name": "graphic",
-        "label": "SVG Graphic",
-        "valueType": "string"
+        "label": "Graphic",
+        "valueType": "string",
+        "multi": false
       }
     ]
   },
