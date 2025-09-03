@@ -189,6 +189,10 @@ picture {
 
 /* RESETS END */
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
   background: linear-gradient(180deg, var(--background-color) 0, transparent 100%);
   color: var(--text-color, var(--dark-grey));

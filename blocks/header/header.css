@@ -379,6 +379,34 @@
     display: none;
 }
 
+.nav-sidebar__to-top {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    justify-content: center;
+    padding: 25px 0;
+    cursor: pointer;
+    text-decoration: none;
+    transform: translateY(80px);
+    will-change: transform;
+    transition: transform .5s ease;
+    height: auto;
+    padding: 25px 0;
+    width: 100%;
+
+    span:not(.icon) {
+        color: var(--secondary-color);
+        font-family: var(--body-font-family);
+        font-size: 13px;
+        line-height: 1.3;
+        padding: 0 10px;
+        text-align: center;
+    }
+}
+
 @media screen and (width >= 1025px) {
     .nav-sidebar {
         background-color: var(--primary-color);
@@ -399,6 +427,14 @@
             + .nav-hamburger {
                 transform: none;
             }
+        }
+    }
+
+    .nav-sidebar__to-top {
+        display: flex;
+
+        &.show {
+            transform: none;
         }
     }
 

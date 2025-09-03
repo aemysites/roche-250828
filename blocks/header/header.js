@@ -296,7 +296,7 @@ function decorateNavSearchTrigger(nav, navSections) {
   return searchTrigger;
 }
 
-function buildNavSideBar(sidebarLogoLink, nav, navSections, placeholders) {
+function buildNavSideBar(sidebarLogoLink, sidebarToTopLink, nav, navSections, placeholders) {
   const sideBar = document.createElement('div');
   sideBar.classList.add('nav-sidebar');
   sideBar.innerHTML = `<svg class="nav-sidebar__accent" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5 777" width="5" height="777">
@@ -311,11 +311,22 @@ function buildNavSideBar(sidebarLogoLink, nav, navSections, placeholders) {
   sidebarLogoLink.append(sidebarLogo);
   sideBar.prepend(sidebarLogoLink);
 
+  sidebarToTopLink.classList.add('nav-sidebar__to-top');
+  sidebarToTopLink.href = '#nav-top';
+  const sidebarToTopLinkIcon = document.createElement('span');
+  sidebarToTopLinkIcon.classList.add('icon', 'icon-arrow-up');
+  const sidebarToTopLinkLabel = document.createElement('span');
+  sidebarToTopLinkLabel.textContent = placeholders.navigationReturnToTopLabel;
+  sidebarToTopLink.append(sidebarToTopLinkIcon, sidebarToTopLinkLabel);
+  decorateIcons(sidebarToTopLink);
+
+  sideBar.append(sidebarToTopLink);
   return sideBar;
 }
 
-function buildNavTopBar(navBrand, nav, sidebarLogoLink) {
+function buildNavTopBar(navBrand, nav, sidebarLogoLink, sidebarToTopLink) {
   const navTop = document.createElement('div');
+  navTop.id = 'nav-top';
   navTop.classList.add('nav-top-bar');
   navTop.append(navBrand.querySelector('.nav-top-bar__primary-logo'), nav.querySelector('.nav-search'), navBrand.querySelector('.nav-top-bar__secondary-logo'));
 
@@ -323,8 +334,10 @@ function buildNavTopBar(navBrand, nav, sidebarLogoLink) {
     entries.forEach((entry) => {
       if (!entry.isIntersecting) {
         sidebarLogoLink.classList.add('show');
+        sidebarToTopLink.classList.add('show');
       } else {
         sidebarLogoLink.classList.remove('show');
+        sidebarToTopLink.classList.remove('show');
       }
     });
   });
@@ -408,9 +421,16 @@ export default async function decorate(block) {
   const searchTrigger = decorateNavSearchTrigger(nav, navSections);
 
   const sidebarLogoLink = document.createElement('a');
-  const sidebar = buildNavSideBar(sidebarLogoLink, nav, navSections, placeholders);
+  const sidebarToTopLink = document.createElement('a');
+  const sidebar = buildNavSideBar(
+    sidebarLogoLink,
+    sidebarToTopLink,
+    nav,
+    navSections,
+    placeholders,
+  );
 
-  const navTop = buildNavTopBar(navBrand, nav, sidebarLogoLink);
+  const navTop = buildNavTopBar(navBrand, nav, sidebarLogoLink, sidebarToTopLink);
   navBrand.remove();
 
   const customizationPanel = buildCustomizationPanel(nav, navSections, placeholders);
