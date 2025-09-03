@@ -835,10 +835,16 @@
         "label": "Label"
       },
       {
-        "component": "richtext",
+        "component": "text",
         "valueType": "string",
         "name": "person",
-        "label": "Name"
+        "label": "Interviewed Person"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "personType",
+        "hidden": true
       },
       {
         "component": "richtext",

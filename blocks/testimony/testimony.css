@@ -1,0 +1,35 @@
+.testimony .image-and-author {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+
+  img {
+    width: 78px;
+    height: 78px;
+    border-radius: 50%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    border: 8px solid transparent;
+    box-shadow: 0 0 0 1px var(--light-grey, #e3dfd5);
+  }
+
+  .author-and-label {}
+
+  .label {
+    font-size: var(--font-size, 20px);
+    line-height: 1.1;
+    font-family: var(--font-family, "Minion", serif);
+    color: var(--secondary-color, #14557a);
+    font-weight: var(--bold, 700);
+    font-style: italic;
+  }
+
+  .person {
+    color: var(--secondary-color, #14557a);
+    font-family: var(--font-family, "Minion", serif);
+    font-style: italic;
+    font-weight: var(--bold, 700);
+    font-size: 34px;
+    line-height: .95;
+  }
+}
