@@ -49,7 +49,7 @@
 
 @media screen and (width >= 1025px) {
     .hero-wrapper {
-        padding-block-start: 80px;
+        padding-block: 80px 120px;
     }
 
     .hero.home {
@@ -65,7 +65,7 @@
 
         .hero__secondary-image {
             position: absolute;
-            bottom: 65px;
+            bottom: 180px;
             right: 130px;
             z-index: -1;
         }
