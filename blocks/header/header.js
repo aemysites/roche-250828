@@ -206,49 +206,7 @@ function buildCustomizationPanel(nav, navSections, placeholders) {
   return panel;
 }
 
-/**
- * loads and decorates the header, mainly the nav
- * @param {Element} block The header block element
- */
-export default async function decorate(block) {
-  // load nav as fragment
-  const navMeta = getMetadata('nav');
-  const navPath = navMeta ? new URL(navMeta, window.location).pathname : '/global-nav';
-  const fragment = await loadFragment(navPath);
-
-  // decorate nav DOM
-  block.textContent = '';
-  const nav = document.createElement('nav');
-  nav.id = 'nav';
-  nav.classList.add('nav');
-  while (fragment.firstElementChild) nav.append(fragment.firstElementChild);
-
-  const placeholders = await fetchPlaceholders();
-
-  const { topSections, mainSections, bottomSections } = processSectionsWithMetadata(nav);
-  nav.replaceChildren(...mainSections);
-
-  const classes = ['brand', 'sections', 'secondary-menu', 'search'];
-  classes.forEach((c, i) => {
-    const section = nav.children[i];
-    if (section) section.classList.add(`nav-${c}`);
-  });
-
-  // create containers for extra sections
-  const createContainer = (sections, containerClass, sectionClass) => {
-    const container = document.createElement('div');
-    container.className = containerClass;
-    sections.forEach((section) => {
-      section.classList.add(sectionClass);
-      container.append(section);
-    });
-    return container;
-  };
-
-  const topContainer = createContainer(topSections, 'nav-top-container', 'nav-top-section');
-  const bottomContainer = createContainer(bottomSections, 'nav-bottom-container', 'nav-bottom-section');
-
-  const navBrand = nav.querySelector('.nav-brand');
+function decorateBrandButtons(navBrand) {
   const brandLinks = navBrand.querySelectorAll('.button');
   brandLinks.forEach((brandLink, i) => {
     brandLink.className = '';
@@ -260,8 +218,9 @@ export default async function decorate(block) {
       brandLink.classList.add('nav-top-bar__secondary-logo');
     }
   });
+}
 
-  const navSections = nav.querySelector('.nav-sections');
+function decorateNavSections(navSections) {
   if (navSections) {
     navSections.querySelectorAll('a').forEach((link) => {
       link.classList.remove('button');
@@ -311,19 +270,11 @@ export default async function decorate(block) {
 
     handleMenus(navSections.querySelector(':scope .default-content-wrapper'));
   }
+}
 
-  nav.setAttribute('aria-expanded', 'false');
-
-  const navMenu = document.createElement('div');
-  navMenu.classList.add('nav-menu');
-  const navSecondaryMenu = nav.querySelector('.nav-secondary-menu');
-  const closeButton = buildClose(placeholders);
-  closeButton.addEventListener('click', () => toggleMenu(nav, navSections, false));
-  navMenu.append(closeButton, navSections, navSecondaryMenu);
-
-  // Search for mobile
-  const navSearch = nav.querySelector('.nav-search');
+function decorateNavSearchTrigger(nav, navSections) {
   const searchTrigger = document.createElement('div');
+  const navSearch = nav.querySelector('.nav-search');
   searchTrigger.classList.add('nav-search-trigger');
   searchTrigger.innerHTML = `<button type="button">
       <span class="icon icon-search-white"></span>
@@ -342,7 +293,10 @@ export default async function decorate(block) {
   isDesktop.addEventListener('change', () => {
     closeSearch(navSearch);
   });
+  return searchTrigger;
+}
 
+function buildNavSideBar(sidebarLogoLink, nav, navSections, placeholders) {
   const sideBar = document.createElement('div');
   sideBar.classList.add('nav-sidebar');
   sideBar.innerHTML = `<svg class="nav-sidebar__accent" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5 777" width="5" height="777">
@@ -352,32 +306,18 @@ export default async function decorate(block) {
   sideBar.prepend(sideNavHamburger);
 
   const sidebarLogo = createOptimizedPicture('../../icons/logo-sep-blanc.svg', '');
-  const sidebarLogoLink = document.createElement('a');
   sidebarLogoLink.classList.add('nav-sidebar__logo');
   sidebarLogoLink.href = '/';
   sidebarLogoLink.append(sidebarLogo);
   sideBar.prepend(sidebarLogoLink);
 
+  return sideBar;
+}
+
+function buildNavTopBar(navBrand, nav, sidebarLogoLink) {
   const navTop = document.createElement('div');
   navTop.classList.add('nav-top-bar');
   navTop.append(navBrand.querySelector('.nav-top-bar__primary-logo'), nav.querySelector('.nav-search'), navBrand.querySelector('.nav-top-bar__secondary-logo'));
-  navBrand.remove();
-
-  const customizationPanel = buildCustomizationPanel(nav, navSections, placeholders);
-
-  const navPanelOverlay = document.createElement('div');
-  navPanelOverlay.classList.add('nav-panel-overlay');
-  navPanelOverlay.addEventListener('click', () => {
-    toggleMenu(nav, navSections, false);
-    closeCustomizationPanel(nav, navSections, customizationPanel);
-  });
-
-  nav.prepend(navMenu);
-  nav.prepend(sideBar);
-  nav.append(navTop);
-  nav.append(searchTrigger);
-  nav.append(customizationPanel);
-  nav.append(navPanelOverlay);
 
   const intersectionObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
@@ -389,6 +329,100 @@ export default async function decorate(block) {
     });
   });
   intersectionObserver.observe(navTop);
+
+  return navTop;
+}
+
+function buildNavPanelOverlay(nav, navSections, customizationPanel) {
+  const navPanelOverlay = document.createElement('div');
+  navPanelOverlay.classList.add('nav-panel-overlay');
+  navPanelOverlay.addEventListener('click', () => {
+    toggleMenu(nav, navSections, false);
+    closeCustomizationPanel(nav, navSections, customizationPanel);
+  });
+  return navPanelOverlay;
+}
+
+function buildNavMenu(nav, navSections, placeholders) {
+  const navMenu = document.createElement('div');
+  navMenu.classList.add('nav-menu');
+  const navSecondaryMenu = nav.querySelector('.nav-secondary-menu');
+  const closeButton = buildClose(placeholders);
+  closeButton.addEventListener('click', () => toggleMenu(nav, navSections, false));
+  navMenu.append(closeButton, navSections, navSecondaryMenu);
+  return navMenu;
+}
+
+/**
+ * loads and decorates the header, mainly the nav
+ * @param {Element} block The header block element
+ */
+export default async function decorate(block) {
+  // load nav as fragment
+  const navMeta = getMetadata('nav');
+  const navPath = navMeta ? new URL(navMeta, window.location).pathname : '/global-nav';
+  const fragment = await loadFragment(navPath);
+
+  // decorate nav DOM
+  block.textContent = '';
+  const nav = document.createElement('nav');
+  nav.id = 'nav';
+  nav.classList.add('nav');
+  nav.setAttribute('aria-expanded', 'false');
+  while (fragment.firstElementChild) nav.append(fragment.firstElementChild);
+
+  const placeholders = await fetchPlaceholders();
+
+  const { topSections, mainSections, bottomSections } = processSectionsWithMetadata(nav);
+  nav.replaceChildren(...mainSections);
+
+  const classes = ['brand', 'sections', 'secondary-menu', 'search'];
+  classes.forEach((c, i) => {
+    const section = nav.children[i];
+    if (section) section.classList.add(`nav-${c}`);
+  });
+
+  // create containers for extra sections
+  const createContainer = (sections, containerClass, sectionClass) => {
+    const container = document.createElement('div');
+    container.className = containerClass;
+    sections.forEach((section) => {
+      section.classList.add(sectionClass);
+      container.append(section);
+    });
+    return container;
+  };
+
+  const topContainer = createContainer(topSections, 'nav-top-container', 'nav-top-section');
+  const bottomContainer = createContainer(bottomSections, 'nav-bottom-container', 'nav-bottom-section');
+
+  const navBrand = nav.querySelector('.nav-brand');
+  decorateBrandButtons(navBrand);
+
+  const navSections = nav.querySelector('.nav-sections');
+  decorateNavSections(navSections);
+
+  const navMenu = buildNavMenu(nav, navSections, placeholders);
+
+  // Search for mobile
+  const searchTrigger = decorateNavSearchTrigger(nav, navSections);
+
+  const sidebarLogoLink = document.createElement('a');
+  const sidebar = buildNavSideBar(sidebarLogoLink, nav, navSections, placeholders);
+
+  const navTop = buildNavTopBar(navBrand, nav, sidebarLogoLink);
+  navBrand.remove();
+
+  const customizationPanel = buildCustomizationPanel(nav, navSections, placeholders);
+
+  const navPanelOverlay = buildNavPanelOverlay(nav, navSections, customizationPanel);
+
+  nav.prepend(navMenu);
+  nav.prepend(sidebar);
+  nav.append(navTop);
+  nav.append(searchTrigger);
+  nav.append(customizationPanel);
+  nav.append(navPanelOverlay);
 
   const navWrapper = document.createElement('div');
   navWrapper.className = 'nav-wrapper';
