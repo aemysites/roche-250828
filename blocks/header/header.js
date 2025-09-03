@@ -26,21 +26,6 @@ function closeOnEscape(e) {
   }
 }
 
-function closeOnFocusLost(e) {
-  const nav = e.currentTarget;
-  if (!nav.contains(e.relatedTarget)) {
-    const navSections = nav.querySelector('.nav-sections');
-    const navSectionExpanded = navSections.querySelector('[aria-expanded="true"]');
-    if (navSectionExpanded && isDesktop.matches) {
-      // eslint-disable-next-line no-use-before-define
-      toggleAllNavSections(navSections, false);
-    } else if (!isDesktop.matches) {
-      // eslint-disable-next-line no-use-before-define
-      toggleMenu(nav, navSections, false);
-    }
-  }
-}
-
 function openOnKeydown(e) {
   const focused = document.activeElement;
   const isNavDrop = focused.className === 'nav-drop';
@@ -159,7 +144,7 @@ function buildHamburger(nav, navSections, placeholders) {
   return hamburger;
 }
 
-function buildClose(nav, navSections, placeholders) {
+function buildClose(placeholders) {
   const close = document.createElement('div');
   close.classList.add('nav-close');
   close.innerHTML = `<button type="button" aria-controls="nav" aria-label="Close navigation">
@@ -168,8 +153,53 @@ function buildClose(nav, navSections, placeholders) {
       </div>
       <span class="nav-close__label">${placeholders.navigationHamburgerLabel || 'Menu'}</span>
     </button>`;
-  close.addEventListener('click', () => toggleMenu(nav, navSections, false));
   return close;
+}
+
+function toggleCustomizationPanel(nav, navSections, panel, skipMenu = false) {
+  if (window.location.hash === '#customize') {
+    if (!skipMenu) {
+      toggleMenu(nav, navSections, false);
+    }
+    panel.setAttribute('aria-expanded', 'true');
+    document.body.style.overflowY = 'hidden';
+  } else {
+    panel.setAttribute('aria-expanded', 'false');
+    document.body.style.overflowY = '';
+  }
+}
+
+function closeCustomizationPanel(nav, navSections, panel) {
+  const noHashURL = window.location.href.replace(/#.*$/, '');
+  window.history.replaceState('', document.title, noHashURL);
+  toggleCustomizationPanel(nav, navSections, panel);
+}
+
+function buildCustomizationPanel(nav, navSections, placeholders) {
+  const panel = document.createElement('div');
+  panel.classList.add('nav-customization-panel');
+
+  const closeButton = buildClose(placeholders);
+  closeButton.classList.add('nav-customization-panel__close');
+  panel.append(closeButton);
+  closeButton.addEventListener('click', () => {
+    closeCustomizationPanel(nav, navSections, panel);
+  });
+
+  const title = document.createElement('div');
+  title.classList.add('nav-customization-panel__title');
+  const span = document.createElement('span');
+  span.textContent = placeholders.customizationMenuTitle;
+  title.append(span);
+  panel.append(title);
+
+  window.addEventListener('hashchange', () => {
+    toggleCustomizationPanel(nav, navSections, panel);
+  });
+
+  toggleCustomizationPanel(nav, navSections, panel, true);
+
+  return panel;
 }
 
 /**
@@ -283,7 +313,8 @@ export default async function decorate(block) {
   const navMenu = document.createElement('div');
   navMenu.classList.add('nav-menu');
   const navSecondaryMenu = nav.querySelector('.nav-secondary-menu');
-  const closeButton = buildClose(nav, navSections, placeholders);
+  const closeButton = buildClose(placeholders);
+  closeButton.addEventListener('click', () => toggleMenu(nav, navSections, false));
   navMenu.append(closeButton, navSections, navSecondaryMenu);
 
   // Search for mobile
@@ -323,22 +354,26 @@ export default async function decorate(block) {
   sidebarLogoLink.append(sidebarLogo);
   sideBar.prepend(sidebarLogoLink);
 
-  const navPanelOverlay = document.createElement('div');
-  navPanelOverlay.classList.add('nav-panel-overlay');
-  navPanelOverlay.addEventListener('click', () => {
-    toggleMenu(nav, navSections, false);
-  });
-
   const navTop = document.createElement('div');
   navTop.classList.add('nav-top-bar');
   navTop.append(navBrand.querySelector('.nav-top-bar__primary-logo'), nav.querySelector('.nav-search'), navBrand.querySelector('.nav-top-bar__secondary-logo'));
   navBrand.remove();
 
+  const customizationPanel = buildCustomizationPanel(nav, navSections, placeholders);
+
+  const navPanelOverlay = document.createElement('div');
+  navPanelOverlay.classList.add('nav-panel-overlay');
+  navPanelOverlay.addEventListener('click', () => {
+    toggleMenu(nav, navSections, false);
+    closeCustomizationPanel(nav, navSections, customizationPanel);
+  });
+
   nav.prepend(navMenu);
   nav.prepend(sideBar);
   nav.append(navTop);
-  nav.append(navPanelOverlay);
   nav.append(searchTrigger);
+  nav.append(customizationPanel);
+  nav.append(navPanelOverlay);
 
   const intersectionObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {

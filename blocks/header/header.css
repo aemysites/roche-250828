@@ -364,6 +364,7 @@
     height: 100dvh;
     inset-block-start: 0;
     width: var(--sidebar-width);
+    z-index: 2;
 }
 
 .nav-sidebar__accent {
@@ -638,6 +639,75 @@
     background: rgb(0 0 0 / 60%);
 }
 
+.nav-customization-panel {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background: var(--primary-color);
+    z-index: 80;
+    width: 100%;
+    transform: translateX(-100%);
+    pointer-events: none;
+    transition: transform .3s ease-in-out;
+    overflow: auto;
+    max-width: 100%;
+    padding: 25px;
+
+    &[aria-expanded="true"] {
+        pointer-events: auto;
+        transform: none;
+    }
+}
+
+.nav-customization-panel__title {
+    border-bottom: 1px solid rgb(20 85 122 / 20%);
+    color: var(--secondary-color);
+    font-family: var(--heading-font-family);
+    font-style: italic;
+    font-weight: var(--bold, 700);
+    font-size: 34px;
+    line-height: .95;
+    margin-top: 60px;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.nav-customization-panel__close {
+    display: block;
+    background: 0 0;
+    border: none;
+    padding: 16px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+
+    .nav-close__label {
+        display: none;
+    }
+}
+
+@media screen and (width >= 1025px) {
+    .nav-customization-panel {
+        padding: 40px;
+        max-width: 742px;
+    }
+
+    .nav-customization-panel__title {
+        display: block;
+        font-size: 46px;
+        line-height: .9;
+        margin-top: 0;
+        padding-bottom: 40px;
+
+        span {
+            display: block;
+            max-width: 300px;
+        }
+    }
+}
+
 .nav[aria-expanded="true"] {
     .nav-hamburger .nav-close-icon {
         display: flex;
@@ -651,15 +721,19 @@
         transform: none;
         pointer-events: auto;
     }
+}
 
-    .nav-close-icon__cross::before {
-        animation: xBefore .7s forwards;
-        animation-iteration-count: 1;
-    }
+.nav {
+    &[aria-expanded], [aria-expanded] {
+        .nav-close-icon__cross::before {
+            animation: xBefore .7s forwards;
+            animation-iteration-count: 1;
+        }
 
-    .nav-close-icon__cross::after {
-        animation: xAfter .7s forwards;
-        animation-iteration-count: 1;
+        .nav-close-icon__cross::after {
+            animation: xAfter .7s forwards;
+            animation-iteration-count: 1;
+        }
     }
 }
 
@@ -712,8 +786,11 @@
                 }
             }
         }
+    }
 
-        .nav-panel-overlay {
+    .nav[aria-expanded="true"],
+    .nav-customization-panel[aria-expanded="true"]  {
+        ~ .nav-panel-overlay, .nav-panel-overlay {
             display: block;
         }
     }
