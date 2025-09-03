@@ -9,8 +9,6 @@ export default function heroParser(element) {
   backgroundImageEl.src = backgroundImage;
   backgroundImageEl.alt = '';
 
-  debugger;
-
   const smallImage = element.querySelector('img');
 
   const cells = [
