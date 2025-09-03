@@ -1,0 +1,110 @@
+.shared-articles {
+    margin: 0;
+
+}
+
+.shared-articles__item {
+    background-color: var(--white);
+    width: calc(50%);
+    display: inline-flex;
+    flex-direction: column;
+    vertical-align: top;
+    white-space: normal;
+    max-width: 260px;
+    flex-shrink: 0;
+    pointer-events: auto;
+
+    &.cta {
+        align-items: center;
+        flex-grow: 1;
+        justify-content: space-between;
+        padding: 25px;
+        height: 350px;
+        min-height: 350px;
+
+        p:not(.button-container) {
+            color: var(--secondary-color);
+            font-family: var(--heading-font-family);
+            font-size: 30px;
+            font-style: italic;
+            font-weight: var(--bold);
+            line-height: .9;
+            margin: 15px 0;
+        }
+
+        img {
+            height: auto;
+            max-width: 100%;
+        }
+    }
+
+    &.post {
+        p:not(.button-container) {
+            color: var(--secondary-color);
+            font-size: 16px;
+            line-height: 1.2;
+            padding: 20px 25px;
+            margin-block: 0 16px;
+        }
+
+        .button-container {
+            padding: 0 25px 20px;
+        }
+    }
+}
+
+.shared-articles-wrapper {
+    overflow: hidden;
+}
+
+.shared-articles__items__carousel-wrapper {
+    height: 350px;
+    position: relative;
+}
+
+.shared-articles__items__carousel {
+    display: flex;
+    flex-wrap: nowrap;
+    position: absolute;
+    transition: all .3s;
+    left: 0;
+    right: 0;
+    gap: 30px;
+}
+
+.shared-articles__items__carousel-controls {
+    display: flex;
+    justify-content: center;
+    padding-top: 27px;
+}
+
+.shared-articles__items__carousel-controls__button {
+    width: 10px;
+    height: 10px;
+    padding: 0;
+    margin-right: 9px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--light-grey);
+    cursor: pointer;
+
+    &.active {
+        background-color: var(--secondary-color);
+    }
+}
+
+@media screen and (width >= 970px) {
+    .shared-articles__items__carousel {
+        transform: none !important;
+        width: 100% !important;;
+    }
+
+    .shared-articles__items__carousel-controls {
+        display: none;
+    }
+
+    .shared-articles__item {
+        flex-basis: 25%;
+        max-width: unset;
+    }
+}

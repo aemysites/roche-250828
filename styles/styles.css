@@ -261,7 +261,7 @@ main img {
 
 /* sections */
 main > .section {
-  margin: 40px 0;
+  padding-block: 40px;
 }
 
 main > .section > div {
@@ -269,7 +269,11 @@ main > .section > div {
 }
 
 main > .section:first-of-type {
-  margin-top: 0;
+  padding-block-start: 0;
+}
+
+main .section .default-content-wrapper:first-child *:first-child {
+    margin-block-start: 0;
 }
 
 @media (width >= 1025px) {
