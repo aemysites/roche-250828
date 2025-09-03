@@ -1,4 +1,4 @@
-.articles {
+.articles__items {
     --item-width: 100%;
 
     display: grid;
@@ -7,9 +7,23 @@
     grid-auto-flow: dense;
     column-gap: 20px;
     height: auto;
+    padding: 40px 0;
 
     picture, img {
         display: block;
+    }
+
+    &.loading {
+        .tease {
+            background: var(--light-grey);
+            background: linear-gradient(100deg, var(--beige-darker) 8%, var(--beige) 18%, var(--beige-darker) 33%);
+            background-size: 200% 100%;
+            animation: 1.5s shine linear infinite;
+
+            a {
+                opacity: 0;
+            }
+        }
     }
 }
 
@@ -18,9 +32,11 @@
     display: flex;
     flex-direction: column;
     grid-column: span 1;
+    min-height: 100px; /* To prevent glitching during masonry reconfig */
 
     a {
         text-decoration: none;
+        transition: opacity .12s;
     }
 
     &.customization {
@@ -79,7 +95,7 @@
 }
 
 .articles__item__h2__text {
-    background-image: linear-gradient(transparent calc(100% - 2px), var(--primary-color, #ffd336) 2px);
+    background-image: linear-gradient(transparent calc(100% - 2px), var(--primary-color) 2px);
     background-repeat: no-repeat;
     background-size: 0 100%;
     transition: background-size 1s;
@@ -96,8 +112,15 @@
     text-transform: uppercase;
 }
 
+.articles__load-more {
+    display: flex;
+    grid-column: 1 / -1;
+    justify-content: center;
+    margin-block-end: 70px;
+}
+
 @media screen and (width >= 620px) {
-    .articles {
+    .articles__items {
         --item-width: calc(50% - 15px);
 
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -109,7 +132,7 @@
 }
 
 @media screen and (width >= 970px) {
-    .articles {
+    .articles__items {
         --item-width: calc(33.3333% - 15px);
 
         column-gap: 30px;
@@ -117,10 +140,11 @@
 }
 
 @media screen and (width >= 1025px) {
-    .articles {
+    .articles__items {
         --item-width: calc(33.3333% - 20px);
 
         grid-template-columns: repeat(3, minmax(0, 1fr));
+        padding-block: 30px;
     }
 
     .articles__item.survey {
@@ -136,9 +160,15 @@
 }
 
 @media screen and (width >= 1440px) {
-    .articles {
+    .articles__items {
         --item-width: calc(25% - 22.5px);
 
         grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+}
+
+@keyframes shine {
+    to {
+        background-position-x: -200%
     }
 }

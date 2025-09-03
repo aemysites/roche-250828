@@ -1,3 +1,7 @@
+import { createOptimizedPicture, fetchPlaceholders, toClassName } from '../../scripts/aem.js';
+
+const loadMoreEndpoint = 'https://www.lumieresurlasep.fr/wp-json/lsls/v1/customized-request';
+
 function isMasonrySupported(container) {
   return getComputedStyle(container).gridTemplateRows === 'masonry';
 }
@@ -5,10 +9,30 @@ function isMasonrySupported(container) {
 function areImagesLoaded(container) {
   const images = Array.from(container.querySelectorAll('img'));
   return images.map((img) => new Promise((resolve, reject) => {
-    if (img.complete) return;
+    if (img.complete) {
+      return;
+    }
     img.onload = resolve;
     img.onerror = reject;
   }));
+}
+
+async function fetchArticles(page) {
+  try {
+    const response = await fetch(`${loadMoreEndpoint}?count=0&page=${page}`);
+    if (!response.ok) {
+      throw new Error(`Response status: ${response.status}`);
+    }
+
+    return response.json();
+  } catch (error) {
+    return null;
+  }
+}
+
+function configureBlock(block) {
+  block.style.gridAutoRows = '0px';
+  block.style.setProperty('row-gap', '1px');
 }
 
 async function masonry(block, items) {
@@ -18,18 +42,82 @@ async function masonry(block, items) {
     // Do nothing
   }
 
-  block.style.gridAutoRows = '0px';
-  block.style.setProperty('row-gap', '1px');
   const colGap = parseFloat(getComputedStyle(block).columnGap);
-
   items.forEach((item) => {
     const ib = item.getBoundingClientRect();
     item.style.gridRowEnd = `span ${Math.round(ib.height + colGap)}`;
   });
 }
 
+function buildTease(href, type, title, imgSrc) {
+  const optimisedPicture = createOptimizedPicture(imgSrc, '', true);
+  const tease = document.createElement('div');
+  tease.classList.add('articles__item', 'tease');
+
+  const wrapper = document.createElement('div');
+  const para = document.createElement('p');
+  const link = document.createElement('a');
+  const imageDiv = document.createElement('div');
+  const titleDiv = document.createElement('div');
+  const postTypeDiv = document.createElement('div');
+  const h2 = document.createElement('h2');
+  const h2Span = document.createElement('span');
+  const postType = document.createElement('p');
+
+  wrapper.append(para);
+  para.append(link);
+
+  link.append(imageDiv, titleDiv, postTypeDiv);
+  link.href = href;
+
+  imageDiv.append(optimisedPicture);
+
+  postTypeDiv.append(postType);
+  postTypeDiv.classList.add('articles__item__post-type');
+  postType.textContent = type;
+
+  titleDiv.append(h2);
+  h2.id = toClassName(title);
+  h2.append(h2Span);
+  h2Span.textContent = title;
+  h2Span.classList.add('articles__item__h2__text');
+
+  tease.append(wrapper);
+
+  return tease;
+}
+
+async function addArticles(block, itemsContainer, items, articles, resizeObserver) {
+  const newItems = [...articles].map((article) => {
+    const range = document.createRange();
+    range.selectNode(block);
+    const documentFragment = range.createContextualFragment(article);
+    const { href } = documentFragment.querySelector('a');
+    const type = documentFragment.querySelector('.post-type').textContent.trim();
+    const imgSrc = documentFragment.querySelector('img').src;
+    const title = documentFragment.querySelector('h2').textContent.trim();
+
+    return buildTease(href, type, title, imgSrc);
+  });
+  itemsContainer.textContent = '';
+  items.push(...newItems);
+  itemsContainer.append(...items);
+
+  if (resizeObserver) {
+    // Required to observe to each new article as otherwise image loading is an issue
+    newItems.forEach((item) => {
+      resizeObserver.observe(item);
+    });
+  }
+}
+
 export default async function decorate(block) {
-  const items = block.querySelectorAll(':scope > div');
+  const placeholders = await fetchPlaceholders();
+
+  const itemsContainer = document.createElement('div');
+  itemsContainer.classList.add('articles__items');
+
+  const items = [...block.querySelectorAll(':scope > div')];
   items.forEach((item) => {
     const typeContainer = item.querySelector(':scope > div:first-child');
     const type = typeContainer.textContent.trim();
@@ -37,6 +125,12 @@ export default async function decorate(block) {
 
     const title = item.querySelector('h2');
     const postType = item.querySelector(':scope > div:nth-child(5)');
+
+    if (type === 'customization') {
+      const loadMoreButton = document.createElement('button');
+      loadMoreButton.classList.add('button');
+      loadMoreButton.textContent = placeholders.customizationPushCTALabel;
+    }
 
     if (type === 'tease') {
       postType.classList.add('articles__item__post-type');
@@ -60,14 +154,38 @@ export default async function decorate(block) {
     }
 
     typeContainer.remove();
+
+    itemsContainer.append(item);
+  });
+  block.prepend(itemsContainer);
+
+  let resizeObserver;
+  if (!isMasonrySupported(block)) {
+    configureBlock(itemsContainer);
+
+    resizeObserver = new ResizeObserver(async () => {
+      await masonry(itemsContainer, items);
+    });
+    resizeObserver.observe(itemsContainer);
+  }
+
+  let page = 1;
+  const loadMoreButtonWrapper = document.createElement('div');
+  loadMoreButtonWrapper.classList.add('articles__load-more');
+  const loadMoreButton = document.createElement('button');
+  loadMoreButton.classList.add('button', 'articles__load-more__cta');
+  loadMoreButton.textContent = placeholders.loadMoreArticles;
+  loadMoreButtonWrapper.append(loadMoreButton);
+  loadMoreButton.addEventListener('click', async () => {
+    const nextPage = page + 1;
+    itemsContainer.classList.add('loading');
+    const result = await fetchArticles(nextPage);
+    if (result) {
+      await addArticles(block, itemsContainer, items, result.posts, resizeObserver);
+      page += 1;
+      itemsContainer.classList.remove('loading');
+    }
   });
 
-  if (!isMasonrySupported(block)) {
-    const resizeObserver = new ResizeObserver(async (entries) => {
-      if (entries[0].contentRect.height > 0) {
-        await masonry(block, items);
-      }
-    });
-    resizeObserver.observe(block);
-  }
+  block.append(loadMoreButtonWrapper);
 }

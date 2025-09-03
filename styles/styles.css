@@ -19,6 +19,8 @@
     --light-yellow: #ffd749;
     --primary-color: #ffd336;
     --secondary-color: #14557a;
+    --light-grey: #e3dfd5;
+    --beige-darker: #f3efe5;
     --background-color: var(--beige);
     --text-color: var(--dark-grey);
 
@@ -236,7 +238,7 @@ button {
     }
 }
 
-@media screen and (width >= 1025px) {
+@media screen and (width < 1025px) {
     .button {
         width: 100%;
     }
