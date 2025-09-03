@@ -125,12 +125,7 @@ export default async function decorate(block) {
 
     const title = item.querySelector('h2');
     const postType = item.querySelector(':scope > div:nth-child(5)');
-
-    if (type === 'customization') {
-      const loadMoreButton = document.createElement('button');
-      loadMoreButton.classList.add('button');
-      loadMoreButton.textContent = placeholders.customizationPushCTALabel;
-    }
+    const text = item.querySelector(':scope > div:nth-child(6)');
 
     if (type === 'tease') {
       postType.classList.add('articles__item__post-type');
@@ -149,6 +144,8 @@ export default async function decorate(block) {
         title.textContent = '';
         title.append(span);
       }
+
+      text?.remove();
     } else {
       postType.remove();
     }

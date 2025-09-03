@@ -17,16 +17,45 @@
       }
     },
     {
-      "title": "Articles Item",
-      "id": "articles-item",
+      "title": "Articles Tease",
+      "id": "articles-tease",
       "plugins": {
         "xwalk": {
           "page": {
             "resourceType": "core/franklin/components/block/v1/block/item",
             "template": {
-              "name": "Articles Item",
-              "model": "articles-item",
-              "titleType": "h2"
+              "name": "Articles Tease",
+              "model": "articles-tease"
+            }
+          }
+        }
+      }
+    },
+    {
+      "title": "Articles Survey",
+      "id": "articles-survey",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block/item",
+            "template": {
+              "name": "Articles Survey",
+              "model": "articles-survey"
+            }
+          }
+        }
+      }
+    },
+    {
+      "title": "Articles Customization",
+      "id": "articles-customization",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block/item",
+            "template": {
+              "name": "Articles Customization",
+              "model": "articles-customization"
             }
           }
         }
@@ -35,18 +64,14 @@
   ],
   "models": [
     {
-      "id": "articles-item",
+      "id": "articles-tease",
       "fields": [
         {
-          "component": "select",
-          "name": "type",
+          "component": "text",
+          "name": "typeOfItem",
           "label": "Type",
-          "valueType": "string",
-          "options": [
-            { "name": "Tease", "value": "tease" },
-            { "name": "Customization", "value": "customization" },
-            { "name": "Survey", "value": "survey" }
-          ]
+          "readOnly": true,
+          "value": "articles-tease"
         },
         {
           "component": "reference",
@@ -88,6 +113,78 @@
       ]
     },
     {
+      "id": "articles-survey",
+      "fields": [
+        {
+          "component": "text",
+          "name": "typeOfItem",
+          "label": "Type",
+          "readOnly": true,
+          "value": "articles-survey"
+        },
+        {
+          "component": "reference",
+          "name": "image",
+          "label": "Image",
+          "multi": false
+        },
+        {
+          "component": "text",
+          "name": "title",
+          "label": "Title",
+          "valueType": "string"
+        },
+        {
+          "component": "text",
+          "name": "titleType",
+          "valueType": "string",
+          "hidden": true
+        }
+      ]
+    },
+    {
+      "id": "articles-customization",
+      "fields": [
+        {
+          "component": "text",
+          "name": "typeOfItem",
+          "label": "Type",
+          "readOnly": true,
+          "value": "articles-customization"
+        },
+        {
+          "component": "text",
+          "name": "title",
+          "label": "Title",
+          "valueType": "string"
+        },
+        {
+          "component": "text",
+          "name": "titleType",
+          "valueType": "string",
+          "hidden": true
+        },
+        {
+          "component": "text",
+          "name": "text",
+          "label": "Text",
+          "valueType": "string"
+        },
+        {
+          "component": "text",
+          "name": "customizationCtaLabel",
+          "label": "Customization CTA Label",
+          "valueType": "string"
+        },
+        {
+          "component": "text",
+          "name": "customizationCtaLabelAfter",
+          "label": "Customization CTA Label after customisation",
+          "valueType": "string"
+        }
+      ]
+    },
+    {
       "id": "articles",
       "fields": []
     }
@@ -95,7 +192,9 @@
   "filters": [{
     "id": "articles",
     "components": [
-      "articles-item"
+      "articles-tease",
+      "articles-customization",
+      "articles-survey"
     ]
   }]
 }

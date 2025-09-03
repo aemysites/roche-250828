@@ -43,7 +43,7 @@
         background: var(--primary-color);
         padding: 30px 30px 20px;
         margin-inline: -20px;
-        text-align: left;
+        text-align: center;
     }
 
     &.survey {
@@ -128,6 +128,7 @@
 
     .articles__item.customization {
         grid-column: span 2;
+        padding: 44px;
     }
 }
 
@@ -155,7 +156,6 @@
 
     .articles__item.customization {
         margin-inline: 0;
-        padding: 30px 20px 50px;
     }
 }
 

@@ -34,7 +34,9 @@
   {
     "id": "articles",
     "components": [
-      "articles-item"
+      "articles-tease",
+      "articles-customization",
+      "articles-survey"
     ]
   },
   {
