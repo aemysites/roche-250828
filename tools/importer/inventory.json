@@ -302,15 +302,47 @@
       ]
     },
     {
-      "name": "Hero",
+      "name": "Post Hero",
       "cluster": 9,
-      "key": "hero9",
+      "key": "postHero",
       "instances": [
         {
           "url": "https://www.lumieresurlasep.fr/temoignages/aidants-au-coeur-de-la-relation-mere-fille/",
           "urlHash": "703b00f9c71a4f9640ea0e076a19fe0ffe909816",
           "uuid": "703b00f9-02-add54bcb8f055de42915ab5371264bb19835b0f0",
-          "xpath": "/html[1]/body[1]"
+          "xpath": "/html[1]/body[1]/main[1]/div[2]/article[1]/section[1]"
+        },
+        {
+          "url": "https://www.lumieresurlasep.fr/temoignages/une-sep-un-cancer-je-ne-veux-pas-que-la-maladie-soit-la-star-de-ma-vie/",
+          "urlHash": "a6b2be4493caf3610232d6bc2f7a90de489a8838",
+          "uuid": "a6b2be44-02-add54bcb8f055de42915ab5371264bb19835b0f0",
+          "xpath": "/html[1]/body[1]/main[1]/div[2]/article[1]/section[1]"
+        }
+      ]
+    },
+    {
+      "name": "Embed",
+      "cluster": 26,
+      "key": "embed26",
+      "instances": [
+        {
+          "url": "https://www.lumieresurlasep.fr/temoignages/aidants-au-coeur-de-la-relation-mere-fille/",
+          "urlHash": "703b00f9c71a4f9640ea0e076a19fe0ffe909816",
+          "uuid": "703b00f9-02-add54bcb8f055de42915ab5371264bb19835b0f0",
+          "xpath": "/html[1]/body[1]/main[1]/div[2]/article[1]/section[2]/div[1]/div[1]/div[1]/div[3]/div[2]/figure[1]"
+        }
+      ]
+    },
+    {
+      "name": "Testimony",
+      "cluster": 27,
+      "key": "testimony27",
+      "instances": [
+        {
+          "url": "https://www.lumieresurlasep.fr/temoignages/une-sep-un-cancer-je-ne-veux-pas-que-la-maladie-soit-la-star-de-ma-vie/",
+          "urlHash": "a6b2be4493caf3610232d6bc2f7a90de489a8838",
+          "uuid": "a6b2be44-00-70928af0e9d7f0ac1f13f2d60f543d2cf08783dd",
+          "xpath": "/html[1]/body[1]/main[1]/div[2]/article[1]/section[2]/div[1]/div[1]/div[1]/div[2]"
         }
       ]
     },
@@ -438,15 +470,15 @@
       ]
     },
     {
-      "name": "Hero",
+      "name": "Post Hero",
       "cluster": 19,
-      "key": "hero19",
+      "key": "postHero",
       "instances": [
         {
           "url": "https://www.lumieresurlasep.fr/temoignages/accepter-la-sep-de-mon-enfant/",
           "urlHash": "f2b061ec03a8c8f695962a033ca1ecaa9a79b365",
           "uuid": "f2b061ec-02-add54bcb8f055de42915ab5371264bb19835b0f0",
-          "xpath": "/html[1]/body[1]"
+          "xpath": "/html[1]/body[1]/main[1]/div[2]/article[1]/section[1]"
         }
       ]
     },
@@ -582,12 +614,6 @@
       "uuid": "703b00f9-07-8432047a6065c3f16241857848a3c7b0988274fc",
       "xpath": "/html[1]/body[1]/footer[1]/div[1]",
       "section": "section-2"
-    },
-    {
-      "url": "https://www.lumieresurlasep.fr/temoignages/une-sep-un-cancer-je-ne-veux-pas-que-la-maladie-soit-la-star-de-ma-vie/",
-      "urlHash": "a6b2be4493caf3610232d6bc2f7a90de489a8838",
-      "uuid": "a6b2be44-00-70928af0e9d7f0ac1f13f2d60f543d2cf08783dd",
-      "xpath": "/html[1]/body[1]/header[1]/div[1]"
     },
     {
       "url": "https://www.lumieresurlasep.fr/temoignages/une-sep-un-cancer-je-ne-veux-pas-que-la-maladie-soit-la-star-de-ma-vie/",

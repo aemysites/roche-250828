@@ -528,6 +528,23 @@
     ]
   },
   {
+    "id": "library-metadata",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "blockName",
+        "label": "Block Name"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "description",
+        "label": "Description of the block variant"
+      }
+    ]
+  },
+  {
     "id": "modal",
     "fields": [
       {
@@ -545,6 +562,48 @@
         "component": "text",
         "name": "linkText",
         "label": "Text"
+      }
+    ]
+  },
+  {
+    "id": "post-hero",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "imageAlt",
+        "label": "Image Alt"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "smallimage",
+        "label": "Small Image"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "smallimageAlt",
+        "label": "Small Image Alt"
+      },
+      {
+        "component": "heading",
+        "valueType": "string",
+        "name": "headline",
+        "label": "Headline",
+        "headingLevel": 1
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "headlineType",
+        "hidden": true
       }
     ]
   },
@@ -820,6 +879,49 @@
         "value": "",
         "label": "Content",
         "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "testimony",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "imageAlt",
+        "value": "",
+        "label": "Image Alt Text"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "label",
+        "label": "Label"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "person",
+        "label": "Interviewed Person"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "personType",
+        "hidden": true
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "description",
+        "label": "Description"
       }
     ]
   },
