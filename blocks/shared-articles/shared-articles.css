@@ -16,11 +16,11 @@
 
     &.cta {
         align-items: center;
-        flex-grow: 1;
         justify-content: space-between;
         padding: 25px;
         height: 350px;
         min-height: 350px;
+        text-align: center;
 
         p:not(.button-container) {
             color: var(--secondary-color);

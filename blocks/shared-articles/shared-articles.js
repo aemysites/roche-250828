@@ -15,9 +15,6 @@ export default function decorate(block) {
 
     typeContainer.remove();
     carousel.append(item);
-    const clone = item.cloneNode(true);
-    items.push(clone);
-    carousel.append(clone);
   });
 
   const pageSize = 3;
