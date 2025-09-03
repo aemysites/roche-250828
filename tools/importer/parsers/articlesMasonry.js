@@ -7,8 +7,6 @@ export default function articlesMasonry(element) {
   const advice = 'advice';
   const instagram = 'instagram';
 
-  let variantClasses = 'masonry';
-
   const gridItems = element.querySelectorAll('.grid-item');
   const items = [];
 
@@ -47,7 +45,6 @@ export default function articlesMasonry(element) {
     ? element.nextElementSibling
     : null ?? element.querySelector('.auto-load-button');
   if (autoLoadButton) {
-    variantClasses += ', load-more'
     autoLoadButton.remove();
   }
 
