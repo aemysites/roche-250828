@@ -481,11 +481,11 @@
       ]
     },
     {
-      "name": "Columns",
+      "name": "Socials",
       "cluster": 22,
-      "source": "Columns",
-      "target": "Columns (columns22)",
-      "key": "columns22",
+      "source": "Socials",
+      "target": "Socials (text)",
+      "key": "socialsText",
       "instances": [
         {
           "url": "https://www.lumieresurlasep.fr/",

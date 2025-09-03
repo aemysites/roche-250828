@@ -6,8 +6,9 @@ export default function parse(element, { document }) {
   const contentRow = links;
   // Header row must be a single column with the block name
   const table = WebImporter.DOMUtils.createTable([
-    ['Columns (columns22)'],
-    contentRow,
+    ['Socials (text)'],
+    [''],
+    [contentRow],
   ], document);
   element.replaceWith(table);
 }
