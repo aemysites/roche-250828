@@ -55,6 +55,8 @@ export const customTransformers = {
         document.querySelector('.skip-link screen-reader-text')?.remove();
         document.querySelector('.a11y-speak-intro-text')?.remove();
         document.querySelector('.comment-box')?.remove();
+        document.querySelector('.return-block')?.remove();
+        document.querySelector('.sidebar-article')?.remove();
       } catch (e) {
         console.warn('Failed to remove onetrust-consent-sdk', e);
       }
