@@ -403,6 +403,21 @@
         padding: 0 10px;
         text-align: center;
     }
+
+    .icon {
+        animation-duration: .5s;
+        animation-timing-function: ease-out;
+    }
+
+    &:hover {
+        span:not(.icon) {
+            font-style: italic;
+        }
+
+        .icon {
+            animation-name: bounce;
+        }
+    }
 }
 
 @media screen and (width >= 1025px) {
@@ -858,5 +873,15 @@
 
     100% {
         transform: rotate(-45deg)
+    }
+}
+
+@keyframes bounce {
+    0%,100% {
+        transform: translateY(0)
+    }
+
+    50% {
+        transform: translateY(-5px)
     }
 }
