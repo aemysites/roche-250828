@@ -43,7 +43,7 @@
         {
           "component": "text",
           "valueType": "string",
-          "name": "name",
+          "name": "person",
           "label": "Name"
         },
         {
