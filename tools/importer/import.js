@@ -17,6 +17,8 @@ import columns6Parser from './parsers/columns6.js';
 import hero10Parser from './parsers/hero10.js';
 import cards8Parser from './parsers/cards8.js';
 import hero14Parser from './parsers/hero14.js';
+import testimony27Parser from './parsers/testimony27.js';
+import embed26Parser from './parsers/embed26.js';
 import tabs13Parser from './parsers/tabs13.js';
 import cards2Parser from './parsers/cards2.js';
 import columns20Parser from './parsers/columns20.js';
@@ -35,6 +37,7 @@ import metadataParser from './parsers/metadata.js';
 import cleanupTransformer from './transformers/cleanup.js';
 import imageTransformer from './transformers/images.js';
 import linkTransformer from './transformers/links.js';
+import postHeroParser from './parsers/post-hero.js';
 import sectionsTransformer from './transformers/sections.js';
 import { TransformHook } from './transformers/transform.js';
 import { customParsers, customTransformers, customElements } from './import.custom.js';
@@ -47,6 +50,8 @@ import articlesMasonry from './parsers/articlesMasonry.js';
 import heroParser from './parsers/hero.js';
 
 const parsers = {
+  postHero: postHeroParser,
+  testimony27: testimony27Parser,
   metadata: metadataParser,
   columns5: columns5Parser,
   cards7: cards7Parser,
@@ -54,6 +59,7 @@ const parsers = {
   hero10: hero10Parser,
   cards8: cards8Parser,
   hero14: heroParser,
+  embed26: embed26Parser,
   tabs13: tabs13Parser,
   cards2: cards2Parser,
   columns20: columns20Parser,

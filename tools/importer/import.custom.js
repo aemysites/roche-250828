@@ -42,7 +42,7 @@ export const customElements = [
  */
 export const customTransformers = {
   inject: (hookName, element, { document }) => {
-    if (hookName === 'beforeTransform') {
+    if (hookName === 'beforePageTransform') {
       try {
         document.querySelector('#onetrust-consent-sdk')?.remove();
         document.querySelector('header')?.remove();
@@ -65,5 +65,5 @@ export const customTransformers = {
         console.warn('Failed to remove onetrust-consent-sdk', e);
       }
     }
-  },
+  }
 };
