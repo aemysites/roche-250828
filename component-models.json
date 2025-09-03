@@ -522,6 +522,18 @@
         "label": "Image Alt"
       },
       {
+        "component": "reference",
+        "valueType": "string",
+        "name": "smallimage",
+        "label": "Small Image"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "smallimageAlt",
+        "label": "Small Image Alt"
+      },
+      {
         "component": "heading",
         "valueType": "string",
         "name": "headline",

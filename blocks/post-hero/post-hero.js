@@ -1,8 +1,9 @@
-import { createOptimizedPicture } from '../../scripts/aem.js';
-
 export default function decorate(block) {
-  const imgClone = block.querySelector('img').cloneNode(true);
-  const optimized = createOptimizedPicture(imgClone.src, imgClone.alt, false, [{ width: '750' }]);
-  optimized.classList.add('mini');
-  block.append(optimized);
+  const smallImage = block.querySelector('img:nth-child(2)');
+
+  // wrap the second div and the picture element in a div
+  const wrapper = document.createElement('div');
+  wrapper.classList.add('post-hero__wrapper');
+  wrapper.append(block.querySelector(':scope > div:nth-child(2)'), smallImage);
+  block.append(wrapper);
 }
