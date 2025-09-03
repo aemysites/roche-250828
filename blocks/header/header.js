@@ -193,6 +193,10 @@ function buildCustomizationPanel(nav, navSections, placeholders) {
   title.append(span);
   panel.append(title);
 
+  const img = createOptimizedPicture('/icons/custom.svg');
+  img.classList.add('nav-customization-panel__img');
+  panel.append(img);
+
   window.addEventListener('hashchange', () => {
     toggleCustomizationPanel(nav, navSections, panel);
   });

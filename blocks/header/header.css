@@ -660,6 +660,16 @@
     }
 }
 
+.nav-customization-panel__img {
+    opacity: .4;
+    position: fixed;
+    bottom: 0;
+    left: 40px;
+    max-width: 476px;
+    z-index: -1;
+    pointer-events: none;
+}
+
 .nav-customization-panel__title {
     border-bottom: 1px solid rgb(20 85 122 / 20%);
     color: var(--secondary-color);
