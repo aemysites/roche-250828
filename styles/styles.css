@@ -289,3 +289,7 @@ main > .section:first-of-type {
 a {
     color: var(--text-color);
 }
+
+.section-1 {
+    background-color: var(--beige);
+}
