@@ -28,7 +28,7 @@ import cards11Parser from './parsers/cards11.js';
 import columns1Parser from './parsers/columns1.js';
 import cards4Parser from './parsers/cards4.js';
 import columns12Parser from './parsers/columns12.js';
-import columns23Parser from './parsers/columns23.js';
+import sharedArticlesParser from './parsers/sharedArticles.js';
 import columns17Parser from './parsers/columns17.js';
 import headerParser from './parsers/header.js';
 import metadataParser from './parsers/metadata.js';
@@ -65,7 +65,7 @@ const parsers = {
   columns1: columns1Parser,
   cards4: cards4Parser,
   columns12: columns12Parser,
-  columns23: columns23Parser,
+  sharedArticles: sharedArticlesParser,
   columns17: columns17Parser,
   articlesMasonry: articlesMasonry,
   ...customParsers,

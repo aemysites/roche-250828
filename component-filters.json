@@ -65,6 +65,12 @@
     ]
   },
   {
+    "id": "shared-articles",
+    "components": [
+      "shared-articles-item"
+    ]
+  },
+  {
     "id": "table",
     "components": [
       "table-row"

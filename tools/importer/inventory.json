@@ -496,11 +496,11 @@
       ]
     },
     {
-      "name": "Columns",
+      "name": "Shared Articles",
       "cluster": 23,
-      "source": "Columns",
-      "target": "Columns (columns23)",
-      "key": "columns23",
+      "source": "Shared Articles",
+      "target": "Shared Articles",
+      "key": "sharedArticles",
       "instances": [
         {
           "url": "https://www.lumieresurlasep.fr/",

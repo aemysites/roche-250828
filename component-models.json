@@ -514,6 +514,58 @@
     ]
   },
   {
+    "id": "shared-articles-item",
+    "fields": [
+      {
+        "component": "select",
+        "name": "type",
+        "label": "Type",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "CTA",
+            "value": "cta"
+          },
+          {
+            "name": "Post",
+            "value": "post"
+          }
+        ]
+      },
+      {
+        "component": "reference",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "text",
+        "label": "Text",
+        "valueType": "string"
+      },
+      {
+        "component": "aem-content",
+        "name": "cta",
+        "label": "CTA Link"
+      },
+      {
+        "component": "text",
+        "name": "ctaText",
+        "label": "CTA Text"
+      },
+      {
+        "component": "text",
+        "name": "ctaTitle",
+        "label": "CTA Title"
+      }
+    ]
+  },
+  {
+    "id": "shared-articles",
+    "fields": []
+  },
+  {
     "id": "socials",
     "fields": [
       {
