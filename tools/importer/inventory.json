@@ -302,15 +302,28 @@
       ]
     },
     {
-      "name": "Hero",
+      "name": "Post Hero",
       "cluster": 9,
-      "key": "hero9",
+      "key": "postHero",
       "instances": [
         {
           "url": "https://www.lumieresurlasep.fr/temoignages/aidants-au-coeur-de-la-relation-mere-fille/",
           "urlHash": "703b00f9c71a4f9640ea0e076a19fe0ffe909816",
           "uuid": "703b00f9-02-add54bcb8f055de42915ab5371264bb19835b0f0",
-          "xpath": "/html[1]/body[1]"
+          "xpath": "/html[1]/body[1]/main[1]/div[2]/article[1]/section[1]"
+        }
+      ]
+    },
+    {
+      "name": "Embed",
+      "cluster": 26,
+      "key": "embed26",
+      "instances": [
+        {
+          "url": "https://www.lumieresurlasep.fr/temoignages/aidants-au-coeur-de-la-relation-mere-fille/",
+          "urlHash": "703b00f9c71a4f9640ea0e076a19fe0ffe909816",
+          "uuid": "703b00f9-02-add54bcb8f055de42915ab5371264bb19835b0f0",
+          "xpath": "/html[1]/body[1]/main[1]/div[2]/article[1]/section[2]/div[1]/div[1]/div[1]/div[3]/div[2]/figure[1]"
         }
       ]
     },

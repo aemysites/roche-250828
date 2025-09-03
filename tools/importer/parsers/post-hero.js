@@ -1,5 +1,4 @@
 export default function heroParser(element) {
-
   const heroImage = element.querySelector('.background');
   const headline = element.querySelector('h1')?.textContent.trim() || '';
 
