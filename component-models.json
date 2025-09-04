@@ -167,6 +167,33 @@
     ]
   },
   {
+    "id": "article-type-filter",
+    "fields": []
+  },
+  {
+    "id": "article-type-filter-item",
+    "fields": [
+      {
+        "component": "aem-content",
+        "name": "link",
+        "valueType": "string",
+        "label": "Link"
+      },
+      {
+        "component": "text",
+        "name": "linkText",
+        "valueType": "string",
+        "label": "Text"
+      },
+      {
+        "component": "text",
+        "name": "linkTitle",
+        "valueType": "string",
+        "label": "Title"
+      }
+    ]
+  },
+  {
     "id": "articles-tease",
     "fields": [
       {
@@ -383,6 +410,48 @@
     ]
   },
   {
+    "id": "category-hero",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "imageAlt",
+        "label": "Image Alt"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "tagLine",
+        "label": "Tag Line"
+      },
+      {
+        "component": "heading",
+        "valueType": "string",
+        "name": "headline",
+        "label": "Headline",
+        "headingLevel": 1
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "headlineType",
+        "hidden": true
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "description",
+        "label": "Description"
+      }
+    ]
+  },
+  {
     "id": "columns",
     "fields": [
       {
@@ -406,6 +475,49 @@
         "label": "Rows"
       }
     ]
+  },
+  {
+    "id": "customized-articles-cta",
+    "fields": [
+      {
+        "component": "text",
+        "name": "typeOfItem",
+        "label": "Type",
+        "readOnly": true,
+        "value": "customized-articles-cta"
+      },
+      {
+        "component": "reference",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "text",
+        "label": "Text",
+        "valueType": "string"
+      },
+      {
+        "component": "aem-content",
+        "name": "cta",
+        "label": "CTA Link"
+      },
+      {
+        "component": "text",
+        "name": "ctaText",
+        "label": "CTA Text"
+      },
+      {
+        "component": "text",
+        "name": "ctaTitle",
+        "label": "CTA Title"
+      }
+    ]
+  },
+  {
+    "id": "customized-articles",
+    "fields": []
   },
   {
     "id": "embed",
@@ -631,6 +743,58 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "related-articles-item",
+    "fields": [
+      {
+        "component": "select",
+        "name": "type",
+        "label": "Type",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "CTA",
+            "value": "cta"
+          },
+          {
+            "name": "Post",
+            "value": "post"
+          }
+        ]
+      },
+      {
+        "component": "reference",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "text",
+        "label": "Text",
+        "valueType": "string"
+      },
+      {
+        "component": "aem-content",
+        "name": "cta",
+        "label": "CTA Link"
+      },
+      {
+        "component": "text",
+        "name": "ctaText",
+        "label": "CTA Text"
+      },
+      {
+        "component": "text",
+        "name": "ctaTitle",
+        "label": "CTA Title"
+      }
+    ]
+  },
+  {
+    "id": "related-articles",
+    "fields": []
   },
   {
     "id": "shared-articles-item",

@@ -35,6 +35,12 @@
     ]
   },
   {
+    "id": "article-type-filter",
+    "components": [
+      "article-type-filter-item"
+    ]
+  },
+  {
     "id": "articles",
     "components": [
       "articles-tease",
@@ -70,8 +76,20 @@
     ]
   },
   {
+    "id": "customized-articles",
+    "components": [
+      "customized-articles-cta"
+    ]
+  },
+  {
     "id": "library-metadata",
     "components": []
+  },
+  {
+    "id": "related-articles",
+    "components": [
+      "related-articles-item"
+    ]
   },
   {
     "id": "shared-articles",

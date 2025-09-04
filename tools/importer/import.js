@@ -19,8 +19,11 @@ import cards8Parser from './parsers/cards8.js';
 import hero14Parser from './parsers/hero14.js';
 import testimony27Parser from './parsers/testimony27.js';
 import embed26Parser from './parsers/embed26.js';
-import tabs13Parser from './parsers/tabs13.js';
-import cards2Parser from './parsers/cards2.js';
+import customizedArticles from './parsers/customizedArticles.js';
+import articleTypeFilter from './parsers/articleTypeFilter.js';
+import categoryHero from './parsers/categoryHero.js';
+import categorySelect from './parsers/categorySelect.js';
+import relatedArticles from './parsers/relatedArticles.js';
 import columns20Parser from './parsers/columns20.js';
 import socialsTextParser from './parsers/socialsText.js';
 import hero19Parser from './parsers/hero19.js';
@@ -60,8 +63,6 @@ const parsers = {
   cards8: cards8Parser,
   hero14: heroParser,
   embed26: embed26Parser,
-  tabs13: tabs13Parser,
-  cards2: cards2Parser,
   columns20: columns20Parser,
   socialsText: socialsTextParser,
   hero19: hero19Parser,
@@ -74,6 +75,11 @@ const parsers = {
   sharedArticles: sharedArticlesParser,
   columns17: columns17Parser,
   articlesMasonry: articlesMasonry,
+  articleTypeFilter: articleTypeFilter,
+  customizedArticles: customizedArticles,
+  categoryHero: categoryHero,
+  categorySelect: categorySelect,
+  relatedArticles: relatedArticles,
   ...customParsers,
 };
 

@@ -35,6 +35,7 @@ export const customParsers = {};
 export const customElements = [
   { name: 'hero', element: '.article-header' },
   { name: 'hero', element: '.header-page' },
+  { name: 'customizedArticles', element: '.block-posts.customized-posts' },
 ];
 
 /**
@@ -58,7 +59,7 @@ export const customTransformers = {
         document.querySelector('.return-block')?.remove();
         document.querySelector('.sidebar-article')?.remove();
         document.querySelector('.breadcrumbs-wrapper')?.remove();
-        document.querySelectorAll('.block-posts')?.forEach(element => {
+        document.querySelectorAll('.block-posts.related-posts')?.forEach(element => {
           element.remove();
         });
       } catch (e) {
