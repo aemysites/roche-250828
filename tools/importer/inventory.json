@@ -317,6 +317,18 @@
           "urlHash": "a6b2be4493caf3610232d6bc2f7a90de489a8838",
           "uuid": "a6b2be44-02-add54bcb8f055de42915ab5371264bb19835b0f0",
           "xpath": "/html[1]/body[1]/main[1]/div[2]/article[1]/section[1]"
+        },
+        {
+          "url": "https://www.lumieresurlasep.fr/temoignages/une-sep-un-cancer-je-ne-veux-pas-que-la-maladie-soit-la-star-de-ma-vie/",
+          "urlHash": "a6b2be4493caf3610232d6bc2f7a90de489a8838",
+          "uuid": "a6b2be44-02-add54bcb8f055de42915ab5371264bb19835b0f0",
+          "xpath": "/html[1]/body[1]/main[1]/div[2]/article[1]/section[1]"
+        },
+        {
+          "url": "https://www.lumieresurlasep.fr/conseils/sep-les-cles-face-a-lisolement/",
+          "urlHash": "da09ea60792378b53979e3c0925e5400fa25dc8f",
+          "uuid": "a6b2be44-02-add54bcb8f055de42915ab5371264bb19835b0f0",
+          "xpath": "/html[1]/body[1]/main[1]/div[2]/article[1]/section[1]"
         }
       ]
     },
