@@ -190,7 +190,7 @@ picture {
 /* RESETS END */
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -384,4 +384,51 @@ a {
 
 .section-1 {
   background-color: var(--beige);
+}
+
+/* styles for pages */
+body.temoignages {
+  background-color: var(--beige, #fbf8f1);
+
+  .post-hero-wrapper {
+    padding-bottom: 20px;
+  }
+
+  h3 {
+    margin: 40px 0 10px;
+    color: var(--secondary-color, #14557a);
+    font-family: var(--font-family, "Minion", serif);
+    font-style: italic;
+    font-weight: var(--bold, 700);
+    font-size: 30px;
+    line-height: .9;
+  }
+
+  h3+p {
+    margin: 0 0 40px;
+  }
+
+  h2 {
+    margin: 40px 0 0 0;
+  }
+
+  main>.section>div:not(:first-child) {
+    max-width: 850px;
+  }
+
+  p:has(img)+p {
+    font-size: 16px;
+
+    &:before {
+      content: '- ';
+    }
+
+    padding-bottom: 40px;
+  }
+
+  .columns div {
+    align-items: normal !important;
+    box-sizing: border-box;
+    gap: 2em;
+  }
 }
