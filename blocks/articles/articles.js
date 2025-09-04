@@ -49,55 +49,9 @@ async function masonry(block, items) {
   });
 }
 
-function buildTease(href, type, title, imgSrc) {
-  const optimisedPicture = createOptimizedPicture(imgSrc, '', true);
-  const tease = document.createElement('div');
-  tease.classList.add('articles__item', 'articles-tease');
-
-  const wrapper = document.createElement('div');
-  const para = document.createElement('p');
-  const link = document.createElement('a');
-  const imageDiv = document.createElement('div');
-  const titleDiv = document.createElement('div');
-  const postTypeDiv = document.createElement('div');
-  const h2 = document.createElement('h2');
-  const h2Span = document.createElement('span');
-  const postType = document.createElement('p');
-
-  wrapper.append(para);
-  para.append(link);
-
-  link.append(imageDiv, titleDiv, postTypeDiv);
-  link.href = href;
-
-  imageDiv.append(optimisedPicture);
-
-  postTypeDiv.append(postType);
-  postTypeDiv.classList.add('articles__item__post-type');
-  postType.textContent = type;
-
-  titleDiv.append(h2);
-  h2.id = toClassName(title);
-  h2.append(h2Span);
-  h2Span.textContent = title;
-  h2Span.classList.add('articles__item__h2__text');
-
-  tease.append(wrapper);
-
-  return tease;
-}
-
 async function addArticles(block, itemsContainer, items, articles, resizeObserver) {
   const newItems = [...articles].map((article) => {
-    const range = document.createRange();
-    range.selectNode(block);
-    const documentFragment = range.createContextualFragment(article);
-    const { href } = documentFragment.querySelector('a');
-    const type = documentFragment.querySelector('.post-type').textContent.trim();
-    const imgSrc = documentFragment.querySelector('img').src;
-    const title = documentFragment.querySelector('h2').textContent.trim();
-
-    return buildTease(href, type, title, imgSrc);
+    return buildTeaseFromCustomizationResponse(article, block);
   });
   itemsContainer.textContent = '';
   items.push(...newItems);
