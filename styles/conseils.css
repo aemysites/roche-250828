@@ -1,0 +1,9 @@
+@layer temoignages {
+
+  /* styles for pages */
+  body.conseils {
+    p {
+      padding: 20px 0;
+    }
+  }
+}
