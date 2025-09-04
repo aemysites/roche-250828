@@ -6,8 +6,8 @@ export default function parse(element, { document }) {
 
   tabLinks.forEach((a) => {
     const url = new URL(a.href);
-    a.href = url.search;
-    rows.push([a]);
+   const params = new URLSearchParams(url.search);
+    rows.push([[params.get('post_type')], [a.textContent]]);
   });
 
   // Create tabs block table from extracted rows

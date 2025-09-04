@@ -41,22 +41,22 @@
       "id": "article-type-filter-item",
       "fields": [
         {
-          "component": "aem-content",
-          "name": "link",
+          "component": "select",
+          "name": "typeOfPost",
+          "label": "Post Type",
           "valueType": "string",
-          "label": "Link"
+          "options": [
+            { "name": "Post", "value": "post" },
+            { "name": "Testimony", "value": "testimony" },
+            { "name": "Advice", "value": "advice" },
+            { "name": "Instagram", "value": "instagram" }
+          ]
         },
         {
           "component": "text",
-          "name": "linkText",
-          "valueType": "string",
-          "label": "Text"
-        },
-        {
-          "component": "text",
-          "name": "linkTitle",
-          "valueType": "string",
-          "label": "Title"
+          "name": "label",
+          "label": "Label",
+          "valueType": "string"
         }
       ]
     }
