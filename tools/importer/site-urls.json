@@ -49,6 +49,18 @@
       "source": "MANUAL",
       "targetPath": "/conseils/activite-sportive-et-sclerose-en-plaques",
       "id": "sweta-1"
+    },
+    {
+      "url": "https://www.lumieresurlasep.fr/temoignages/le-defi-dalban-jaillais-sep-a-la-voile/",
+      "source": "MANUAL",
+      "targetPath": "/temoignages/le-defi-dalban-jaillais-sep-a-la-voile",
+      "id": "ben-1"
+    },
+    {
+      "url": "https://www.lumieresurlasep.fr/temoignages/le-defi-danne-lafond-criquet/",
+      "source": "MANUAL",
+      "targetPath": "/temoignages/le-defi-danne-lafond-criquet",
+      "id": "ben-2"
     }
   ],
   "lastCrawled": null,

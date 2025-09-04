@@ -322,6 +322,17 @@
           "url": "https://www.lumieresurlasep.fr/conseils/activite-sportive-et-sclerose-en-plaques/",
           "urlHash": "sweta-1",
           "uuid": "sweta-1",
+        },
+        {
+          "url": "https://www.lumieresurlasep.fr/temoignages/le-defi-dalban-jaillais-sep-a-la-voile/",
+          "urlHash": "ben-1",
+          "uuid": "ben-1a",
+          "xpath": "/html[1]/body[1]/main[1]/div[2]/article[1]/section[1]"
+        },
+        {
+          "url": "https://www.lumieresurlasep.fr/temoignages/le-defi-danne-lafond-criquet/",
+          "urlHash": "ben-2",
+          "uuid": "ben-2a",
           "xpath": "/html[1]/body[1]/main[1]/div[2]/article[1]/section[1]"
         }
       ]
@@ -354,6 +365,18 @@
           "url": "https://www.lumieresurlasep.fr/temoignages/une-sep-un-cancer-je-ne-veux-pas-que-la-maladie-soit-la-star-de-ma-vie/",
           "urlHash": "a6b2be4493caf3610232d6bc2f7a90de489a8838",
           "uuid": "a6b2be44-00-70928af0e9d7f0ac1f13f2d60f543d2cf08783dd",
+          "xpath": "/html[1]/body[1]/main[1]/div[2]/article[1]/section[2]/div[1]/div[1]/div[1]/div[2]"
+        },
+        {
+          "url": "https://www.lumieresurlasep.fr/temoignages/le-defi-dalban-jaillais-sep-a-la-voile/",
+          "urlHash": "ben-1",
+          "uuid": "ben-1a",
+          "xpath": "/html[1]/body[1]/main[1]/div[2]/article[1]/section[2]/div[1]/div[1]/div[1]/div[2]"
+        },
+        {
+          "url": "https://www.lumieresurlasep.fr/temoignages/le-defi-danne-lafond-criquet/",
+          "urlHash": "ben-2",
+          "uuid": "ben-2a",
           "xpath": "/html[1]/body[1]/main[1]/div[2]/article[1]/section[2]/div[1]/div[1]/div[1]/div[2]"
         }
       ]
