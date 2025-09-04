@@ -317,6 +317,12 @@
           "urlHash": "b1dd98c575795e8b02dec87ded6812086cac40ef",
           "uuid": "a6b2be44-02-add54bcb8f055de42915ab5371264bb19835b0f0",
           "xpath": "/html[1]/body[1]/main[1]/div[2]/article[1]/section[1]"
+        },
+        {
+          "url": "https://www.lumieresurlasep.fr/conseils/activite-sportive-et-sclerose-en-plaques/",
+          "urlHash": "sweta-1",
+          "uuid": "sweta-1",
+          "xpath": "/html[1]/body[1]/main[1]/div[2]/article[1]/section[1]"
         }
       ]
     },
@@ -330,6 +336,12 @@
           "urlHash": "703b00f9c71a4f9640ea0e076a19fe0ffe909816",
           "uuid": "703b00f9-02-add54bcb8f055de42915ab5371264bb19835b0f0",
           "xpath": "/html[1]/body[1]/main[1]/div[2]/article[1]/section[2]/div[1]/div[1]/div[1]/div[3]/div[2]/figure[1]"
+        },
+        {
+          "url": "https://www.lumieresurlasep.fr/conseils/activite-sportive-et-sclerose-en-plaques/",
+          "urlHash": "sweta-1",
+          "uuid": "sweta-1",
+          "xpath": "/html[1]/body[1]/main[1]/div[2]/article[1]/section[2]/div[1]/div[1]/div[1]/div[1]/div[2]/figure[1]"
         }
       ]
     },
