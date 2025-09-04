@@ -322,6 +322,7 @@
           "url": "https://www.lumieresurlasep.fr/conseils/activite-sportive-et-sclerose-en-plaques/",
           "urlHash": "sweta-1",
           "uuid": "sweta-1",
+          "xpath": "/html[1]/body[1]/main[1]/div[2]/article[1]/section[1]"
         },
         {
           "url": "https://www.lumieresurlasep.fr/temoignages/le-defi-dalban-jaillais-sep-a-la-voile/",
@@ -333,6 +334,54 @@
           "url": "https://www.lumieresurlasep.fr/temoignages/le-defi-danne-lafond-criquet/",
           "urlHash": "ben-2",
           "uuid": "ben-2a",
+          "xpath": "/html[1]/body[1]/main[1]/div[2]/article[1]/section[1]"
+        },
+        {
+          "url": "https://www.lumieresurlasep.fr/conseils/autoreeducation-a-domicile/",
+          "urlHash": "sweta-2",
+          "uuid": "sweta-2",
+          "xpath": "/html[1]/body[1]/main[1]/div[2]/article[1]/section[1]"
+        },
+        {
+          "url": "https://www.lumieresurlasep.fr/conseils/avec-une-sclerose-en-plaques-peut-on-allaiter-apres-sa-grossesse/",
+          "urlHash": "sweta-3",
+          "uuid": "sweta-3",
+          "xpath": "/html[1]/body[1]/main[1]/div[2]/article[1]/section[1]"
+        },
+        {
+          "url": "https://www.lumieresurlasep.fr/conseils/avec-une-sclerose-en-plaques-quelles-sont-les-recommandations-pour-un-accouchement/",
+          "urlHash": "sweta-4",
+          "uuid": "sweta-4",
+          "xpath": "/html[1]/body[1]/main[1]/div[2]/article[1]/section[1]"
+        },
+        {
+          "url": "https://www.lumieresurlasep.fr/conseils/cephalees-et-migraines/",
+          "urlHash": "sweta-5",
+          "uuid": "sweta-5",
+          "xpath": "/html[1]/body[1]/main[1]/div[2]/article[1]/section[1]"
+        },
+        {
+          "url": "https://www.lumieresurlasep.fr/conseils/comment-se-lancer-dans-un-projet-de-grossesse-avec-une-sclerose-en-plaques/",
+          "urlHash": "sweta-6",
+          "uuid": "sweta-6",
+          "xpath": "/html[1]/body[1]/main[1]/div[2]/article[1]/section[1]"
+        },
+        {
+          "url": "https://www.lumieresurlasep.fr/conseils/conseils-et-astuces-en-sophrologie/",
+          "urlHash": "sweta-7",
+          "uuid": "sweta-7",
+          "xpath": "/html[1]/body[1]/main[1]/div[2]/article[1]/section[1]"
+        },
+        {
+          "url": "https://www.lumieresurlasep.fr/conseils/dans-le-cadre-dune-irm-faut-il-craindre-les-injections-repetees-de-gadolinium/",
+          "urlHash": "sweta-8",
+          "uuid": "sweta-8",
+          "xpath": "/html[1]/body[1]/main[1]/div[2]/article[1]/section[1]"
+        },
+        {
+          "url": "https://www.lumieresurlasep.fr/conseils/evoquer-la-maladie-au-sein-du-couple/",
+          "urlHash": "sweta-9",
+          "uuid": "sweta-9",
           "xpath": "/html[1]/body[1]/main[1]/div[2]/article[1]/section[1]"
         }
       ]
@@ -352,6 +401,54 @@
           "url": "https://www.lumieresurlasep.fr/conseils/activite-sportive-et-sclerose-en-plaques/",
           "urlHash": "sweta-1",
           "uuid": "sweta-1",
+          "xpath": "/html[1]/body[1]/main[1]/div[2]/article[1]/section[2]/div[1]/div[1]/div[1]/div[1]/div[2]/figure[1]"
+        },
+        {
+          "url": "https://www.lumieresurlasep.fr/conseils/autoreeducation-a-domicile/",
+          "urlHash": "sweta-2",
+          "uuid": "sweta-2",
+          "xpath": "/html[1]/body[1]/main[1]/div[2]/article[1]/section[2]/div[1]/div[1]/div[1]/div[1]/div[2]/figure[1]"
+        },
+        {
+          "url": "https://www.lumieresurlasep.fr/conseils/avec-une-sclerose-en-plaques-peut-on-allaiter-apres-sa-grossesse/",
+          "urlHash": "sweta-3",
+          "uuid": "sweta-3",
+          "xpath": "/html[1]/body[1]/main[1]/div[2]/article[1]/section[2]/div[1]/div[1]/div[1]/div[1]/div[2]/figure[1]"
+        },
+        {
+          "url": "https://www.lumieresurlasep.fr/conseils/avec-une-sclerose-en-plaques-quelles-sont-les-recommandations-pour-un-accouchement/",
+          "urlHash": "sweta-4",
+          "uuid": "sweta-4",
+          "xpath": "/html[1]/body[1]/main[1]/div[2]/article[1]/section[2]/div[1]/div[1]/div[1]/div[1]/div[2]/figure[1]"
+        },
+        {
+          "url": "https://www.lumieresurlasep.fr/conseils/cephalees-et-migraines/",
+          "urlHash": "sweta-5",
+          "uuid": "sweta-5",
+          "xpath": "/html[1]/body[1]/main[1]/div[2]/article[1]/section[2]/div[1]/div[1]/div[1]/div[1]/div[2]/figure[1]"
+        },
+        {
+          "url": "https://www.lumieresurlasep.fr/conseils/comment-se-lancer-dans-un-projet-de-grossesse-avec-une-sclerose-en-plaques/",
+          "urlHash": "sweta-6",
+          "uuid": "sweta-6",
+          "xpath": "/html[1]/body[1]/main[1]/div[2]/article[1]/section[2]/div[1]/div[1]/div[1]/div[1]/div[2]/figure[1]"
+        },
+        {
+          "url": "https://www.lumieresurlasep.fr/conseils/conseils-et-astuces-en-sophrologie/",
+          "urlHash": "sweta-7",
+          "uuid": "sweta-7",
+          "xpath": "/html[1]/body[1]/main[1]/div[2]/article[1]/section[2]/div[1]/div[1]/div[1]/div[1]/div[2]/figure[1]"
+        },
+        {
+          "url": "https://www.lumieresurlasep.fr/conseils/dans-le-cadre-dune-irm-faut-il-craindre-les-injections-repetees-de-gadolinium/",
+          "urlHash": "sweta-8",
+          "uuid": "sweta-8",
+          "xpath": "/html[1]/body[1]/main[1]/div[2]/article[1]/section[2]/div[1]/div[1]/div[1]/div[1]/div[2]/figure[1]"
+        },
+        {
+          "url": "https://www.lumieresurlasep.fr/conseils/evoquer-la-maladie-au-sein-du-couple/",
+          "urlHash": "sweta-9",
+          "uuid": "sweta-9",
           "xpath": "/html[1]/body[1]/main[1]/div[2]/article[1]/section[2]/div[1]/div[1]/div[1]/div[1]/div[2]/figure[1]"
         }
       ]
@@ -500,6 +597,36 @@
           "url": "https://www.lumieresurlasep.fr/temoignages/accepter-la-sep-de-mon-enfant/",
           "urlHash": "f2b061ec03a8c8f695962a033ca1ecaa9a79b365",
           "uuid": "f2b061ec-02-add54bcb8f055de42915ab5371264bb19835b0f0",
+          "xpath": "/html[1]/body[1]/main[1]/div[2]/article[1]/section[1]"
+        },
+        {
+          "url": "https://www.lumieresurlasep.fr/conseils/cephalees-et-migraines/",
+          "urlHash": "sweta-5",
+          "uuid": "sweta-5",
+          "xpath": "/html[1]/body[1]/main[1]/div[2]/article[1]/section[1]"
+        },
+        {
+          "url": "https://www.lumieresurlasep.fr/conseils/comment-se-lancer-dans-un-projet-de-grossesse-avec-une-sclerose-en-plaques/",
+          "urlHash": "sweta-6",
+          "uuid": "sweta-6",
+          "xpath": "/html[1]/body[1]/main[1]/div[2]/article[1]/section[1]"
+        },
+        {
+          "url": "https://www.lumieresurlasep.fr/conseils/conseils-et-astuces-en-sophrologie/",
+          "urlHash": "sweta-7",
+          "uuid": "sweta-7",
+          "xpath": "/html[1]/body[1]/main[1]/div[2]/article[1]/section[1]"
+        },
+        {
+          "url": "https://www.lumieresurlasep.fr/conseils/dans-le-cadre-dune-irm-faut-il-craindre-les-injections-repetees-de-gadolinium/",
+          "urlHash": "sweta-8",
+          "uuid": "sweta-8",
+          "xpath": "/html[1]/body[1]/main[1]/div[2]/article[1]/section[1]"
+        },
+        {
+          "url": "https://www.lumieresurlasep.fr/conseils/evoquer-la-maladie-au-sein-du-couple/",
+          "urlHash": "sweta-9",
+          "uuid": "sweta-9",
           "xpath": "/html[1]/body[1]/main[1]/div[2]/article[1]/section[1]"
         }
       ]

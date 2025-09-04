@@ -61,6 +61,54 @@
       "source": "MANUAL",
       "targetPath": "/temoignages/le-defi-danne-lafond-criquet",
       "id": "ben-2"
+    },
+    {
+      "url": "https://www.lumieresurlasep.fr/conseils/autoreeducation-a-domicile/",
+      "source": "MANUAL",
+      "targetPath": "/conseils/autoreeducation-a-domicile",
+      "id": "sweta-2"
+    },
+    {
+      "url": "https://www.lumieresurlasep.fr/conseils/avec-une-sclerose-en-plaques-peut-on-allaiter-apres-sa-grossesse/",
+      "source": "MANUAL",
+      "targetPath": "/conseils/avec-une-sclerose-en-plaques-peut-on-allaiter-apres-sa-grossesse",
+      "id": "sweta-3"
+    },
+    {
+      "url": "https://www.lumieresurlasep.fr/conseils/avec-une-sclerose-en-plaques-quelles-sont-les-recommandations-pour-un-accouchement/",
+      "source": "MANUAL",
+      "targetPath": "/conseils/avec-une-sclerose-en-plaques-quelles-sont-les-recommandations-pour-un-accouchement",
+      "id": "sweta-4"
+    },
+    {
+      "url": "https://www.lumieresurlasep.fr/conseils/cephalees-et-migraines/",
+      "source": "MANUAL",
+      "targetPath": "/conseils/cephalees-et-migraines",
+      "id": "sweta-5"
+    },
+    {
+      "url": "https://www.lumieresurlasep.fr/conseils/comment-se-lancer-dans-un-projet-de-grossesse-avec-une-sclerose-en-plaques/",
+      "source": "MANUAL",
+      "targetPath": "/conseils/comment-se-lancer-dans-un-projet-de-grossesse-avec-une-sclerose-en-plaques",
+      "id": "sweta-6"
+    },
+    {
+      "url": "https://www.lumieresurlasep.fr/conseils/conseils-et-astuces-en-sophrologie/",
+      "source": "MANUAL",
+      "targetPath": "/conseils/conseils-et-astuces-en-sophrologie",
+      "id": "sweta-7"
+    },
+    {
+      "url": "https://www.lumieresurlasep.fr/conseils/dans-le-cadre-dune-irm-faut-il-craindre-les-injections-repetees-de-gadolinium/",
+      "source": "MANUAL",
+      "targetPath": "/conseils/dans-le-cadre-dune-irm-faut-il-craindre-les-injections-repetees-de-gadolinium",
+      "id": "sweta-8"
+    },
+    {
+      "url": "https://www.lumieresurlasep.fr/conseils/evoquer-la-maladie-au-sein-du-couple/",
+      "source": "MANUAL",
+      "targetPath": "/conseils/evoquer-la-maladie-au-sein-du-couple",
+      "id": "sweta-9"
     }
   ],
   "lastCrawled": null,
