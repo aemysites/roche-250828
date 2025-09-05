@@ -129,3 +129,9 @@
         background-position-x: -200%
     }
 }
+
+.category-articles-container .default-content-wrapper h2 {
+    margin-block-end: 30px;
+    font-size: 46px;
+    line-height: 40px;
+}
