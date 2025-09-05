@@ -6,6 +6,7 @@ import {
   isMasonrySupported,
 } from '../articles/utils.js';
 
+// Decorate category articles
 export default async function decorate(block) {
   const index = await fetchPageIndex();
   const category = window.location.pathname;
