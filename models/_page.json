@@ -18,6 +18,13 @@
         {
           "component": "text",
           "valueType": "string",
+          "name": "category",
+          "multi": true,
+          "label": "Category"
+        },
+        {
+          "component": "text",
+          "valueType": "string",
           "name": "keywords",
           "multi": true,
           "label": "Keywords"

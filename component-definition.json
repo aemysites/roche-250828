@@ -270,6 +270,67 @@
           }
         },
         {
+          "title": "Category Articles",
+          "id": "category-articles",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Articles",
+                  "model": "articles",
+                  "filter": "articles"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Articles Tease",
+          "id": "articles-tease",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Articles Tease",
+                  "model": "articles-tease"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Articles Survey",
+          "id": "articles-survey",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Articles Survey",
+                  "model": "articles-survey"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Articles Customization",
+          "id": "articles-customization",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Articles Customization",
+                  "model": "articles-customization"
+                }
+              }
+            }
+          }
+        },
+        {
           "title": "Category Hero",
           "id": "category-hero",
           "plugins": {
