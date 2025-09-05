@@ -11,8 +11,11 @@ export default async function decorate(block) {
   const index = await fetchPageIndex();
   const category = window.location.pathname;
   const searchParams = new URLSearchParams(window.location.search);
-  const postTypes = [searchParams.get('post_type')]
-    || ['post', 'advice', 'instagram', 'testimony'];
+  const postTypes = searchParams.get('post_type')
+    ? [searchParams.get('post_type')]
+    : ['post', 'advice', 'instagram', 'testimony'];
+
+  console.log(postTypes);
   const filteredIndexes = index
     .filter((item) => {
       const itemCategories = item.category.split(', ')
