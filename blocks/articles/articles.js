@@ -130,8 +130,6 @@ export default async function decorate(block) {
     // Failsafe: ensure articles show after 1 second no matter what
     setTimeout(() => {
       if (!itemsContainer.classList.contains('stable')) {
-        // eslint-disable-next-line no-console
-        console.warn('Articles taking too long to stabilize, showing anyway');
         itemsContainer.classList.add('stable');
       }
     }, 1000);
