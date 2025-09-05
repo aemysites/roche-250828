@@ -1,4 +1,5 @@
-import { createOptimizedPicture, fetchPlaceholders, toClassName } from '../../scripts/aem.js';
+import { fetchPlaceholders } from '../../scripts/aem.js';
+import { buildTeaseFromCustomizationResponse } from './utils.js';
 
 const loadMoreEndpoint = 'https://www.lumieresurlasep.fr/wp-json/lsls/v1/customized-request';
 
@@ -50,9 +51,7 @@ async function masonry(block, items) {
 }
 
 async function addArticles(block, itemsContainer, items, articles, resizeObserver) {
-  const newItems = [...articles].map((article) => {
-    return buildTeaseFromCustomizationResponse(article, block);
-  });
+  const newItems = [...articles].map((article) => buildTeaseFromCustomizationResponse(article, block));
   itemsContainer.textContent = '';
   items.push(...newItems);
   itemsContainer.append(...items);
