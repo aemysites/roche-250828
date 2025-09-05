@@ -40,6 +40,7 @@
     opacity: 1;
 }
 
+/* articles item */
 .articles__item {
     align-self: start;
     display: flex;

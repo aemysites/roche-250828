@@ -33,9 +33,14 @@ export const customParsers = {};
  * ]
  */
 export const customElements = [
+  { name: 'categoryHero', element: '.category .header-page' },
+  { name: 'categoryArticles', element: '.category .posts-container .masonry-container' },
   { name: 'hero', element: '.article-header' },
   { name: 'hero', element: '.header-page' },
   { name: 'customizedArticles', element: '.block-posts.customized-posts' },
+  { name: 'categorySelect', element: '.category-list-mobile' },
+  { name: 'socialsText', element: '.rs-social-block' },
+  { name: 'articleTypeFilter', element: '.filters-post-type' },
 ];
 
 /**
@@ -59,6 +64,7 @@ export const customTransformers = {
         document.querySelector('.return-block')?.remove();
         document.querySelector('.sidebar-article')?.remove();
         document.querySelector('.breadcrumbs-wrapper')?.remove();
+        document.querySelector('.category .sidebar .category-list')?.remove();
         document.querySelectorAll('.block-posts.related-posts')?.forEach(element => {
           element.remove();
         });
