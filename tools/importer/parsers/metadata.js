@@ -38,7 +38,7 @@ export default function parse(element, { document }) {
     }
   });
 
-  meta['Category'] = [...document.head.querySelectorAll('meta[name="category"]')]
+  meta['category'] = [...document.head.querySelectorAll('meta[name="category"]')]
     .map((meta) => meta.getAttribute('content'))
     .join(', ');
 
