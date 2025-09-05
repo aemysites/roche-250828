@@ -44,7 +44,7 @@ export default async function decorate(block) {
 
   const items = [...block.querySelectorAll(':scope > div')];
   let teaseCount = 0;
-  
+
   items.forEach((item) => {
     const typeContainer = item.querySelector(':scope > div:first-child');
     const type = typeContainer.textContent.trim();
@@ -52,7 +52,7 @@ export default async function decorate(block) {
 
     if (type === 'articles-tease') {
       teaseCount++;
-      
+
       const title = item.querySelector('h2');
       const postType = item.querySelector(':scope > div:nth-child(5)');
       postType.classList.add('articles__item__post-type');
@@ -111,19 +111,19 @@ export default async function decorate(block) {
       await handleMasonryItems(itemsContainer, items);
     });
     resizeObserver.observe(itemsContainer);
-    
+
     // Wait for initial layout calculation, then show the articles
     setTimeout(async () => {
       try {
         await handleMasonryItems(itemsContainer, items);
         // Small delay to ensure layout is truly stable
-        await new Promise(resolve => setTimeout(resolve, 100));
+        await new Promise((resolve) => setTimeout(resolve, 100));
       } catch (error) {
         console.warn('Initial masonry calculation failed:', error);
       }
       itemsContainer.classList.add('stable');
     }, 50);
-    
+
     // Failsafe: ensure articles show after 1 second no matter what
     setTimeout(() => {
       if (!itemsContainer.classList.contains('stable')) {

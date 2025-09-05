@@ -77,11 +77,11 @@ export async function handleMasonryItems(container, items) {
 
   // Batch DOM reads and writes to prevent multiple reflows
   const colGap = parseFloat(getComputedStyle(container).columnGap) || 20;
-  
+
   // Read all heights first (batched reads)
-  const measurements = items.map(item => ({
+  const measurements = items.map((item) => ({
     item,
-    height: item.getBoundingClientRect().height
+    height: item.getBoundingClientRect().height,
   }));
 
   // Apply all changes in one batch (batched writes)
