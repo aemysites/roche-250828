@@ -517,6 +517,138 @@
       "url": "https://www.lumieresurlasep.fr/category/vivre-avec-la-sep/partager-les-petites-victoires/",
       "source": "MANUAL",
       "targetPath": "/category/vivre-avec-la-sep/partager-les-petites-victoires/"
+    },
+    {
+      "url": "https://www.lumieresurlasep.fr/le-suivi-medical/",
+      "source": "MANUAL",
+      "targetPath": "/le-suivi-medical",
+      "id": "sweta-54"
+    },
+    {
+      "url": "https://www.lumieresurlasep.fr/le-suivi-radiologique/",
+      "source": "MANUAL",
+      "targetPath": "/le-suivi-radiologique",
+      "id": "sweta-55"
+    },
+    {
+      "url": "https://www.lumieresurlasep.fr/objectif-remission/",
+      "source": "MANUAL",
+      "targetPath": "/objectif-remission",
+      "id": "sweta-56"
+    },
+    {
+      "url": "https://www.lumieresurlasep.fr/traitements-de-fond/",
+      "source": "MANUAL",
+      "targetPath": "/traitements-de-fond",
+      "id": "sweta-57"
+    },
+    {
+      "url": "https://www.lumieresurlasep.fr/traitements-de-la-sep/",
+      "source": "MANUAL",
+      "targetPath": "/traitements-de-la-sep",
+      "id": "sweta-58"
+    },
+    {
+      "url": "https://www.lumieresurlasep.fr/traitements-des-poussees/",
+      "source": "MANUAL",
+      "targetPath": "/traitements-des-poussees",
+      "id": "sweta-59"
+    },
+    {
+      "url": "https://www.lumieresurlasep.fr/traitements-symptomatiques/",
+      "source": "MANUAL",
+      "targetPath": "/traitements-symptomatiques",
+      "id": "sweta-60"
+    },
+    {
+      "url": "https://www.lumieresurlasep.fr/voyager-sclerose-en-plaques-guide/",
+      "source": "MANUAL",
+      "targetPath": "/voyager-sclerose-en-plaques-guide",
+      "id": "sweta-61"
+    },
+    {
+      "url": "https://www.lumieresurlasep.fr/sep-nmosd-comprendre-maladies-inflammatoires/",
+      "source": "MANUAL",
+      "targetPath": "/sep-nmosd-comprendre-maladies-inflammatoires",
+      "id": "sweta-62"
+    },
+    {
+      "url": "https://www.lumieresurlasep.fr/sep-et-nature-hyperactivite/",
+      "source": "MANUAL",
+      "targetPath": "/sep-et-nature-hyperactivite",
+      "id": "sweta-63"
+    },
+    {
+      "url": "https://www.lumieresurlasep.fr/sep-quelles-aides-pour-les-aidants/",
+      "source": "MANUAL",
+      "targetPath": "/sep-quelles-aides-pour-les-aidants",
+      "id": "sweta-64"
+    },
+    {
+      "url": "https://www.lumieresurlasep.fr/sep-mes-droits-et-mes-demarches/",
+      "source": "MANUAL",
+      "targetPath": "/sep-mes-droits-et-mes-demarches",
+      "id": "sweta-65"
+    },
+    {
+      "url": "https://www.lumieresurlasep.fr/sep-puis-je-transmettre-la-maladie-a-mon-enfant/",
+      "source": "MANUAL",
+      "targetPath": "/sep-puis-je-transmettre-la-maladie-a-mon-enfant",
+      "id": "sweta-66"
+    },
+    {
+      "url": "https://www.lumieresurlasep.fr/les-differentes-formes-de-sep/",
+      "source": "MANUAL",
+      "targetPath": "/les-differentes-formes-de-sep",
+      "id": "sweta-67"
+    },
+    {
+      "url": "https://www.lumieresurlasep.fr/en-cas-de-poussee/",
+      "source": "MANUAL",
+      "targetPath": "/en-cas-de-poussee",
+      "id": "sweta-68"
+    },
+    {
+      "url": "https://www.lumieresurlasep.fr/les-symptomes-dune-poussee/",
+      "source": "MANUAL",
+      "targetPath": "/les-symptomes-dune-poussee",
+      "id": "sweta-69"
+    },
+    {
+      "url": "https://www.lumieresurlasep.fr/la-maladie/",
+      "source": "MANUAL",
+      "targetPath": "/la-maladie",
+      "id": "sweta-70"
+    },
+    {
+      "url": "https://www.lumieresurlasep.fr/les-autres-symptomes-de-la-sep/",
+      "source": "MANUAL",
+      "targetPath": "/les-autres-symptomes-de-la-sep",
+      "id": "sweta-71"
+    },
+    {
+      "url": "https://www.lumieresurlasep.fr/sauto-evaluer/",
+      "source": "MANUAL",
+      "targetPath": "/sauto-evaluer",
+      "id": "sweta-72"
+    },
+    {
+      "url": "https://www.lumieresurlasep.fr/sep-evolution-differentes-formes-cliniques/",
+      "source": "MANUAL",
+      "targetPath": "/sep-evolution-differentes-formes-cliniques",
+      "id": "sweta-73"
+    },
+    {
+      "url": "https://www.lumieresurlasep.fr/choisir-metier-adapter-poste-ou-changer/",
+      "source": "MANUAL",
+      "targetPath": "/choisir-metier-adapter-poste-ou-changer",
+      "id": "sweta-74"
+    },
+    {
+      "url": "https://www.lumieresurlasep.fr/projet-ambition-autonomie/",
+      "source": "MANUAL",
+      "targetPath": "/projet-ambition-autonomie",
+      "id": "sweta-75"
     }
   ],
   "lastCrawled": null,

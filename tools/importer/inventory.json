@@ -647,6 +647,138 @@
           "urlHash": "sweta-53",
           "uuid": "sweta-53",
           "xpath": "/html[1]/body[1]/main[1]/div[2]/article[1]/section[1]"
+        },
+        {
+          "url": "https://www.lumieresurlasep.fr/le-suivi-medical/",
+          "urlHash": "sweta-54",
+          "uuid": "sweta-54",
+          "xpath": "/html[1]/body[1]/main[1]/div[2]/article[1]/section[1]"
+        },
+        {
+          "url": "https://www.lumieresurlasep.fr/le-suivi-radiologique/",
+          "urlHash": "sweta-55",
+          "uuid": "sweta-55",
+          "xpath": "/html[1]/body[1]/main[1]/div[2]/article[1]/section[1]"
+        },
+        {
+          "url": "https://www.lumieresurlasep.fr/objectif-remission/",
+          "urlHash": "sweta-56",
+          "uuid": "sweta-56",
+          "xpath": "/html[1]/body[1]/main[1]/div[2]/article[1]/section[1]"
+        },
+        {
+          "url": "https://www.lumieresurlasep.fr/traitements-de-fond/",
+          "urlHash": "sweta-57",
+          "uuid": "sweta-57",
+          "xpath": "/html[1]/body[1]/main[1]/div[2]/article[1]/section[1]"
+        },
+        {
+          "url": "https://www.lumieresurlasep.fr/traitements-de-la-sep/",
+          "urlHash": "sweta-58",
+          "uuid": "sweta-58",
+          "xpath": "/html[1]/body[1]/main[1]/div[2]/article[1]/section[1]"
+        },
+        {
+          "url": "https://www.lumieresurlasep.fr/traitements-des-poussees/",
+          "urlHash": "sweta-59",
+          "uuid": "sweta-59",
+          "xpath": "/html[1]/body[1]/main[1]/div[2]/article[1]/section[1]"
+        },
+        {
+          "url": "https://www.lumieresurlasep.fr/traitements-symptomatiques/",
+          "urlHash": "sweta-60",
+          "uuid": "sweta-60",
+          "xpath": "/html[1]/body[1]/main[1]/div[2]/article[1]/section[1]"
+        },
+        {
+          "url": "https://www.lumieresurlasep.fr/voyager-sclerose-en-plaques-guide/",
+          "urlHash": "sweta-61",
+          "uuid": "sweta-61",
+          "xpath": "/html[1]/body[1]/main[1]/div[2]/article[1]/section[1]"
+        },
+        {
+          "url": "https://www.lumieresurlasep.fr/sep-nmosd-comprendre-maladies-inflammatoires/",
+          "urlHash": "sweta-62",
+          "uuid": "sweta-62",
+          "xpath": "/html[1]/body[1]/main[1]/div[2]/article[1]/section[1]"
+        },
+        {
+          "url": "https://www.lumieresurlasep.fr/sep-et-nature-hyperactivite/",
+          "urlHash": "sweta-63",
+          "uuid": "sweta-63",
+          "xpath": "/html[1]/body[1]/main[1]/div[2]/article[1]/section[1]"
+        },
+        {
+          "url": "https://www.lumieresurlasep.fr/sep-quelles-aides-pour-les-aidants/",
+          "urlHash": "sweta-64",
+          "uuid": "sweta-64",
+          "xpath": "/html[1]/body[1]/main[1]/div[2]/article[1]/section[1]"
+        },
+        {
+          "url": "https://www.lumieresurlasep.fr/sep-mes-droits-et-mes-demarches/",
+          "urlHash": "sweta-65",
+          "uuid": "sweta-65",
+          "xpath": "/html[1]/body[1]/main[1]/div[2]/article[1]/section[1]"
+        },
+        {
+          "url": "https://www.lumieresurlasep.fr/sep-puis-je-transmettre-la-maladie-a-mon-enfant/",
+          "urlHash": "sweta-66",
+          "uuid": "sweta-66",
+          "xpath": "/html[1]/body[1]/main[1]/div[2]/article[1]/section[1]"
+        },
+        {
+          "url": "https://www.lumieresurlasep.fr/les-differentes-formes-de-sep/",
+          "urlHash": "sweta-67",
+          "uuid": "sweta-67",
+          "xpath": "/html[1]/body[1]/main[1]/div[2]/article[1]/section[1]"
+        },
+        {
+          "url": "https://www.lumieresurlasep.fr/en-cas-de-poussee/",
+          "urlHash": "sweta-68",
+          "uuid": "sweta-68",
+          "xpath": "/html[1]/body[1]/main[1]/div[2]/article[1]/section[1]"
+        },
+        {
+          "url": "https://www.lumieresurlasep.fr/les-symptomes-dune-poussee/",
+          "urlHash": "sweta-69",
+          "uuid": "sweta-69",
+          "xpath": "/html[1]/body[1]/main[1]/div[2]/article[1]/section[1]"
+        },
+        {
+          "url": "https://www.lumieresurlasep.fr/la-maladie/",
+          "urlHash": "sweta-70",
+          "uuid": "sweta-70",
+          "xpath": "/html[1]/body[1]/main[1]/div[2]/article[1]/section[1]"
+        },
+        {
+          "url": "https://www.lumieresurlasep.fr/les-autres-symptomes-de-la-sep/",
+          "urlHash": "sweta-71",
+          "uuid": "sweta-71",
+          "xpath": "/html[1]/body[1]/main[1]/div[2]/article[1]/section[1]"
+        },
+        {
+          "url": "https://www.lumieresurlasep.fr/sauto-evaluer/",
+          "urlHash": "sweta-72",
+          "uuid": "sweta-72",
+          "xpath": "/html[1]/body[1]/main[1]/div[2]/article[1]/section[1]"
+        },
+        {
+          "url": "https://www.lumieresurlasep.fr/sep-evolution-differentes-formes-cliniques/",
+          "urlHash": "sweta-73",
+          "uuid": "sweta-73",
+          "xpath": "/html[1]/body[1]/main[1]/div[2]/article[1]/section[1]"
+        },
+        {
+          "url": "https://www.lumieresurlasep.fr/choisir-metier-adapter-poste-ou-changer/",
+          "urlHash": "sweta-74",
+          "uuid": "sweta-74",
+          "xpath": "/html[1]/body[1]/main[1]/div[2]/article[1]/section[1]"
+        },
+        {
+          "url": "https://www.lumieresurlasep.fr/projet-ambition-autonomie/",
+          "urlHash": "sweta-75",
+          "uuid": "sweta-75",
+          "xpath": "/html[1]/body[1]/main[1]/div[2]/article[1]/section[1]"
         }
       ]
     },
@@ -1419,6 +1551,138 @@
           "url": "https://www.lumieresurlasep.fr/conseils/sep-et-sexualite/",
           "urlHash": "sweta-53",
           "uuid": "sweta-53",
+          "xpath": "/html[1]/body[1]/main[1]/div[2]/article[1]/section[1]"
+        },
+        {
+          "url": "https://www.lumieresurlasep.fr/le-suivi-medical/",
+          "urlHash": "sweta-54",
+          "uuid": "sweta-54",
+          "xpath": "/html[1]/body[1]/main[1]/div[2]/article[1]/section[1]"
+        },
+        {
+          "url": "https://www.lumieresurlasep.fr/le-suivi-radiologique/",
+          "urlHash": "sweta-55",
+          "uuid": "sweta-55",
+          "xpath": "/html[1]/body[1]/main[1]/div[2]/article[1]/section[1]"
+        },
+        {
+          "url": "https://www.lumieresurlasep.fr/objectif-remission/",
+          "urlHash": "sweta-56",
+          "uuid": "sweta-56",
+          "xpath": "/html[1]/body[1]/main[1]/div[2]/article[1]/section[1]"
+        },
+        {
+          "url": "https://www.lumieresurlasep.fr/traitements-de-fond/",
+          "urlHash": "sweta-57",
+          "uuid": "sweta-57",
+          "xpath": "/html[1]/body[1]/main[1]/div[2]/article[1]/section[1]"
+        },
+        {
+          "url": "https://www.lumieresurlasep.fr/traitements-de-la-sep/",
+          "urlHash": "sweta-58",
+          "uuid": "sweta-58",
+          "xpath": "/html[1]/body[1]/main[1]/div[2]/article[1]/section[1]"
+        },
+        {
+          "url": "https://www.lumieresurlasep.fr/traitements-des-poussees/",
+          "urlHash": "sweta-59",
+          "uuid": "sweta-59",
+          "xpath": "/html[1]/body[1]/main[1]/div[2]/article[1]/section[1]"
+        },
+        {
+          "url": "https://www.lumieresurlasep.fr/traitements-symptomatiques/",
+          "urlHash": "sweta-60",
+          "uuid": "sweta-60",
+          "xpath": "/html[1]/body[1]/main[1]/div[2]/article[1]/section[1]"
+        },
+        {
+          "url": "https://www.lumieresurlasep.fr/voyager-sclerose-en-plaques-guide/",
+          "urlHash": "sweta-61",
+          "uuid": "sweta-61",
+          "xpath": "/html[1]/body[1]/main[1]/div[2]/article[1]/section[1]"
+        },
+        {
+          "url": "https://www.lumieresurlasep.fr/sep-nmosd-comprendre-maladies-inflammatoires/",
+          "urlHash": "sweta-62",
+          "uuid": "sweta-62",
+          "xpath": "/html[1]/body[1]/main[1]/div[2]/article[1]/section[1]"
+        },
+        {
+          "url": "https://www.lumieresurlasep.fr/sep-et-nature-hyperactivite/",
+          "urlHash": "sweta-63",
+          "uuid": "sweta-63",
+          "xpath": "/html[1]/body[1]/main[1]/div[2]/article[1]/section[1]"
+        },
+        {
+          "url": "https://www.lumieresurlasep.fr/sep-quelles-aides-pour-les-aidants/",
+          "urlHash": "sweta-64",
+          "uuid": "sweta-64",
+          "xpath": "/html[1]/body[1]/main[1]/div[2]/article[1]/section[1]"
+        },
+        {
+          "url": "https://www.lumieresurlasep.fr/sep-mes-droits-et-mes-demarches/",
+          "urlHash": "sweta-65",
+          "uuid": "sweta-65",
+          "xpath": "/html[1]/body[1]/main[1]/div[2]/article[1]/section[1]"
+        },
+        {
+          "url": "https://www.lumieresurlasep.fr/sep-puis-je-transmettre-la-maladie-a-mon-enfant/",
+          "urlHash": "sweta-66",
+          "uuid": "sweta-66",
+          "xpath": "/html[1]/body[1]/main[1]/div[2]/article[1]/section[1]"
+        },
+        {
+          "url": "https://www.lumieresurlasep.fr/les-differentes-formes-de-sep/",
+          "urlHash": "sweta-67",
+          "uuid": "sweta-67",
+          "xpath": "/html[1]/body[1]/main[1]/div[2]/article[1]/section[1]"
+        },
+        {
+          "url": "https://www.lumieresurlasep.fr/en-cas-de-poussee/",
+          "urlHash": "sweta-68",
+          "uuid": "sweta-68",
+          "xpath": "/html[1]/body[1]/main[1]/div[2]/article[1]/section[1]"
+        },
+        {
+          "url": "https://www.lumieresurlasep.fr/les-symptomes-dune-poussee/",
+          "urlHash": "sweta-69",
+          "uuid": "sweta-69",
+          "xpath": "/html[1]/body[1]/main[1]/div[2]/article[1]/section[1]"
+        },
+        {
+          "url": "https://www.lumieresurlasep.fr/la-maladie/",
+          "urlHash": "sweta-70",
+          "uuid": "sweta-70",
+          "xpath": "/html[1]/body[1]/main[1]/div[2]/article[1]/section[1]"
+        },
+        {
+          "url": "https://www.lumieresurlasep.fr/les-autres-symptomes-de-la-sep/",
+          "urlHash": "sweta-71",
+          "uuid": "sweta-71",
+          "xpath": "/html[1]/body[1]/main[1]/div[2]/article[1]/section[1]"
+        },
+        {
+          "url": "https://www.lumieresurlasep.fr/sauto-evaluer/",
+          "urlHash": "sweta-72",
+          "uuid": "sweta-72",
+          "xpath": "/html[1]/body[1]/main[1]/div[2]/article[1]/section[1]"
+        },
+        {
+          "url": "https://www.lumieresurlasep.fr/sep-evolution-differentes-formes-cliniques/",
+          "urlHash": "sweta-73",
+          "uuid": "sweta-73",
+          "xpath": "/html[1]/body[1]/main[1]/div[2]/article[1]/section[1]"
+        },
+        {
+          "url": "https://www.lumieresurlasep.fr/choisir-metier-adapter-poste-ou-changer/",
+          "urlHash": "sweta-74",
+          "uuid": "sweta-74",
+          "xpath": "/html[1]/body[1]/main[1]/div[2]/article[1]/section[1]"
+        },
+        {
+          "url": "https://www.lumieresurlasep.fr/projet-ambition-autonomie/",
+          "urlHash": "sweta-75",
+          "uuid": "sweta-75",
           "xpath": "/html[1]/body[1]/main[1]/div[2]/article[1]/section[1]"
         }
       ]
