@@ -55,7 +55,8 @@
         "socials",
         "articles",
         "testimony",
-        "library-metadata"
+        "library-metadata",
+        "category-articles"
       ]
     }
   ]
