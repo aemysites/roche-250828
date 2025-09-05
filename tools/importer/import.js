@@ -288,6 +288,32 @@ function transformFragment(main, { fragment, inventory, ...source }) {
 
 export default {
   onLoad: async (payload) => {
+    // Couldn't find anywhere else to put this to have access to the original document with scripts
+    // Please move it if there is a better place for this that still works
+    const yoastSchema = payload.document.querySelector('.yoast-schema-graph');
+    if (yoastSchema) {
+      const CATEGORY_PREFIX = "https://www.lumieresurlasep.fr/category"
+
+      const json = JSON.parse(yoastSchema.textContent);
+      json["@graph"]
+        .filter(entry => entry["@type"] === "BreadcrumbList")
+        .flatMap(breadcrumb => breadcrumb.itemListElement)
+        .filter(item => item["@type"] === "ListItem" && item.item !== "https://www.lumieresurlasep.fr/")
+        .map(item => (item.item?.startsWith(CATEGORY_PREFIX)
+            ? item.item.replace(CATEGORY_PREFIX, "")
+              .replace(/\/$/, "")
+              .replace(/^\//, "")
+            : item.item || null
+        ))
+        .filter((item) => item)
+        .forEach((item) => {
+          const metaEl = payload.document.createElement('meta');
+          metaEl.name = 'category';
+          metaEl.content = item;
+          payload.document.head.append(metaEl);
+        });
+    }
+
     await handleOnLoad(payload);
   },
 

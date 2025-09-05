@@ -37,6 +37,11 @@ export default function parse(element, { document }) {
       meta[key] = new Date(value).toISOString().slice(0, 10);
     }
   });
+
+  meta['Category'] = [...document.head.querySelectorAll('meta[name="category"]')]
+    .map((meta) => meta.getAttribute('content'))
+    .join(', ');
+
   // create the block
   const block = WebImporter.Blocks.createBlock(document, {
     name: 'Metadata',
