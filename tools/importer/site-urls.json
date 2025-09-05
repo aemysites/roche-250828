@@ -373,6 +373,150 @@
       "source": "MANUAL",
       "targetPath": "/conseils/sep-et-sexualite",
       "id": "sweta-53"
+    },
+    {
+      "id": "rjwtrmn-1",
+      "url": "https://www.lumieresurlasep.fr/category/ambition-autonomie-pro/",
+      "source": "MANUAL",
+      "targetPath": "/category/ambition-autonomie-pro/"
+    },
+    {
+      "id": "rjwtrmn-2",
+      "url": "https://www.lumieresurlasep.fr/category/comprendre-la-sep/",
+      "source": "MANUAL",
+      "targetPath": "/category/comprendre-la-sep/"
+    },
+    {
+      "id": "rjwtrmn-3",
+      "url": "https://www.lumieresurlasep.fr/category/uncategorized/",
+      "source": "MANUAL",
+      "targetPath": "/category/uncategorized/"
+    },
+    {
+      "id": "rjwtrmn-4",
+      "url": "https://www.lumieresurlasep.fr/category/vivre-avec-la-sep/",
+      "source": "MANUAL",
+      "targetPath": "/category/vivre-avec-la-sep/"
+    },
+    {
+      "id": "rjwtrmn-5",
+      "url": "https://www.lumieresurlasep.fr/category/comprendre-la-sep/les-differentes-formes-de-sep/",
+      "source": "MANUAL",
+      "targetPath": "/category/comprendre-la-sep/les-differentes-formes-de-sep/"
+    },
+    {
+      "id": "rjwtrmn-6",
+      "url": "https://www.lumieresurlasep.fr/category/comprendre-la-sep/le-diagnostic/",
+      "source": "MANUAL",
+      "targetPath": "/category/comprendre-la-sep/le-diagnostic/"
+    },
+    {
+      "id": "rjwtrmn-7",
+      "url": "https://www.lumieresurlasep.fr/category/comprendre-la-sep/les-symptomes-et-poussees/",
+      "source": "MANUAL",
+      "targetPath": "/category/comprendre-la-sep/les-symptomes-et-poussees/"
+    },
+    {
+      "id": "rjwtrmn-8",
+      "url": "https://www.lumieresurlasep.fr/category/comprendre-la-sep/les-traitements/",
+      "source": "MANUAL",
+      "targetPath": "/category/comprendre-la-sep/les-traitements/"
+    },
+    {
+      "id": "rjwtrmn-9",
+      "url": "https://www.lumieresurlasep.fr/category/comprendre-la-sep/la-recherche/",
+      "source": "MANUAL",
+      "targetPath": "/category/comprendre-la-sep/la-recherche/"
+    },
+    {
+      "id": "rjwtrmn-10",
+      "url": "https://www.lumieresurlasep.fr/category/comprendre-la-sep/le-suivi-de-l-evolution-de-la-maladie/",
+      "source": "MANUAL",
+      "targetPath": "/category/comprendre-la-sep/le-suivi-de-l-evolution-de-la-maladie/"
+    },
+    {
+      "id": "rjwtrmn-11",
+      "url": "https://www.lumieresurlasep.fr/category/comprendre-la-sep/lheredite-et-les-facteurs-de-risque/",
+      "source": "MANUAL",
+      "targetPath": "/category/comprendre-la-sep/lheredite-et-les-facteurs-de-risque/"
+    },
+    {
+      "id": "rjwtrmn-12",
+      "url": "https://www.lumieresurlasep.fr/category/vivre-avec-la-sep/accepter-le-diagnostic/",
+      "source": "MANUAL",
+      "targetPath": "/category/vivre-avec-la-sep/accepter-le-diagnostic/"
+    },
+    {
+      "id": "rjwtrmn-13",
+      "url": "https://www.lumieresurlasep.fr/category/vivre-avec-la-sep/comprendre-le-parcours-de-soin/",
+      "source": "MANUAL",
+      "targetPath": "/category/vivre-avec-la-sep/comprendre-le-parcours-de-soin/"
+    },
+    {
+      "id": "rjwtrmn-14",
+      "url": "https://www.lumieresurlasep.fr/category/vivre-avec-la-sep/gerer-la-douleur/",
+      "source": "MANUAL",
+      "targetPath": "/category/vivre-avec-la-sep/gerer-la-douleur/"
+    },
+    {
+      "id": "rjwtrmn-15",
+      "url": "https://www.lumieresurlasep.fr/category/vivre-avec-la-sep/ameliorer-le-quotidien/",
+      "source": "MANUAL",
+      "targetPath": "/category/vivre-avec-la-sep/ameliorer-le-quotidien/"
+    },
+    {
+      "id": "rjwtrmn-16",
+      "url": "https://www.lumieresurlasep.fr/category/vivre-avec-la-sep/ameliorer-le-quotidien/bien-etre/",
+      "source": "MANUAL",
+      "targetPath": "/category/vivre-avec-la-sep/ameliorer-le-quotidien/bien-etre/"
+    },
+    {
+      "id": "rjwtrmn-17",
+      "url": "https://www.lumieresurlasep.fr/category/vivre-avec-la-sep/ameliorer-le-quotidien/vie-de-famille/",
+      "source": "MANUAL",
+      "targetPath": "/category/vivre-avec-la-sep/ameliorer-le-quotidien/vie-de-famille/"
+    },
+    {
+      "id": "rjwtrmn-18",
+      "url": "https://www.lumieresurlasep.fr/category/vivre-avec-la-sep/ameliorer-le-quotidien/travail/",
+      "source": "MANUAL",
+      "targetPath": "/category/vivre-avec-la-sep/ameliorer-le-quotidien/travail/"
+    },
+    {
+      "id": "rjwtrmn-19",
+      "url": "https://www.lumieresurlasep.fr/category/vivre-avec-la-sep/ameliorer-le-quotidien/alimentation/",
+      "source": "MANUAL",
+      "targetPath": "/category/vivre-avec-la-sep/ameliorer-le-quotidien/alimentation/"
+    },
+    {
+      "id": "rjwtrmn-20",
+      "url": "https://www.lumieresurlasep.fr/category/vivre-avec-la-sep/ameliorer-le-quotidien/voyage/",
+      "source": "MANUAL",
+      "targetPath": "/category/vivre-avec-la-sep/ameliorer-le-quotidien/voyage/"
+    },
+    {
+      "id": "rjwtrmn-21",
+      "url": "https://www.lumieresurlasep.fr/category/vivre-avec-la-sep/ameliorer-le-quotidien/loisirs/",
+      "source": "MANUAL",
+      "targetPath": "/category/vivre-avec-la-sep/ameliorer-le-quotidien/loisirs/"
+    },
+    {
+      "id": "rjwtrmn-22",
+      "url": "https://www.lumieresurlasep.fr/category/vivre-avec-la-sep/ameliorer-le-quotidien/activite-physique/",
+      "source": "MANUAL",
+      "targetPath": "/category/vivre-avec-la-sep/ameliorer-le-quotidien/activite-physique/"
+    },
+    {
+      "id": "rjwtrmn-23",
+      "url": "https://www.lumieresurlasep.fr/category/vivre-avec-la-sep/ameliorer-le-quotidien/connaitre-mes-droits/",
+      "source": "MANUAL",
+      "targetPath": "/category/vivre-avec-la-sep/ameliorer-le-quotidien/connaitre-mes-droits/"
+    },
+    {
+      "id": "rjwtrmn-24",
+      "url": "https://www.lumieresurlasep.fr/category/vivre-avec-la-sep/partager-les-petites-victoires/",
+      "source": "MANUAL",
+      "targetPath": "/category/vivre-avec-la-sep/partager-les-petites-victoires/"
     }
   ],
   "lastCrawled": null,
