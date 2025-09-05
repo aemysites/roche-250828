@@ -5,6 +5,7 @@ function areImagesLoaded(container) {
   const images = Array.from(container.querySelectorAll('img'));
   return images.map((img) => new Promise((resolve, reject) => {
     if (img.complete) {
+      resolve();
       return;
     }
     img.onload = resolve;
@@ -12,8 +13,8 @@ function areImagesLoaded(container) {
   }));
 }
 
-export function buildTease(href, type, title, imgSrc) {
-  const optimisedPicture = createOptimizedPicture(imgSrc, '', true);
+export function buildTease(href, type, title, imgSrc, eager = false) {
+  const optimisedPicture = createOptimizedPicture(imgSrc, '', eager);
   const tease = document.createElement('div');
   tease.classList.add('articles__item', 'articles-tease');
 
@@ -68,15 +69,25 @@ export function isMasonrySupported(container) {
 
 export async function handleMasonryItems(container, items) {
   try {
-    await Promise.all([areImagesLoaded(container)]);
+    // Wait for ALL images to load before recalculating masonry
+    const imagePromises = areImagesLoaded(container);
+    await Promise.all(imagePromises);
   } catch (e) {
-    // Do nothing
+    // Continue even if some images fail to load
   }
 
-  const colGap = parseFloat(getComputedStyle(container).columnGap);
-  items.forEach((item) => {
-    const ib = item.getBoundingClientRect();
-    item.style.gridRowEnd = `span ${Math.round(ib.height + colGap)}`;
+  // Batch DOM reads and writes to prevent multiple reflows
+  const colGap = parseFloat(getComputedStyle(container).columnGap) || 20;
+
+  // Read all heights first (batched reads)
+  const measurements = items.map((item) => ({
+    item,
+    height: item.getBoundingClientRect().height,
+  }));
+
+  // Apply all changes in one batch (batched writes)
+  measurements.forEach(({ item, height }) => {
+    item.style.gridRowEnd = `span ${Math.round(height + colGap)}`;
   });
 }
 
