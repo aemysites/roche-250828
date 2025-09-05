@@ -1,7 +1,7 @@
-@layer temoignages {
+@layer testimony {
 
   /* styles for pages */
-  body.temoignages {
+  body.testimony {
     .icon-logo-sep {
       display: none !important;
     }

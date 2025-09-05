@@ -1,7 +1,7 @@
-@layer conseils {
+@layer advice {
 
   /* styles for pages */
-  body.conseils {
+  body.advice {
 
     .icon-logo-sep {
       display: none !important;
@@ -10,7 +10,7 @@
     p, h2 {
       padding: 20px 8%;
     }
-    
+
     ul {
       padding-left: 15%;
       padding-right: 10%;
