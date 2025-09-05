@@ -5,7 +5,8 @@
     "/content/roche-250828/metadata:/metadata.json",
     "/content/roche-250828/tools/sidekick/library:/tools/sidekick/library.json",
     "/content/roche-250828/placeholders:/placeholders.json",
-    "/content/roche-250828/tags:/tags.json"
+    "/content/roche-250828/tags:/tags.json",
+    "/content/roche-250828/query-index:/query-index.json"
   ],
   "includes": [
     "/content/roche-250828/"

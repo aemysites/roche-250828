@@ -14,3 +14,12 @@ indices:
       robots:
         select: head > meta[name="robots"]
         value: attribute(el, "content")
+      title:
+        selectFirst: h1
+        value: textContent(el)
+      poster-image:
+        selectFirst: img
+        value: attribute(el, "src")
+      template:
+        select: head > meta[name="template"]
+        value: attribute(el, "content")
