@@ -132,7 +132,7 @@ export default async function decorate(block) {
       if (!itemsContainer.classList.contains('stable')) {
         itemsContainer.classList.add('stable');
       }
-    }, 500);
+    }, 1000);
   } else {
     // For browsers with native masonry support, show immediately
     itemsContainer.classList.add('stable');
