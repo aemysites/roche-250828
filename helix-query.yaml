@@ -7,9 +7,12 @@ indices:
     exclude:
       - '/tools'
       - '/block-collection'
+      - '/tools/**'
+      - '/block-collection/**'
       - '/**.json'
       - '/global-nav'
       - '/global-footer'
+      - '/placeholders'
     target: /query-index.json
     properties:
       lastModified:
