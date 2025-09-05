@@ -51,7 +51,7 @@ export default async function decorate(block) {
     item.classList.add('articles__item', type);
 
     if (type === 'articles-tease') {
-      teaseCount++;
+      teaseCount += 1;
 
       const title = item.querySelector('h2');
       const postType = item.querySelector(':scope > div:nth-child(5)');
@@ -117,8 +117,11 @@ export default async function decorate(block) {
       try {
         await handleMasonryItems(itemsContainer, items);
         // Small delay to ensure layout is truly stable
-        await new Promise((resolve) => setTimeout(resolve, 100));
+        await new Promise((resolve) => {
+          setTimeout(resolve, 100);
+        });
       } catch (error) {
+        // eslint-disable-next-line no-console
         console.warn('Initial masonry calculation failed:', error);
       }
       itemsContainer.classList.add('stable');
@@ -127,6 +130,7 @@ export default async function decorate(block) {
     // Failsafe: ensure articles show after 1 second no matter what
     setTimeout(() => {
       if (!itemsContainer.classList.contains('stable')) {
+        // eslint-disable-next-line no-console
         console.warn('Articles taking too long to stabilize, showing anyway');
         itemsContainer.classList.add('stable');
       }
