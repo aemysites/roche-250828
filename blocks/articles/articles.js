@@ -43,12 +43,16 @@ export default async function decorate(block) {
   itemsContainer.classList.add('articles__items');
 
   const items = [...block.querySelectorAll(':scope > div')];
+  let teaseCount = 0;
+  
   items.forEach((item) => {
     const typeContainer = item.querySelector(':scope > div:first-child');
     const type = typeContainer.textContent.trim();
     item.classList.add('articles__item', type);
 
     if (type === 'articles-tease') {
+      teaseCount++;
+      
       const title = item.querySelector('h2');
       const postType = item.querySelector(':scope > div:nth-child(5)');
       postType.classList.add('articles__item__post-type');
@@ -59,6 +63,16 @@ export default async function decorate(block) {
       link.parentElement.classList.remove('button-container');
       link.classList.remove('button');
       link.append(...([...item.children].filter((el) => el !== linkContainer)));
+
+      // Set first 6 articles to eager loading (above the fold)
+      const img = item.querySelector('img');
+      if (img && teaseCount <= 6) {
+        img.setAttribute('loading', 'eager');
+        // Add fetchpriority for the first 3 most critical images
+        if (teaseCount <= 3) {
+          img.setAttribute('fetchpriority', 'high');
+        }
+      }
 
       const span = document.createElement('span');
       span.classList.add('articles__item__h2__text');
@@ -97,6 +111,29 @@ export default async function decorate(block) {
       await handleMasonryItems(itemsContainer, items);
     });
     resizeObserver.observe(itemsContainer);
+    
+    // Wait for initial layout calculation, then show the articles
+    setTimeout(async () => {
+      try {
+        await handleMasonryItems(itemsContainer, items);
+        // Small delay to ensure layout is truly stable
+        await new Promise(resolve => setTimeout(resolve, 100));
+      } catch (error) {
+        console.warn('Initial masonry calculation failed:', error);
+      }
+      itemsContainer.classList.add('stable');
+    }, 50);
+    
+    // Failsafe: ensure articles show after 1 second no matter what
+    setTimeout(() => {
+      if (!itemsContainer.classList.contains('stable')) {
+        console.warn('Articles taking too long to stabilize, showing anyway');
+        itemsContainer.classList.add('stable');
+      }
+    }, 1000);
+  } else {
+    // For browsers with native masonry support, show immediately
+    itemsContainer.classList.add('stable');
   }
 
   let page = 1;
