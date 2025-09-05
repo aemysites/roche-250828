@@ -1,0 +1,26 @@
+{
+  "definitions": [
+    {
+      "title": "Category Articles",
+      "id": "category-articles",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block",
+            "template": {
+              "name": "Category Articles",
+              "model": "category-articles"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "category-articles",
+      "fields": []
+    }
+  ],
+  "filters": []
+}

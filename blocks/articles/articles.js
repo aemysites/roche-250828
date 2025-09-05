@@ -1,22 +1,12 @@
 import { fetchPlaceholders } from '../../scripts/aem.js';
-import { buildTeaseFromCustomizationResponse } from './utils.js';
+import {
+  buildTeaseFromCustomizationResponse,
+  configureMasonryContainer,
+  handleMasonryItems,
+  isMasonrySupported,
+} from './utils.js';
 
 const loadMoreEndpoint = 'https://www.lumieresurlasep.fr/wp-json/lsls/v1/customized-request';
-
-function isMasonrySupported(container) {
-  return getComputedStyle(container).gridTemplateRows === 'masonry';
-}
-
-function areImagesLoaded(container) {
-  const images = Array.from(container.querySelectorAll('img'));
-  return images.map((img) => new Promise((resolve, reject) => {
-    if (img.complete) {
-      return;
-    }
-    img.onload = resolve;
-    img.onerror = reject;
-  }));
-}
 
 async function fetchArticles(page) {
   try {
@@ -31,27 +21,9 @@ async function fetchArticles(page) {
   }
 }
 
-function configureBlock(block) {
-  block.style.gridAutoRows = '0px';
-  block.style.setProperty('row-gap', '1px');
-}
-
-async function masonry(block, items) {
-  try {
-    await Promise.all([areImagesLoaded(block)]);
-  } catch (e) {
-    // Do nothing
-  }
-
-  const colGap = parseFloat(getComputedStyle(block).columnGap);
-  items.forEach((item) => {
-    const ib = item.getBoundingClientRect();
-    item.style.gridRowEnd = `span ${Math.round(ib.height + colGap)}`;
-  });
-}
-
 async function addArticles(block, itemsContainer, items, articles, resizeObserver) {
-  const newItems = [...articles].map((article) => buildTeaseFromCustomizationResponse(article, block));
+  const newItems = [...articles]
+    .map((article) => buildTeaseFromCustomizationResponse(article, block));
   itemsContainer.textContent = '';
   items.push(...newItems);
   itemsContainer.append(...items);
@@ -119,10 +91,10 @@ export default async function decorate(block) {
 
   let resizeObserver;
   if (!isMasonrySupported(block)) {
-    configureBlock(itemsContainer);
+    configureMasonryContainer(itemsContainer);
 
     resizeObserver = new ResizeObserver(async () => {
-      await masonry(itemsContainer, items);
+      await handleMasonryItems(itemsContainer, items);
     });
     resizeObserver.observe(itemsContainer);
   }

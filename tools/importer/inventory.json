@@ -257,9 +257,9 @@
       ]
     },
     {
-      "name": "Articles",
+      "name": "Category Articles",
       "cluster": 7,
-      "key": "articlesMasonry",
+      "key": "categoryArticles",
       "instances": [
         {
           "url": "https://www.lumieresurlasep.fr/category/vivre-avec-la-sep/accepter-le-diagnostic/",

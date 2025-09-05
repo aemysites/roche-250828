@@ -24,6 +24,7 @@ import articleTypeFilter from './parsers/articleTypeFilter.js';
 import categoryHero from './parsers/categoryHero.js';
 import categorySelect from './parsers/categorySelect.js';
 import relatedArticles from './parsers/relatedArticles.js';
+import categoryArticles from './parsers/categoryArticles.js';
 import columns20Parser from './parsers/columns20.js';
 import socialsTextParser from './parsers/socialsText.js';
 import hero19Parser from './parsers/hero19.js';
@@ -80,6 +81,7 @@ const parsers = {
   categoryHero: categoryHero,
   categorySelect: categorySelect,
   relatedArticles: relatedArticles,
+  categoryArticles: categoryArticles,
   ...customParsers,
 };
 

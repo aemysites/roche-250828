@@ -1,5 +1,16 @@
 import { createOptimizedPicture, toClassName } from '../../scripts/aem.js';
 
+function areImagesLoaded(container) {
+  const images = Array.from(container.querySelectorAll('img'));
+  return images.map((img) => new Promise((resolve, reject) => {
+    if (img.complete) {
+      return;
+    }
+    img.onload = resolve;
+    img.onerror = reject;
+  }));
+}
+
 export function buildTease(href, type, title, imgSrc) {
   const optimisedPicture = createOptimizedPicture(imgSrc, '', true);
   const tease = document.createElement('div');
@@ -48,4 +59,27 @@ export function buildTeaseFromCustomizationResponse(article, block) {
   const title = documentFragment.querySelector('h2').textContent.trim();
 
   return buildTease(href, type, title, imgSrc);
+}
+
+export function isMasonrySupported(container) {
+  return getComputedStyle(container).gridTemplateRows === 'masonry';
+}
+
+export async function handleMasonryItems(container, items) {
+  try {
+    await Promise.all([areImagesLoaded(container)]);
+  } catch (e) {
+    // Do nothing
+  }
+
+  const colGap = parseFloat(getComputedStyle(container).columnGap);
+  items.forEach((item) => {
+    const ib = item.getBoundingClientRect();
+    item.style.gridRowEnd = `span ${Math.round(ib.height + colGap)}`;
+  });
+}
+
+export function configureMasonryContainer(container) {
+  container.style.gridAutoRows = '0px';
+  container.style.setProperty('row-gap', '1px');
 }

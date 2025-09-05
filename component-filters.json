@@ -61,14 +61,6 @@
     ]
   },
   {
-    "id": "articles",
-    "components": [
-      "articles-tease",
-      "articles-customization",
-      "articles-survey"
-    ]
-  },
-  {
     "id": "columns",
     "components": [
       "column"
