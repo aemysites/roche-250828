@@ -1,5 +1,5 @@
 /**
- * Gets page index object.
+ * Fetches the page index object.
  * @param {string} [prefix] Location of placeholders
  * @returns {object} Window placeholders object
  */

@@ -1,5 +1,6 @@
 import { createOptimizedPicture, toClassName } from '../../scripts/aem.js';
 
+// Checking if the images are loaded
 function areImagesLoaded(container) {
   const images = Array.from(container.querySelectorAll('img'));
   return images.map((img) => new Promise((resolve, reject) => {
