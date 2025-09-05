@@ -30,4 +30,5 @@
 .article-type-filter {
     display: flex;
     gap: 8px;
+    flex-wrap: wrap;
 }
