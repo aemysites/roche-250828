@@ -98,9 +98,6 @@
 
         picture {
             overflow: hidden;
-            /* Add aspect ratio to prevent CLS from image loading */
-            aspect-ratio: 3 / 2;
-            display: block;
         }
 
         img {
@@ -110,8 +107,6 @@
             transition: transform .5s cubic-bezier(.25,.46,.45,.94);
             vertical-align: top;
             width: 100%;
-            /* Ensure image fills the aspect ratio container */
-            height: 100%;
         }
 
         & h2 {
