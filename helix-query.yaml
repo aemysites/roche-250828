@@ -1,11 +1,15 @@
-version: 1
+version: 2
 
 indices:
   pages:
     include:
       - '/**'
     exclude:
+      - '/tools'
+      - '/block-collection'
       - '/**.json'
+      - '/global-nav'
+      - '/global-footer'
     target: /query-index.json
     properties:
       lastModified:
