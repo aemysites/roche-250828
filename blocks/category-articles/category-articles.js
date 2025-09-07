@@ -15,7 +15,6 @@ export default async function decorate(block) {
     ? [searchParams.get('post_type')]
     : ['post', 'advice', 'instagram', 'testimony'];
 
-  console.log(postTypes);
   const filteredIndexes = index
     .filter((item) => {
       const itemCategories = item.category.split(', ')
