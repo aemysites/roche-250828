@@ -39,7 +39,7 @@ export default async function decorate(block) {
     titleText.textContent = item.title;
     title.append(titleText);
     const imgSrc = item['poster-image'];
-    const img = createOptimizedPicture(imgSrc);
+    const img = createOptimizedPicture(imgSrc, ', true');
     img.classList.add('category-articles__item__image');
     card.append(type);
     card.append(title);
@@ -55,7 +55,7 @@ export default async function decorate(block) {
     resizeObserver = new ResizeObserver(async () => {
       await handleMasonryItems(cardsContainer, cards);
     });
-    resizeObserver.observe(cardsContainer);
+    resizeObserver.observe(...cards);
   }
 
   cardsContainer.append(...cards);
