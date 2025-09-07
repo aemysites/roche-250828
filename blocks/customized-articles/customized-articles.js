@@ -15,5 +15,6 @@ export default function decorate(block) {
     typeContainer.remove();
   });
 
-  block.prepend(itemsContainer);
+  itemsContainer.append(...items.slice(1));
+  block.append(itemsContainer);
 }

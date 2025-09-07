@@ -3,7 +3,7 @@
     margin: 0;
 }
 
-.customized-articles__title {
+.customized-articles__title p {
     font-size: 30px;
     line-height: 26px;
     font-family: var(--heading-font-family);
