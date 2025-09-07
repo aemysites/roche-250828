@@ -55,7 +55,9 @@ export default async function decorate(block) {
     resizeObserver = new ResizeObserver(async () => {
       await handleMasonryItems(cardsContainer, cards);
     });
-    resizeObserver.observe(...cards);
+    cards.forEach((card) => {
+      resizeObserver.observe(card);
+    });
   }
 
   cardsContainer.append(...cards);
