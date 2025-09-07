@@ -540,7 +540,15 @@
   },
   {
     "id": "customized-articles",
-    "fields": []
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "title",
+        "value": "",
+        "label": "Title",
+        "valueType": "string"
+      }
+    ]
   },
   {
     "id": "embed",

@@ -7,6 +7,9 @@ export default function parse(element, { document }) {
   // Table header row as per the example: exactly 'Cards', one cell
   const rows = [['Customized Articles']];
 
+  const title = element.querySelector('.title');
+  rows.push([title]);
+
   const items = [];
 
   ctas.forEach(cta => {

@@ -3,7 +3,11 @@ export default function decorate(block) {
   itemsContainer.classList.add('customized-articles__items');
 
   const items = [...block.querySelectorAll(':scope > div')];
-  items.forEach((item) => {
+
+  const title = items[0];
+  title.classList.add('customized-articles__title');
+
+  items.slice(1).forEach((item) => {
     const typeContainer = item.querySelector(':scope > div:first-child');
     const type = typeContainer.textContent.trim();
     item.classList.add('customized-articles__item', type);
