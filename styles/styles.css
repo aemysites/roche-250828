@@ -13,6 +13,7 @@
 
 @import url('testimony.css');
 @import url('advice.css');
+@import url('category.css');
 
 @layer reset {
   :root {

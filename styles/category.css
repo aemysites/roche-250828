@@ -1,0 +1,8 @@
+@layer category {
+    body.category {
+        .page-meta {
+            margin-block-start: 1em;
+            margin-bottom: 90px;
+        }
+    }
+}
