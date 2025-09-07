@@ -1,6 +1,7 @@
-export default function categorySelect(element) {
+export default function pageMeta(element) {
   const cells = [
-    [`Category Select`],
+    [`Page Meta`],
+    [element.textContent]
   ];
 
   const block = WebImporter.DOMUtils.createTable(cells, document);

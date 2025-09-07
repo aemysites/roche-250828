@@ -25,6 +25,7 @@ import categoryHero from './parsers/categoryHero.js';
 import categorySelect from './parsers/categorySelect.js';
 import relatedArticles from './parsers/relatedArticles.js';
 import categoryArticles from './parsers/categoryArticles.js';
+import pageMeta from './parsers/pageMeta.js';
 import columns20Parser from './parsers/columns20.js';
 import socialsTextParser from './parsers/socialsText.js';
 import hero19Parser from './parsers/hero19.js';
@@ -82,6 +83,7 @@ const parsers = {
   categorySelect: categorySelect,
   relatedArticles: relatedArticles,
   categoryArticles: categoryArticles,
+  pageMeta: pageMeta,
   ...customParsers,
 };
 

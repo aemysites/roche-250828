@@ -41,6 +41,7 @@ export const customElements = [
   { name: 'categorySelect', element: '.category-list-mobile' },
   { name: 'socialsText', element: '.rs-social-block' },
   { name: 'articleTypeFilter', element: '.filters-post-type' },
+  { name: 'pageMeta', element: '.promomat-container' },
 ];
 
 /**

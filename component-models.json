@@ -701,6 +701,18 @@
     ]
   },
   {
+    "id": "page-meta",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
     "id": "post-hero",
     "fields": [
       {
