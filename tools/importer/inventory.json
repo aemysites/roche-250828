@@ -1690,7 +1690,8 @@
           "uuid": "48d47c80-04-9a3b427bbc870fd3cb61ecf2e1cbe7927b2035d2",
           "xpath": "/html[1]/body[1]/main[1]/div[2]/div[1]/div[1]"
         }
-      ]
+      ],
+      "target": "Articles (masonry)"
     },
     {
       "name": "Post Hero",
